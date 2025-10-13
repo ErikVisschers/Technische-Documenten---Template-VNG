@@ -18,6 +18,7 @@ var respecConfig = {
     "abstract": "",
     "ch01": "",
     "ch02": "",
+    "ch03": "",
     "VNG-R-Generating": "",
     "VNG-R-Assembling": "",
     "VNG-R-Publishing": "",
