@@ -19,13 +19,13 @@ var respecConfig = {
   publishDate: "2025-10-20",
   content: {
     // sleutel = markdown-bestandnaam zonder .md
-    "abstract": "",
-    "ch01": "",
-    "ch02": "",
-    "ch03": "",
-    "Leon's Chapter 1 - Generating": "",
-    "Leon's Chapter 2 - Assembling": "",
-    "Leon's Chapter 3 - Publishing": "",
-    "Leon's Chapter 4 - Foutoplossing": ""
+    "abstract": "content/abstract.md",
+    "ch01": "content/ch01.md",
+    "ch02": "content/ch02.md",
+    "ch03": "content/ch03.md",
+    "Leon's Chapter 1 - Generating": "content/mermaid1.md",
+    "Leon's Chapter 2 - Assembling": "content/mermaid1.md",
+    "Leon's Chapter 3 - Publishing": "content/mermaid.md",
+    "Leon's Chapter 4 - Foutoplossing": "content/abstract.md"
   }
 };
