@@ -67,13 +67,14 @@ jobs:
             await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
 
             try {
-              // Wait for ReSpec to be ready (CI may sometimes fail this)
+              // Wait for ReSpec to be ready
               await page.waitForFunction(() => document.respec && document.respec.ready, { timeout: 90000 });
               console.log('ReSpec is ready.');
               await page.evaluate(() => document.respec.flush());
             } catch (err) {
               console.warn('⚠️ ReSpec.ready not detected. Proceeding after fallback wait.');
-              await page.waitForTimeout(5000); // fallback wait 5s
+              // Use standard Promise-based delay instead of waitForTimeout
+              await new Promise(resolve => setTimeout(resolve, 5000));
             }
 
             // Export outputs
