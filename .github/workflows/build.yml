@@ -1,4 +1,4 @@
-name: Build and Update Docs
+name: Build and Deploy Docs
 
 on:
   workflow_dispatch:
@@ -11,28 +11,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
+      # 3️⃣ Install Puppeteer
       - name: Install Puppeteer
         run: npm install puppeteer
 
-      - name: Generate ReSpec snapshot (HTML, PDF, PNG)
+      # 4️⃣ Start local HTTP server
+      - name: Start local HTTP server
+        run: python3 -m http.server 8080 --bind 127.0.0.1 &
+
+      # 5️⃣ Render ReSpec document
+      - name: Render ReSpec document
         run: |
-          echo "Rendering ReSpec document..."
           npx puppeteer browsers install chrome
           node -e "
           const puppeteer = require('puppeteer');
           (async () => {
             const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
             const page = await browser.newPage();
-            await page.goto('file://' + process.cwd() + '/index.html', { waitUntil: 'networkidle2' });
-            await page.waitForFunction(() => document.respec && document.respec.ready);
+            await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
+            await page.waitForFunction(() => document.respec && document.respec.ready, { timeout: 90000 });
             await page.evaluate(() => document.respec.flush());
             await page.pdf({ path: 'snapshot.pdf', format: 'A4', printBackground: true });
             await page.screenshot({ path: 'snapshot.png', fullPage: true });
@@ -40,8 +47,10 @@ jobs:
             await browser.close();
           })();"
 
-      - name: Update docs folder
+      # 6️⃣ Prepare docs folder
+      - name: Prepare docs folder
         run: |
+          rm -rf docs/* || true
           mkdir -p docs
           cp snapshot.html docs/index.html
           cp snapshot.pdf docs/
@@ -49,14 +58,12 @@ jobs:
           cp -r css js media md docs/ || true
           touch docs/.nojekyll
 
-
-
-      - name: Commit and push updated docs
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add docs/
-          git commit -m "Update docs (automatically generated)" || echo "No changes to commit"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # 7️⃣ Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
