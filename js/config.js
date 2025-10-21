@@ -1,6 +1,10 @@
 var respecConfig = {
-  specStatus: "io", // in ontwikkeling versie / draft
-  specType: "ED",  // Editor's Draft
+  useLogo: true,
+  
+  specStatus: "ED", // Editor’s Draft
+  specType: "norm", // or "inform" if it’s informative
+  editorsDraft: true,
+
   edDraftURI: "https://erikvisschers.github.io/Technische-Documenten---Template-VNG/", //aanbevolen door W3C / ReSpec
   license: "eupl",
   shortName: "technische-documenten-template-test",

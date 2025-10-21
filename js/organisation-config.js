@@ -136,6 +136,12 @@ var organisationConfig = {
             date: "June 2013",
             rawDate: "2021"
         },
+        "MIM": {
+            href: "https://docs.geostandaarden.nl/mim/mim/",
+            title: "Metamodel Informatie Modellering (MIM)",
+            publisher: "Geonovum",
+            date: "2020",
+        },
         "SemVer": {
             href: "https://semver.org",
             title: "Semantic Versioning 2.0.0",
