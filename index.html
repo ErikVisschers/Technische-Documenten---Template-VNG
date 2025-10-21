@@ -52,12 +52,8 @@
   <script>
     let content = "";
 
-    const getClass = function(key) {
-      if (respecConfig.content[key]!==""){return ` class="${respecConfig.content[key]}"`}
-    }
-
     for (let contentKey in respecConfig.content) {
-      content += `<section data-include-format="markdown" data-include="${contentKey}.md" ${getClass(contentKey)||""}></section>`
+      content += `<section data-include-format="markdown" data-include="${respecConfig.content[contentKey]}" ${getClass(contentKey) || ""}></section>`;
     }
 
     document.body.insertAdjacentHTML('beforeend', content);

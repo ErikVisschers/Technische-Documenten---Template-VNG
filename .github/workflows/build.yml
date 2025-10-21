@@ -64,7 +64,11 @@ jobs:
             await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
 
             try {
-              await page.waitForFunction(() => document.respec && document.respec.ready, { timeout: 90000 });
+              await page.waitForFunction(
+                () => document.respec && document.respec.ready && document.querySelectorAll('section').length > 3,
+                { timeout: 180000 }
+              );
+
               console.log('ReSpec is ready.');
               await page.evaluate(() => document.respec.flush());
             } catch (err) {
@@ -111,7 +115,7 @@ jobs:
           cp snapshot.html docs/index.html
           cp snapshot.pdf docs/
           cp snapshot.png docs/
-          cp -r css js media md docs/ || true
+          cp -r css js media content docs/ || true
           touch docs/.nojekyll
 
       # 7️⃣ Deploy to GitHub Pages
