@@ -1,9 +1,12 @@
 ## Voorbeeld tabel
 
-| Kolom 1 | Kolom 2 | Kolom 3 |
-|---------|---------|---------|
-| A       | B       | B       |
-| C       | D       | B       |
+| Kolom 1 | Kolom 2 | Kolom 3 | Kolom A | Kolom B | Kolom C |
+|---------|---------|---------|---------|---------|---------|
+| A       | B       | B       | A  A    | B   B   | B    D  |
+| C       | D       | B       | C       | D       | B  B    |
+| C       | D       | B       | C       | D       | B       |
+| C       | D       | B       | C       | D       | B       |
+
 
 Erik gebruikt dit Document dat een uitleg van de toepassing van Respec documentatie binnen VNG Realisatie bevat. 
 * In hoofdstuk 1 wordt de werking van het template uitgelegd. Hoe je het kunt gebruiken voor je eigen specificatie, wat er precies gebeurd als je er mee aan de gang gaat en waar je daarbij op moet letten.

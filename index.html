@@ -4,21 +4,28 @@
 <head>
   <meta content="text/html; charset=utf-8" http-equiv="content-type">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
   <script src="https://cdn.jsdelivr.net/gh/digitalbazaar/respec-mermaid@1.0.1/dist/main.js" class="remove"></script>
-  <script src="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/js/organisation-config.js" class="remove"></script>
+  <!-- <script src="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/js/organisation-config.js" class="remove"></script> -->
+  <script src="js/organisation-config.js" class="remove"></script>
   <script src="js/config.js" class="remove"></script>
   <script class="remove"> respecConfig = {...organisationConfig, ...respecConfig}</script>
   <script>document.title = respecConfig.title</script>
-  <title>Default</title>
   <link rel="shortcut icon" type="image/x-icon" href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico" />
-  <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" async></script>
+  
+  <!-- 👇 Voeg hier je eigen stylesheet toe -->
+  <link rel="stylesheet" href="css/custom.css">
+
+  <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" ></script>
+  
   <!-- De volgende style is noodzakelijk voor de werking van imagemaps. -->
   <style>
 	.figure img,    .sidefigure img,    figure img,
 	.figure object, .sidefigure object, figure object {
 		max-width: none !important; 
 	}
-	h7 {
+/* Wordt zelden gebruikt en heeft geen effect op standaard HTML.  */
+	/* h7 {
 		font-style: italic;
 	}
 	h7::after{
@@ -28,19 +35,26 @@
  	h7::before{
 		content: "\a";
 		white-space: pre;
-	}
+	} */
   </style>
 </head>
 
 <body>
-  <section id="abstract" data-include-format="markdown" data-include="abstract.md"></section>
-  <section id="sotd"></section><!-- Wordt automatisch ingevuld met een standaard tekst afhankelijk van de waarde van de property 'specStatus'. -->
-  <section id="ch01" data-include-format="markdown" data-include="ch01.md"></section>
+
+  <!-- <section id="abstract" data-include-format="markdown" data-include="abstract.md"></section> -->
+  <!-- <section id="sotd"></section><!-- Wordt automatisch ingevuld met een standaard tekst afhankelijk van de waarde van de property 'specStatus'. -->
+  <!-- <section id="ch01" data-include-format="markdown" data-include="ch01.md"></section>
   <section id="rm" data-include-format="markdown" data-include="README.md"></section>
   <section id="gen" data-include-format="markdown" data-include="VNG-R-Generating.md"></section>
   <section id="assembl" data-include-format="markdown" data-include="VNG-R-Assembling.md"></section>
   <section id="publ" data-include-format="markdown" data-include="VNG-R-Publishing.md"></section>
-  <section id="probl" data-include-format="markdown" data-include=" VNG-R-Foutoplossing.md"></section>
+  <section id="probl" data-include-format="markdown" data-include=" VNG-R-Foutoplossing.md"></section> -->
+  ```mermaid
+  graph TD;
+    A[Start] --> B{Werkt Mermaid?};
+    B -- Ja --> C[Geweldig 🎉];
+    B -- Nee --> D[Controleer scripts];
+
   <script>
     let content = "";
 
@@ -52,11 +66,11 @@
       content += `<section data-include-format="markdown" data-include="${contentKey}.md" ${getClass(contentKey)||""}></section>`
     }
 
-    document.getElementById("probl").insertAdjacentHTML('afterend', content);
+    document.body.insertAdjacentHTML('beforeend', content);
   </script>
+
   <section id='conformance'></section>
   <section id='tof'></section>
-  <section id="index"></section>
 </body>
 
 

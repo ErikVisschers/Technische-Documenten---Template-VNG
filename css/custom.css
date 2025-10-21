@@ -1,0 +1,32 @@
+  /* <!-- Eigen stijlen --> */
+  <style>
+    /* Algemene layoutaanpassingen */
+    body {
+      font-family: "Open Sans", sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Kleuraanpassing hoofdstuktitels */
+    h1, h2, h3 {
+      color: #004c97; /* VNG-blauw, pas aan naar eigen kleur */
+    }
+
+    /* Tabellen netter maken */
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    /* Custom label aan de zijkant */
+    .sidelabel {
+      background-color: #004c97;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 0 4px 4px 0;
+      font-weight: bold;
+    }
+  </style>

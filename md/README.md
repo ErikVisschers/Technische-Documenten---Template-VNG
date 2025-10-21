@@ -20,3 +20,6 @@ Het 'build.yml' action script in de folder '.github/workflows/' is disabled aang
 * In de Settings van deze repository 'Actions' en de 'Actions' tab te disablen.
 
 Op een later moment zullen we dit bestand verwijderen.
+
+
+Deze documentatiestructuur is gebaseerd op de VNG-R-Respec-Template, die onder de W3C Software and Document License valt.
