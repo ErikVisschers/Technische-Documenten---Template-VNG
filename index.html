@@ -9,7 +9,6 @@
   <!-- <script src="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/js/organisation-config.js" class="remove"></script> -->
   <script src="js/organisation-config.js" class="remove"></script>
   <script src="js/config.js" class="remove"></script>
-  <script class="remove"> respecConfig = {...organisationConfig, ...respecConfig}</script>
   <script>document.title = respecConfig.title</script>
   <link rel="shortcut icon" type="image/x-icon" href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico" />
   
@@ -53,14 +52,14 @@
     let content = "";
 
     for (let contentKey in respecConfig.content) {
-      content += `<section data-include-format="markdown" data-include="${respecConfig.content[contentKey]}" ${getClass(contentKey) || ""}></section>`;
+      content += `<section data-include-format="markdown" data-include="${respecConfig.content[contentKey]}"></section>`;
     }
-
     document.body.insertAdjacentHTML('beforeend', content);
   </script>
 
   <section id='conformance'></section>
   <section id='tof'></section>
+  <script class="remove"> respecConfig = {...organisationConfig, ...respecConfig}</script>
 </body>
 
 
