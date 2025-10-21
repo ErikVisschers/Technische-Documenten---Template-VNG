@@ -47,6 +47,9 @@ jobs:
           cp snapshot.pdf docs/
           cp snapshot.png docs/
           cp -r css js media md docs/ || true
+          touch docs/.nojekyll
+
+
 
       - name: Commit and push updated docs
         run: |
