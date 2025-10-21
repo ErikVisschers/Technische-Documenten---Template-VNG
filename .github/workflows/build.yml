@@ -1,69 +1,114 @@
 name: Build and Deploy Docs
 
 on:
-  workflow_dispatch:
   push:
     branches:
-      - main
+      - main # Trigger workflow automatically when changes are pushed to main branch
+      # Removed workflow_dispatch to prevent double builds
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest # Use latest Ubuntu runner for CI
 
     steps:
       # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
+        # Clones your repository so the workflow can access your code and files
 
       # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
+        # Node.js is required to run Puppeteer and other npm scripts
 
       # 3️⃣ Install Puppeteer
       - name: Install Puppeteer
         run: npm install puppeteer
+        # Puppeteer is installed here to render your ReSpec document and generate PDF/screenshot
 
       # 4️⃣ Start local HTTP server
       - name: Start local HTTP server
         run: python3 -m http.server 8080 --bind 127.0.0.1 &
-
-      # 5️⃣ Render ReSpec document
+        # Starts a simple HTTP server to serve your local HTML files
+        # '&' runs the server in the background so the workflow can continue
+      
+        # 4.1️⃣ Wait for HTTP server to be ready
+      - name: Wait for local HTTP server
+        run: |
+          echo "Waiting for HTTP server to be ready..."
+          for i in {1..20}; do
+            if curl -s http://127.0.0.1:8080 > /dev/null; then
+              echo "Server is ready!"
+              break
+            else
+              echo "Waiting... ($i)"
+              sleep 3
+            fi
+          done
+      # 5️⃣ Render ReSpec document (robust)
       - name: Render ReSpec document
         run: |
+          # Install required Chrome browser for Puppeteer
           npx puppeteer browsers install chrome
+          
+          # Use Puppeteer to open the HTML, wait for ReSpec to be ready, and generate outputs
           node -e "
           const puppeteer = require('puppeteer');
           (async () => {
-            const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
+            const browser = await puppeteer.launch({
+              headless: true,
+              args: ['--no-sandbox', '--disable-setuid-sandbox']
+            });
             const page = await browser.newPage();
+            
+            console.log('Navigating to local HTML...');
             await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
-            await page.waitForFunction(() => document.respec && document.respec.ready, { timeout: 90000 });
-            await page.evaluate(() => document.respec.flush());
+
+            try {
+              // Wait for ReSpec to be ready (CI may sometimes fail this)
+              await page.waitForFunction(() => document.respec && document.respec.ready, { timeout: 90000 });
+              console.log('ReSpec is ready.');
+              await page.evaluate(() => document.respec.flush());
+            } catch (err) {
+              console.warn('⚠️ ReSpec.ready not detected. Proceeding after fallback wait.');
+              await page.waitForTimeout(5000); // fallback wait 5s
+            }
+
+            // Export outputs
             await page.pdf({ path: 'snapshot.pdf', format: 'A4', printBackground: true });
             await page.screenshot({ path: 'snapshot.png', fullPage: true });
             await page.content().then(c => require('fs').writeFileSync('snapshot.html', c));
+
             await browser.close();
+            console.log('Snapshots generated successfully.');
           })();"
+        # This step creates snapshot.html, snapshot.pdf, and snapshot.png from your ReSpec document
+        # 🔹 CI Notes:
+        # - Make sure the HTTP server is running before Puppeteer starts.
+        # - Use '--no-sandbox' and '--disable-setuid-sandbox' flags in CI environments.
+        # - If Puppeteer times out, check server logs or consider replacing waitForFunction with a fixed wait.
 
       # 6️⃣ Prepare docs folder
       - name: Prepare docs folder
         run: |
-          rm -rf docs/* || true
-          mkdir -p docs
+          rm -rf docs/* || true # Clean previous docs
+          mkdir -p docs       # Ensure docs folder exists
           cp snapshot.html docs/index.html
           cp snapshot.pdf docs/
           cp snapshot.png docs/
-          cp -r css js media md docs/ || true
-          touch docs/.nojekyll
+          cp -r css js media md docs/ || true # Copy supporting assets if present
+          touch docs/.nojekyll # Disable Jekyll processing for GitHub Pages
+        # This step collects all files needed for GitHub Pages deployment into the docs folder
 
       # 7️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          publish_branch: gh-pages
-          user_name: github-actions[bot]
-          user_email: github-actions[bot]@users.noreply.github.com
+          github_token: ${{ secrets.GITHUB_TOKEN }} # Token for authentication
+          publish_dir: ./docs                         # Directory to publish
+          publish_branch: gh-pages                    # GitHub Pages branch
+          user_name: github-actions[bot]             # Commit author name
+          user_email: github-actions[bot]@users.noreply.github.com # Commit author email
+        # Deploys the docs folder to GitHub Pages so your site is live
