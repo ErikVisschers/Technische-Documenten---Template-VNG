@@ -1,5 +1,6 @@
 var respecConfig = {
   specStatus: "io", // in ontwikkeling versie / draft
+  specType: "ED",  // Editor's Draft
   edDraftURI: "https://erikvisschers.github.io/Technische-Documenten---Template-VNG/", //aanbevolen door W3C / ReSpec
   license: "eupl",
   shortName: "technische-documenten-template-test",
@@ -23,9 +24,9 @@ var respecConfig = {
     "ch01": "content/ch01.md",
     "ch02": "content/ch02.md",
     "ch03": "content/ch03.md",
-    "Leon's Chapter 1 - Generating": "content/mermaid1.md",
-    "Leon's Chapter 2 - Assembling": "content/mermaid1.md",
-    "Leon's Chapter 3 - Publishing": "content/mermaid.md",
-    "Leon's Chapter 4 - Foutoplossing": "content/abstract.md"
+    "ch04": "content/mermaid1.md",
+    // "Leon's Chapter 2 - Assembling": "content/mermaid1.md",
+    // "Leon's Chapter 3 - Publishing": "content/mermaid.md",
+    // "Leon's Chapter 4 - Foutoplossing": "content/abstract.md"
   }
 };

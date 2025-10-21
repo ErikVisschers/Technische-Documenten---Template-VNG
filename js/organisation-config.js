@@ -39,8 +39,8 @@ var organisationConfig = {
             // Specificatie-statussen	
             cv: "Consultatieversie",
             vv: "Versie ter vaststelling",
-	    ig: "In Gebruik versie",
-	    io: "In Ontwikkeling versie",
+	        ig: "In Gebruik versie",
+	        io: "In Ontwikkeling versie",
  //           tg: "Teruggetrokken versie",
 	    // Specificatie-types
             im: "Informatiemodel",
