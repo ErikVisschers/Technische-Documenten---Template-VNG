@@ -1,22 +1,140 @@
-<!DOCTYPE html>
-<html lang="nl">
-
-<head>
+<!DOCTYPE html><html lang="nl"><head><style>dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}</style><link rel="preconnect" crossorigin="anonymous" href="https://www.w3.org" class="removeOnSave"><link rel="preload" as="style" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/base.css" class="removeOnSave"><link rel="preload" as="style" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/dark.css" class="removeOnSave"><link rel="stylesheet" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/base.css" class="removeOnSave">
   <meta content="text/html; charset=utf-8" http-equiv="content-type">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <script src="https://cdn.jsdelivr.net/gh/digitalbazaar/respec-mermaid@1.0.1/dist/main.js" class="remove"></script>
+  
   <!-- <script src="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/js/organisation-config.js" class="remove"></script> -->
-  <script src="js/organisation-config.js" class="remove"></script>
-  <script src="js/config.js" class="remove"></script>
-  <script class="remove"> respecConfig = {...organisationConfig, ...respecConfig}</script>
-  <script>document.title = respecConfig.title</script>
-  <link rel="shortcut icon" type="image/x-icon" href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico" />
+  
+  
+  
+  <script>document.title = respecConfig.title</script><title>Testen van de Technische Documentatie Template (VNG ReSpec) 2025-10-20</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico">
   
   <!-- 👇 Voeg hier je eigen stylesheet toe -->
   <link rel="stylesheet" href="css/custom.css">
 
-  <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" ></script>
+  <style id="respec-ui-styles" class="removeOnSave">.respec-modal .close-button{position:absolute;z-index:inherit;padding:.2em;font-weight:700;cursor:pointer;margin-left:5px;border:none;background:0 0}
+#respec-ui{position:fixed;display:flex;flex-direction:row-reverse;top:20px;right:20px;width:202px;text-align:right;z-index:9000}
+#respec-pill,.respec-info-button{height:2.4em;background:#fff;background:var(--bg,#fff);color:#787878;color:var(--tocnav-normal-text,#787878);border:1px solid #ccc;box-shadow:1px 1px 8px 0 rgba(100,100,100,.5);box-shadow:1px 1px 8px 0 var(--tocsidebar-shadow,rgba(100,100,100,.5));padding:.2em 0}
+.respec-info-button{border:none;opacity:.75;border-radius:2em;margin-right:1em;min-width:3.5em;will-change:opacity}
+.respec-info-button:focus,.respec-info-button:hover{opacity:1;transition:opacity .2s}
+#respec-pill{width:4.8em}
+#respec-pill:not(:disabled){animation:respec-fadein .6s ease-in-out}
+@keyframes respec-fadein{
+from{margin-top:-1.2em;border-radius:50%;border:.2em solid rgba(100,100,100,.5);box-shadow:none;height:4.8em}
+to{margin-top:0;border:1px solid #ccc;border-radius:0;box-shadow:1px 1px 8px 0 rgba(100,100,100,.5);height:2.4em}
+}
+#respec-pill:disabled{margin-top:-1.2em;position:relative;border:none;box-shadow:none;border-radius:50%;width:4.8em;height:4.8em;padding:0}
+#respec-pill:disabled::after{position:absolute;content:'';inset:-.2em;border-radius:50%;border:.2em solid rgba(100,100,100,.5);border-left:.2em solid transparent;animation:respec-spin .5s infinite linear}
+@media (prefers-reduced-motion){
+#respec-pill:not(:disabled){animation:none}
+#respec-pill:disabled::after{animation:none;border-left:.2em solid rgba(100,100,100,.5)}
+}
+@keyframes respec-spin{
+0%{transform:rotate(0)}
+100%{transform:rotate(360deg)}
+}
+.respec-hidden{visibility:hidden;opacity:0;transition:visibility 0s .2s,opacity .2s linear}
+.respec-visible{visibility:visible;opacity:1;transition:opacity .2s linear}
+#respec-pill:focus,#respec-pill:hover{color:#000;background-color:#f5f5f5;transition:color .2s}
+#respec-menu{position:absolute;margin:0;padding:0;font-family:sans-serif;background:var(--bg,#fff);color:var(--text,#000);box-shadow:1px 1px 8px 0 rgba(100,100,100,.5);width:200px;display:none;text-align:left;margin-top:32px;font-size:.8em}
+#respec-menu:not([hidden]){display:block}
+#respec-menu li{list-style-type:none;margin:0;padding:0}
+.respec-save-buttons{display:grid;grid-template-columns:repeat(auto-fill,minmax(47%,2fr));grid-gap:.5cm;padding:.5cm}
+.respec-save-button:link{padding-top:16px;color:var(--def-text,#fff);background:var(--def-bg,#2a5aa8);justify-self:stretch;height:1cm;text-decoration:none;text-align:center;font-size:inherit;border:none;border-radius:.2cm}
+.respec-save-button:link:hover{color:var(--def-text,#fff);background:var(--defrow-border,#2a5aa8);padding:0;margin:0;border:0;padding-top:16px}
+.respec-save-button:link:focus{background:var(--tocnav-active-bg,#193766);color:var(--tocnav-active-text,#000)}
+#respec-pill:focus,#respec-ui button:focus,.respec-option:focus{outline:0;outline-style:none}
+#respec-pill-error{background-color:red;color:#fff}
+#respec-pill-warning{background-color:orange;color:#fff}
+.respec-error-list,.respec-warning-list{margin:0;padding:0;font-family:sans-serif;font-size:.85em}
+.respec-warning-list{background-color:#fffbe6}
+:is(.respec-warning-list,.respec-error-list)>li{list-style-type:none;margin:0;padding:.5em 0;padding-left:2em;padding-right:.5em}
+:is(.respec-warning-list,.respec-error-list)>li+li{margin-top:.5rem}
+:is(.respec-warning-list,.respec-error-list)>li:before{position:absolute;left:.4em}
+:is(.respec-warning-list,.respec-error-list) p{padding:0;margin:0}
+.respec-warning-list>li{color:#5c3b00;border-bottom:thin solid #fff5c2}
+.respec-error-list,.respec-error-list li{background-color:#fff0f0}
+.respec-warning-list>li::before{content:"⚠️"}
+.respec-error-list>li::before{content:"💥"}
+.respec-error-list>li{color:#5c3b00;border-bottom:thin solid #ffd7d7}
+:is(.respec-warning-list,.respec-error-list)>li li{list-style:disc}
+#respec-overlay{display:block;position:fixed;z-index:10000;top:0;left:0;height:100%;width:100%;background:#000}
+.respec-show-overlay{transition:opacity .2s linear;opacity:.5}
+.respec-hide-overlay{transition:opacity .2s linear;opacity:0}
+.respec-modal{display:block;position:fixed;z-index:11000;top:10%;background:var(--bg,#fff);color:var(--text,#000);border:5px solid #666;border-color:var(--tocsidebar-shadow,#666);min-width:20%;padding:0;max-height:80%;overflow-y:auto;margin:0 -.5cm;left:20%;max-width:75%;min-width:60%}
+.respec-modal h3{margin:0;padding:.2em;left:0!important;text-align:center;background:var(--tocsidebar-shadow,#ddd);color:var(--text,#000);font-size:1em}
+#respec-menu button.respec-option{background:var(--bg,#fff);color:var(--text,#000);border:none;width:100%;text-align:left;font-size:inherit;padding:1.2em 1.2em}
+#respec-menu button.respec-option:hover{background-color:var(--tocnav-hover-bg,#eee);color:var(--tocnav-hover-text,#000)}
+.respec-cmd-icon{padding-right:.5em}
+#respec-ui button.respec-option:first-child{margin-top:0}
+#respec-ui button.respec-option:last-child{border:none;border-radius:inherit;margin-bottom:0}
+.respec-button-copy-paste{position:absolute;height:28px;width:40px;cursor:pointer;background-image:linear-gradient(#fcfcfc,#eee);border:1px solid #90b8de;border-left:0;border-radius:0 0 3px 0;-webkit-user-select:none;user-select:none;-webkit-appearance:none;top:0;left:127px}
+@media print{
+#respec-ui{display:none}
+}
+.respec-iframe{width:100%;min-height:550px;height:100%;overflow:hidden;padding:0;margin:0;border:0}
+.respec-iframe:not(.ready){background:url(https://respec.org/xref/loader.gif) no-repeat center}
+.respec-iframe+a[href]{font-size:.9rem;float:right;margin:0 .5em .5em;border-bottom-width:1px}
+p:is(.respec-hint,.respec-occurrences){display:block;margin-top:.5em}
+.respec-plugin{text-align:right;color:rgb(120,120,120,.5);font-size:.6em}</style><style id="respec-mainstyle">@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:italic}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline;position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-.7em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}</style><link rel="dns-prefetch" crossorigin="anonymous" href="https://api.specref.org" class="removeOnSave"><link rel="preconnect" crossorigin="anonymous" href="https://respec.org" class="removeOnSave"><link rel="preload" as="script" href="https://www.w3.org/Tools/respec/respec-highlight" class="removeOnSave">
   
   <!-- De volgende style is noodzakelijk voor de werking van imagemaps. -->
   <style>
@@ -37,10 +155,229 @@
 		white-space: pre;
 	} */
   </style>
-</head>
+<link rel="stylesheet" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/base.css"><style id="respec-nlgov">img.license{float:left;padding-right:5px;background:0 0}</style><meta name="color-scheme" content="light"><meta name="description" content="Erik gebruikt dit Document dat een uitleg van de toepassing van Respec documentatie binnen VNG Realisatie bevat."><style>
+  .sidelabel {
+    position: fixed;
+    -webkit-transform-origin: top right;
+    right: 100%;
+    top: 0;
+    -webkit-transform: rotate(-90deg);
+    padding: 4px 50px 4px 10px;
+    color: white;
+    white-space: nowrap;
+    z-index: 1;
+    background-color: #DC7633;
+  }</style><script type="text/javascript">
+   /* Any custom mermaid.js scripts will go here. */
+  </script><style>
+  /* Any custom mermaid.js scripts will go here. */
+  }</style><script id="initialUserConfig" type="application/json">{
+  "nl_organisationName": "VNG Realisatie",
+  "nl_organisationStylesURL": "https://gitdocumentatie.logius.nl/publicatie/respec/style/",
+  "nl_organisationPublishURL": "https://vng-realisatie.github.io/publicatie",
+  "logos": [
+    {
+      "src": "https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.jpg",
+      "alt": "VNG-Realisatie",
+      "id": "VNG-Realisatie",
+      "height": 77,
+      "url": "https://www.vng.nl"
+    }
+  ],
+  "postProcess": [
+    null
+  ],
+  "pubDomain": "cim",
+  "latestVersion": [
+    "nl_organisationPublishURL",
+    "pubDomain",
+    "/",
+    "shortName"
+  ],
+  "thisVersion": [
+    "nl_organisationPublishURL",
+    "pubDomain",
+    "/",
+    "shortName",
+    "/",
+    "publishVersion"
+  ],
+  "prevVersion": [
+    "nl_organisationPublishURL",
+    "pubDomain",
+    "/",
+    "shortName",
+    "/",
+    "previousPublishVersion"
+  ],
+  "useLogo": true,
+  "useLabel": true,
+  "license": "eupl",
+  "addSectionLinks": true,
+  "localizationStrings": {
+    "nl": {
+      "cv": "Consultatieversie",
+      "vv": "Versie ter vaststelling",
+      "ig": "In Gebruik versie",
+      "io": "In Ontwikkeling versie",
+      "im": "Informatiemodel",
+      "hl": "Handleiding",
+      "st": "Standaard"
+    }
+  },
+  "sotdText": {
+    "nl": {
+      "sotd": "Status van dit document",
+      "cv": "Dit is een door het TO goedgekeurde consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
+      "vv": "Dit is een definitief concept van de nieuwe versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
+      "ig": "Dit document is 'In Gebruik'.",
+      "io": "Dit document is nog 'In Ontwikkeling'."
+    }
+  },
+  "labelColor": {
+    "ig": "#A569BD",
+    "io": "#DC7633"
+  },
+  "licenses": {
+    "cc0": {
+      "name": "Creative Commons 0 Public Domain Dedication",
+      "short": "CC0",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-zero.svg"
+    },
+    "cc-by": {
+      "name": "Creative Commons Attribution 4.0 International Public License",
+      "short": "CC-BY",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by.svg"
+    },
+    "cc-by-nd": {
+      "name": "Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal",
+      "short": "CC-BY-ND",
+      "url": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl",
+      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by-nd.svg"
+    },
+    "eupl": {
+      "name": "EUROPEAN UNION PUBLIC LICENCE v. 1.2",
+      "short": "EUPL",
+      "url": "https://eupl.eu/",
+      "image": "https://eupl.eu/eu.png"
+    }
+  },
+  "localBiblio": {
+    "ORICODE": {
+      "href": "https://www.unicode.org/versions/latest/",
+      "publisher": "Unicode Consortium",
+      "title": "The Unicode Standard",
+      "date": "June 2013",
+      "rawDate": "2021"
+    },
+    "SemVer": {
+      "href": "https://semver.org",
+      "title": "Semantic Versioning 2.0.0",
+      "authors": [
+        "T. Preston-Werner"
+      ],
+      "date": "June 2013"
+    }
+  },
+  "specStatus": "io",
+  "specType": "ED",
+  "edDraftURI": "https://erikvisschers.github.io/Technische-Documenten---Template-VNG/",
+  "shortName": "technische-documenten-template-test",
+  "title": "Testen van de Technische Documentatie Template (VNG ReSpec)",
+  "subtitle": "Proof of Concept",
+  "editors": [
+    {
+      "name": "Erik Visschers",
+      "company": "Smart-ICT"
+    }
+  ],
+  "authors": [
+    {
+      "name": "Erik Visschers",
+      "company": "Smart-ICT"
+    }
+  ],
+  "github": {
+    "repoURL": "https://github.com/ErikVisschers/Technische-Documenten---Template-VNG"
+  },
+  "publishVersion": "2025-10-20",
+  "previousPublishVersion": "2025-09-10",
+  "publishDate": "2025-10-20",
+  "content": {
+    "abstract": "content/abstract.md",
+    "ch01": "content/ch01.md",
+    "ch02": "content/ch02.md",
+    "ch03": "content/ch03.md",
+    "ch04": "content/mermaid1.md"
+  }
+}</script></head>
 
-<body>
-  <section id="abstract" data-include-format="markdown" data-include="content/abstract.md"></section>
+<body class="toc-inline"><p id="toc-nav"><a id="toc-jump" href="#toc" aria-labelledby="toc-jump-text"><span aria-hidden="true">↑</span> <span id="toc-jump-text">Jump to Table of Contents</span></a><a id="toc-toggle" href="#toc" aria-labelledby="toc-expand-text"><span aria-hidden="true">→</span> <span id="toc-expand-text">Pop Out Sidebar</span></a></p><div id="respec-ui" class="removeOnSave"><button id="respec-pill" aria-controls="respec-menu" aria-expanded="false" aria-haspopup="true" aria-label="ReSpec Menu">ReSpec</button><ul id="respec-menu" role="menu" aria-labelledby="respec-pill" hidden=""><li role="menuitem"><button class="respec-option" id="respec-button-doorzoek-specref">
+      <span class="respec-cmd-icon" aria-hidden="true">🔎<!---0.670676%--></span> Doorzoek Specref<!---0.670676%-->…
+    </button><!---0.670676%--></li><li role="menuitem"><button class="respec-option" id="respec-button-search-definitions">
+      <span class="respec-cmd-icon" aria-hidden="true">📚<!---0.670676%--></span> Search definitions<!---0.670676%-->…
+    </button><!---0.670676%--></li><li role="menuitem"><button class="respec-option" id="respec-button-over-35.4.1">
+      <span class="respec-cmd-icon" aria-hidden="true">ℹ️<!---0.670676%--></span> Over 35.4.1<!---0.670676%-->…
+    </button><!---0.670676%--></li><li role="menuitem"><button class="respec-option" id="respec-button-bewaar-snapshot">
+      <span class="respec-cmd-icon" aria-hidden="true">💾<!---0.670676%--></span> Bewaar Snapshot<!---0.670676%-->…
+    </button><!---0.670676%--></li></ul></div><h1 id="title" class="title">Testen van de Technische Documentatie Template (VNG ReSpec) 2025-10-20</h1>
+  <section id="abstract" class="introductory"><!--OddPage--><h2>Voorbeeld tabel</h2>
+<table>
+<thead>
+<tr>
+<th>Kolom 1</th>
+<th>Kolom 2</th>
+<th>Kolom 3</th>
+<th>Kolom A</th>
+<th>Kolom B</th>
+<th>Kolom C</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>A</td>
+<td>B</td>
+<td>B</td>
+<td>A  A</td>
+<td>B   B</td>
+<td>B    D</td>
+</tr>
+<tr>
+<td>C</td>
+<td>D</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>B  B</td>
+</tr>
+<tr>
+<td>C</td>
+<td>D</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>B</td>
+</tr>
+<tr>
+<td>C</td>
+<td>D</td>
+<td>B</td>
+<td>C</td>
+<td>D</td>
+<td>B</td>
+</tr>
+</tbody></table>
+<p>Erik gebruikt dit Document dat een uitleg van de toepassing van Respec documentatie binnen VNG Realisatie bevat. </p>
+<ul>
+<li>In hoofdstuk 1 wordt de werking van het template uitgelegd. Hoe je het kunt gebruiken voor je eigen specificatie, wat er precies gebeurd als je er mee aan de gang gaat en waar je daarbij op moet letten.</li>
+<li>Hoofdstuk 2 beschrijft hoe je binnen Imvertor (indien toegepast) een deel van de content van je specificatie kan genereren. Dit hoofdstuk is optioneel aangezien je Respec document niet per definitie betrekking hoeft te hebben op een Informatiemodel.</li>
+<li>Hoofdstuk 3 beschrijft waar je op moet letten als je het GitHub Respec template kopieert (zowel als admin als als gebruiker), hoe je de Respec documentatie, evt. naast de door Imvertor gegenereerde content, nog kan voorzien van andere content en hoe je door het aanpassen van configuration properties de stijl van het document kan veranderen daarbij rekening houdend met wat wij binnen VNG Realisatie met elkaar hebben afgesproken. In de flowchart van hoofdstuk 5 wordt dit hoofdstuk met de 'Generatie tak' geïllustreerd.</li>
+<li>Hoe de gegenereerde Respec bestanden gepubliceerd kunnen worden wordt in Hoofdstuk 4 beschreven. In de flowchart van hoofdstuk 5 wordt dit hoofdstuk met de 'Publicatie tak' geïllustreerd.</li>
+<li>In hoofdstuk 5 is een flowchart van het gehele proces voor het vervaardigen van Respec documentatie uitgewerkt. Dit is echter tevens een voorbeeld van het gebruik van Mermaid, een manier om flowcharts te vervaardigen.</li>
+<li>De hoofdstukken volgend op hoofdstuk 5 hebben slechts een illustratieve functie. Op basis daarvan moet je, samen met de uitleg in hoofdstuk 3, in staat zijn de getoonde functionaliteit te gebruiken.</li>
+</ul>
+</section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave<!---0.670676%--></h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Voorbeeld tabel</a><!---0.670676%--></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1.<!---0.670676%--> </bdi>Conformiteit<!---0.670676%--></a><!---0.670676%--></li></ol></nav>
 
   <!-- <section id="sotd"></section><!-- Wordt automatisch ingevuld met een standaard tekst afhankelijk van de waarde van de property 'specStatus'. -->
   <!-- <section id="ch01" data-include-format="markdown" data-include="ch01.md"></section>
@@ -61,11 +398,296 @@
     }
 
     document.body.insertAdjacentHTML('beforeend', content);
-  </script>
+  </script><section class="content/abstract.md">
 
-  <section id='conformance'></section>
-  <section id='tof'></section>
-</body>
+    
+        <meta charset="utf-8">
+        <title>Error response</title>
+    
+    
+        <section><div class="header-wrapper"><h3 id="error-response">Error response</h3><a class="self-link" href="#error-response" aria-label="Permalink for this Section"></a></div>
+        <p>Error code: 404</p>
+        <p>Message: File not found.</p>
+        <p>Error code explanation: 404 - Nothing matches the given URI.</p>
+    
+</section></section><section class="content/ch01.md">
+
+    
+        <meta charset="utf-8">
+        <title>Error response</title>
+    
+    
+        <section><div class="header-wrapper"><h3 id="error-response-0">Error response</h3><a class="self-link" href="#error-response-0" aria-label="Permalink for this Section"></a></div>
+        <p>Error code: 404</p>
+        <p>Message: File not found.</p>
+        <p>Error code explanation: 404 - Nothing matches the given URI.</p>
+    
+</section></section><section class="content/ch02.md">
+
+    
+        <meta charset="utf-8">
+        <title>Error response</title>
+    
+    
+        <section><div class="header-wrapper"><h3 id="error-response-1">Error response</h3><a class="self-link" href="#error-response-1" aria-label="Permalink for this Section"></a></div>
+        <p>Error code: 404</p>
+        <p>Message: File not found.</p>
+        <p>Error code explanation: 404 - Nothing matches the given URI.</p>
+    
+</section></section><section class="content/ch03.md">
+
+    
+        <meta charset="utf-8">
+        <title>Error response</title>
+    
+    
+        <section><div class="header-wrapper"><h3 id="error-response-2">Error response</h3><a class="self-link" href="#error-response-2" aria-label="Permalink for this Section"></a></div>
+        <p>Error code: 404</p>
+        <p>Message: File not found.</p>
+        <p>Error code explanation: 404 - Nothing matches the given URI.</p>
+    
+</section></section><section class="content/mermaid1.md">
+
+    
+        <meta charset="utf-8">
+        <title>Error response</title>
+    
+    
+        <section><div class="header-wrapper"><h3 id="error-response-3">Error response</h3><a class="self-link" href="#error-response-3" aria-label="Permalink for this Section"></a></div>
+        <p>Error code: 404</p>
+        <p>Message: File not found.</p>
+        <p>Error code explanation: 404 - Nothing matches the given URI.</p>
+    
+</section></section>
+
+  <section id="conformance"><!--OddPage--><div class="header-wrapper"><h2 id="x1-conformiteit"><bdi class="secno">1.<!---0.670676%--> </bdi>Conformiteit<!---0.670676%--></h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 1."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.<!---0.670676%--></p><!---0.670676%--></section>
+  <section id="tof"></section>
 
 
-</html>
+
+
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><div class="sidelabel">VNG Realisatie undefined - In Ontwikkeling versie</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
