@@ -31,7 +31,7 @@ jobs:
       - name: Start local HTTP server
         run: python3 -m http.server 8080 --bind 127.0.0.1 &
 
-      # 4.1️⃣ Wait for HTTP server to be ready
+      # 4️⃣.1️⃣ Wait for HTTP server to be ready
       - name: Wait for local HTTP server
         run: |
           echo "Waiting for HTTP server to be ready..."
@@ -86,7 +86,7 @@ jobs:
             console.log('Snapshots generated successfully.');
           })();"
 
-      # 5.1️⃣ Verify snapshot files
+      # 5️⃣.1️⃣ Verify snapshot files
       - name: Verify snapshot files
         run: |
           echo "Checking generated files..."
@@ -97,7 +97,7 @@ jobs:
           fi
           echo "✅ snapshot.html has content."
 
-      # 5.2️⃣ Upload snapshot artifacts
+      # 5️⃣.2️⃣ Upload snapshot artifacts
       - name: Upload snapshot artifacts
         uses: actions/upload-artifact@v4
         with:
