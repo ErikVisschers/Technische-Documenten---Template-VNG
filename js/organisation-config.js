@@ -7,7 +7,7 @@ var organisationConfig = {
     logos: [{
         src: "https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.jpg",
         alt: "VNG-Realisatie",
-        id: "VNG-Realisatie",
+        id: "VNG-Realisatie id",
         height: 77,
         url: "https://www.vng.nl",
     }],
