@@ -55,7 +55,6 @@ var respecConfig = {
     // "Leon's Chapter 2 - Assembling": "content/mermaid1.md",
     // "Leon's Chapter 3 - Publishing": "content/mermaid.md",
     // "Leon's Chapter 4 - Foutoplossing": "content/abstract.md"
-    }
   },
   
   // 👇 Optioneel: eigen kleuraanpassingen (overrulen VNG-waarden)
