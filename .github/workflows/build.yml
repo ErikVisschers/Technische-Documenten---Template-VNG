@@ -62,43 +62,64 @@ jobs:
         run: |
           npx puppeteer browsers install chrome
           node -e "
+
           const puppeteer = require('puppeteer');
           const fs = require('fs');
+
           (async () => {
             const browser = await puppeteer.launch({
               headless: true,
-              args: ['--no-sandbox','--disable-setuid-sandbox']
+              args: ['--no-sandbox', '--disable-setuid-sandbox']
             });
+
             const page = await browser.newPage();
             console.log('Navigating to local HTML...');
+
             await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
 
             try {
-              // Wait until ReSpec is ready and imvertor section exists
+              console.log('Waiting for ReSpec and #imvertor to load...');
+
+              // Wait until ReSpec is ready AND #imvertor exists AND sections have rendered
               await page.waitForFunction(
                 () => {
                   const respecReady = document.respec && document.respec.ready;
-                  const imvertorLoaded = !!document.querySelector('#imvertor');
-                  const sectionCount = document.querySelectorAll('section').length;
-                  return respecReady && imvertorLoaded && sectionCount > 3;
+                  const imvertor = document.querySelector('#imvertor');
+                  const sections = document.querySelectorAll('section').length;
+                  // Optional: check that #imvertor has innerHTML
+                  const imvertorFilled = imvertor && imvertor.innerHTML.trim().length > 0;
+                  return respecReady && imvertorFilled && sections > 3;
                 },
-                { timeout: 180000 }
+                { timeout: 300000 } // 5 minutes for large files
               );
-              console.log('✅ ReSpec ready and imvertor section loaded.');
-              await page.evaluate(() => document.respec.flush());
+
+              console.log('✅ ReSpec ready and Imvertor loaded.');
+
+              // Force a final ReSpec flush to ensure all sections are processed
+              await page.evaluate(() => {
+                if (document.respec && document.respec.flush) {
+                  return document.respec.flush();
+                }
+              });
+
+              // Extra wait for dynamic content like Mermaid diagrams
+              await page.waitForTimeout(3000); // 3 seconds
+
             } catch (err) {
-              console.warn('⚠️ ReSpec or imvertor not fully detected. Fallback wait 15s.');
-              await new Promise(resolve => setTimeout(resolve, 15000));
+              console.warn('⚠️ ReSpec or Imvertor not fully detected. Generating snapshots anyway.');
             }
 
             // Generate snapshots
+            console.log('Generating snapshots...');
             await page.pdf({ path: 'snapshot.pdf', format: 'A4', printBackground: true });
             await page.screenshot({ path: 'snapshot.png', fullPage: true });
+
             const htmlContent = await page.content();
             fs.writeFileSync('snapshot.html', htmlContent);
+
             console.log('✅ Snapshots generated.');
             await browser.close();
-          })();"
+          })();
 
       # 5️⃣.1️⃣ Verify snapshots
       - name: Verify snapshot files
