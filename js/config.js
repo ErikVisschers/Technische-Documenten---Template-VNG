@@ -46,11 +46,16 @@ var respecConfig = {
     "abstract": "content/abstract.md",
     "ch01": "content/ch01.md",
     "ch02": "content/ch02.md",
+    "imvertor": { 
+        src: "content/generated/LOGICAL-JZV-1-20251001.respec.html",
+        format: "html"
+        },
     "ch03": "content/ch03.md",
     "ch04": "content/mermaid1.md"
     // "Leon's Chapter 2 - Assembling": "content/mermaid1.md",
     // "Leon's Chapter 3 - Publishing": "content/mermaid.md",
     // "Leon's Chapter 4 - Foutoplossing": "content/abstract.md"
+    }
   },
   
   // 👇 Optioneel: eigen kleuraanpassingen (overrulen VNG-waarden)
