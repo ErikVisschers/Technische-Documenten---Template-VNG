@@ -1,7 +1,7 @@
 name: Build and Deploy Docs
 
 permissions:
-  contents: write  # Required for pushing to repository (gh-pages and main)
+  contents: write
 
 on:
   push:
@@ -21,8 +21,12 @@ jobs:
       - name: Check imvertor file exists
         run: |
           echo "Checking for imvertor file..."
-          ls -lh content/generated/ || true
-
+          ls -lh content/generated/
+          if [ ! -f content/generated/LOGICAL-JZV-1-20251001.respec.html ]; then
+            echo "❌ Imvertor file is missing!"
+            exit 1
+          fi
+          echo "✅ Imvertor file exists."
 
       # 2️⃣ Setup Node.js
       - name: Setup Node.js
@@ -38,13 +42,13 @@ jobs:
       - name: Start local HTTP server
         run: python3 -m http.server 8080 --bind 127.0.0.1 &
 
-      # 4️⃣.1️⃣ Wait for HTTP server to be ready
+      # 4️⃣.1️⃣ Wait for server ready
       - name: Wait for local HTTP server
         run: |
-          echo "Waiting for HTTP server to be ready..."
+          echo "Waiting for HTTP server..."
           for i in {1..20}; do
             if curl -s http://127.0.0.1:8080 > /dev/null; then
-              echo "Server is ready!"
+              echo "Server ready!"
               break
             else
               echo "Waiting... ($i)"
@@ -52,41 +56,37 @@ jobs:
             fi
           done
 
-      # 5️⃣ Render ReSpec document (robust with debug)
+      # 5️⃣ Render ReSpec document with robust checks
       - name: Render ReSpec document
         run: |
           npx puppeteer browsers install chrome
-          
           node -e "
           const puppeteer = require('puppeteer');
           const fs = require('fs');
-
           (async () => {
             const browser = await puppeteer.launch({
               headless: true,
-              args: ['--no-sandbox', '--disable-setuid-sandbox']
+              args: ['--no-sandbox','--disable-setuid-sandbox']
             });
-
             const page = await browser.newPage();
             console.log('Navigating to local HTML...');
             await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
 
             try {
-              // Wait for ReSpec ready AND imvertor section to appear
+              // Wait until ReSpec is ready and imvertor section exists
               await page.waitForFunction(
                 () => {
                   const respecReady = document.respec && document.respec.ready;
                   const imvertorLoaded = !!document.querySelector('#imvertor');
-                  const enoughSections = document.querySelectorAll('section').length > 3;
-                  return respecReady && imvertorLoaded && enoughSections;
+                  const sectionCount = document.querySelectorAll('section').length;
+                  return respecReady && imvertorLoaded && sectionCount > 3;
                 },
-                { timeout: 180000 } // wait up to 3 minutes
+                { timeout: 180000 }
               );
-
-              console.log('✅ ReSpec and imvertor content ready.');
+              console.log('✅ ReSpec ready and imvertor section loaded.');
               await page.evaluate(() => document.respec.flush());
             } catch (err) {
-              console.warn('⚠️ ReSpec or imvertor not fully detected. Falling back to 15s wait.');
+              console.warn('⚠️ ReSpec or imvertor not fully detected. Fallback wait 15s.');
               await new Promise(resolve => setTimeout(resolve, 15000));
             }
 
@@ -95,46 +95,33 @@ jobs:
             await page.screenshot({ path: 'snapshot.png', fullPage: true });
             const htmlContent = await page.content();
             fs.writeFileSync('snapshot.html', htmlContent);
-            console.log('✅ Snapshots generated successfully.');
+            console.log('✅ Snapshots generated.');
             await browser.close();
           })();"
 
-      # 5️⃣.1️⃣ Verify snapshot files
+      # 5️⃣.1️⃣ Verify snapshots
       - name: Verify snapshot files
         run: |
-          echo "Checking generated files..."
+          echo "Checking generated snapshots..."
           ls -lh snapshot.*
-          if [ ! -s snapshot.html ]; then
-            echo "❌ snapshot.html is empty!"
-            exit 1
-          fi
-          echo "✅ snapshot.html has content."
-
-      # 5️⃣.2️⃣ Upload snapshot artifacts
-      - name: Upload snapshot artifacts
-        uses: actions/upload-artifact@v4
-        with:
-          name: docs-snapshots
-          path: |
-            snapshot.html
-            snapshot.pdf
-            snapshot.png
+          for f in snapshot.html snapshot.pdf snapshot.png; do
+            if [ ! -s $f ]; then
+              echo "❌ $f is empty or missing!"
+              exit 1
+            fi
+          done
+          echo "✅ All snapshots present and non-empty."
 
       # 6️⃣ Prepare docs folder
       - name: Prepare docs folder
         run: |
           mkdir -p docs
-
-          # Copy rendered snapshots
           cp snapshot.html docs/index.html
           cp snapshot.pdf docs/
           cp snapshot.png docs/
-
-          # Copy only static assets needed for HTML
+          # Copy only needed static assets
           cp -r css js media docs/
-          
           touch docs/.nojekyll
-
 
       # 7️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
@@ -145,22 +132,3 @@ jobs:
           publish_branch: gh-pages
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
-
-      # # 8️⃣ Commit generated snapshots to main for local availability
-      # - name: Commit CI-generated snapshots to main
-      #   run: |
-      #     git config user.name "github-actions[bot]"
-      #     git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      #     # Only copy CI snapshots to a separate folder inside docs
-      #     mkdir -p docs/generated/ci-snapshots
-      #     cp snapshot.html snapshot.pdf snapshot.png docs/generated/ci-snapshots/
-
-      #     # Stage only CI snapshot files
-      #     git add docs/generated/ci-snapshots/*
-
-      #     # Commit if there are changes
-      #     git diff --cached --quiet || git commit -m "Update CI-generated snapshots [skip ci]"
-
-      #     # Push to main branch
-      #     git push origin main
