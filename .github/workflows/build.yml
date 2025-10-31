@@ -68,9 +68,10 @@ jobs:
                 () => document.respec && document.respec.ready && document.querySelectorAll('section').length > 3,
                 { timeout: 180000 }
               );
+              await page.evaluate(() => document.respec.flush());
 
               console.log('ReSpec is ready.');
-              await page.evaluate(() => document.respec.flush());
+
             } catch (err) {
               console.warn('⚠️ ReSpec.ready not detected. Proceeding after fallback wait.');
               await new Promise(resolve => setTimeout(resolve, 5000));
