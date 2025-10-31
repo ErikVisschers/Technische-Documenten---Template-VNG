@@ -1,4 +1,19 @@
 const fs = require('fs');
+const path = require('path');
+
+function loadFile(filePath, type = "html") {
+  try {
+    const resolvedPath = path.resolve(__dirname, filePath);
+    if (!fs.existsSync(resolvedPath)) {
+      console.warn(`[Warning] ${type.toUpperCase()} file not found: ${resolvedPath}`);
+      return `<p style="color:red">⚠️ Missing ${type.toUpperCase()} file: ${filePath}</p>`;
+    }
+    return fs.readFileSync(resolvedPath, 'utf-8');
+  } catch (err) {
+    console.error(`[Error] Failed to read ${type.toUpperCase()} file: ${filePath}`, err);
+    return `<p style="color:red">⚠️ Error loading ${filePath}</p>`;
+  }
+}
 
 var respecConfig = {
 // 👇 Versie-informatie
@@ -45,16 +60,12 @@ var respecConfig = {
   // 👇 Markdown-bestanden
   content: {
     // sleutel = markdown-bestandnaam zonder .md
-    "abstract": "content/abstract.md",
-    "ch01": "content/ch01.md",
-    "ch02": "content/ch02.md",
-    "imvertor": { 
-      src: "content/generated/LOGICAL-JZV-1-20251001.respec.html",
-      format: "html",
-      wrapper: htmlContent => `<section id="imvertor">${htmlContent}</section>`
-        },
-    "ch03": "content/ch03.md",
-    "ch04": "content/mermaid1.md"
+    abstract: loadFile("content/abstract.md", "markdown"),
+    ch01: loadFile("content/ch01.md", "markdown"),
+    ch02: loadFile("content/ch02.md", "markdown"),
+    imvertor: loadFile("content/generated/LOGICAL-JZV-1-20251001.respec.html", "html"),
+    ch03: loadFile("content/ch03.md", "markdown"),
+    ch04: loadFile("content/mermaid1.md", "markdown")
     // "Leon's Chapter 2 - Assembling": "content/mermaid1.md",
     // "Leon's Chapter 3 - Publishing": "content/mermaid.md",
     // "Leon's Chapter 4 - Foutoplossing": "content/abstract.md"
