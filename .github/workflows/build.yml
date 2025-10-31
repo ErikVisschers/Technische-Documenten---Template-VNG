@@ -110,19 +110,18 @@ jobs:
       # 6️⃣ Prepare docs folder
       - name: Prepare docs folder
         run: |
-          # Remove everything except content/generated
-          find docs -mindepth 1 -not -path "docs/generated*" -exec rm -rf {} +
-
           mkdir -p docs
+
+          # Copy rendered snapshots
           cp snapshot.html docs/index.html
           cp snapshot.pdf docs/
           cp snapshot.png docs/
+
+          # Copy only static assets needed for HTML
           cp -r css js media docs/
-
-          # Copy content, but exclude manually maintained generated folder
-          rsync -a --exclude='generated/' content/ docs/content/
-
+          
           touch docs/.nojekyll
+
 
       # 7️⃣ Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
@@ -134,21 +133,21 @@ jobs:
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
 
-      # 8️⃣ Commit generated snapshots to main for local availability
-      - name: Commit CI-generated snapshots to main
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
+      # # 8️⃣ Commit generated snapshots to main for local availability
+      # - name: Commit CI-generated snapshots to main
+      #   run: |
+      #     git config user.name "github-actions[bot]"
+      #     git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Only copy CI snapshots to a separate folder inside docs
-          mkdir -p docs/generated/ci-snapshots
-          cp snapshot.html snapshot.pdf snapshot.png docs/generated/ci-snapshots/
+      #     # Only copy CI snapshots to a separate folder inside docs
+      #     mkdir -p docs/generated/ci-snapshots
+      #     cp snapshot.html snapshot.pdf snapshot.png docs/generated/ci-snapshots/
 
-          # Stage only CI snapshot files
-          git add docs/generated/ci-snapshots/*
+      #     # Stage only CI snapshot files
+      #     git add docs/generated/ci-snapshots/*
 
-          # Commit if there are changes
-          git diff --cached --quiet || git commit -m "Update CI-generated snapshots [skip ci]"
+      #     # Commit if there are changes
+      #     git diff --cached --quiet || git commit -m "Update CI-generated snapshots [skip ci]"
 
-          # Push to main branch
-          git push origin main
+      #     # Push to main branch
+      #     git push origin main
