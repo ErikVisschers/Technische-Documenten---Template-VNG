@@ -283,19 +283,12 @@ dd{margin-left:0}
     let content = "";
     for (let key in respecConfig.content) {
       const item = respecConfig.content[key];
-      if (typeof item === "object" && item.format === "html") {
-        if (item.wrapper) {
-          // Use fetched HTML content in the wrapper
-          fetch(item.src)
-            .then(r => r.text())
-            .then(html => {
-              document.body.insertAdjacentHTML('beforeend', item.wrapper(html));
-            });
-        } else {
-          document.body.insertAdjacentHTML('beforeend', `<section data-include-format="html" data-include="${item.src}"></section>`);
-        }
+      if (typeof item === "string") {
+        // Markdown file
+        content += `<section data-include-format="markdown" data-include="${item}"></section>`;
       } else {
-        document.body.insertAdjacentHTML('beforeend', `<section data-include-format="markdown" data-include="${item}"></section>`);
+        // HTML already loaded in Node
+        content += `<section id="${key}">${item}</section>`;
       }
     }
 
