@@ -22,13 +22,24 @@ jobs:
         run: |
           npm install puppeteer
 
-      - name: Check for Imvertor file
+      - name: Check for Imvertor files
         run: |
-          if [ ! -f imvertor.respec.html ]; then
-            echo "❌ Imvertor file is missing in root!"
+          echo "🔍 Looking for Imvertor files..."
+          files=(content/generated/*.respec.html)
+
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "❌ No Imvertor .respec.html files found in content/generated/"
             exit 1
           fi
-          echo "✅ Imvertor file exists."
+
+          echo "✅ Found ${#files[@]} Imvertor file(s):"
+          ls -lh content/generated/*.respec.html
+
+          # Optionally copy all to root (or wherever next steps expect them)
+          for f in "${files[@]}"; do
+            cp "$f" .
+          done
+
 
       - name: Start HTTP server
         run: |
@@ -43,6 +54,11 @@ jobs:
             fi
           done
 
+      - name: "Debug: show server content"
+        run: |
+          echo "📂 Listing files served by the local HTTP server"
+          ls -R .
+          
       - name: Generate snapshots with Puppeteer
         run: |
           npx puppeteer browsers install chrome
