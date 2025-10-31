@@ -16,6 +16,13 @@ jobs:
       # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
+        
+      # 1️⃣.1️⃣ Check if Imvertor file exists
+      - name: Check imvertor file exists
+        run: |
+          echo "Checking for imvertor file..."
+          ls -lh content/generated/ || true
+
 
       # 2️⃣ Setup Node.js
       - name: Setup Node.js
