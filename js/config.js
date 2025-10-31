@@ -51,7 +51,7 @@ var respecConfig = {
     "imvertor": { 
       src: "content/generated/LOGICAL-JZV-1-20251001.respec.html",
       format: "html",
-      wrapper: filePath => `<section id="imvertor">${fs.readFileSync(filePath, 'utf-8')}</section>`
+      wrapper: htmlContent => `<section id="imvertor">${htmlContent}</section>`
         },
     "ch03": "content/ch03.md",
     "ch04": "content/mermaid1.md"
