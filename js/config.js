@@ -63,7 +63,8 @@ var respecConfig = {
     abstract: loadFile("content/abstract.md", "markdown"),
     ch01: loadFile("content/ch01.md", "markdown"),
     ch02: loadFile("content/ch02.md", "markdown"),
-    imvertor: loadFile("content/generated/LOGICAL-JZV-1-20251001.respec.html", "html"),
+    // Imvertor HTML file in the root
+    imvertor: loadFile("imvertor.respec.html", "html"),
     ch03: loadFile("content/ch03.md", "markdown"),
     ch04: loadFile("content/mermaid1.md", "markdown")
     // "Leon's Chapter 2 - Assembling": "content/mermaid1.md",
