@@ -1,45 +1,19 @@
-<!DOCTYPE html><html lang="nl"><head><style>.issue-label{text-transform:initial}
-.warning>p:first-child{margin-top:0}
-.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
-span.warning{padding:.1em .5em .15em}
-.issue.closed span.issue-number{text-decoration:line-through}
-.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
-.warning{border-color:#f11;border-color:var(--warning-border,#f11);border-width:.2em;border-style:solid;background:#fbe9e9;background:var(--warning-bg,#fbe9e9);color:#000;color:var(--text,#000)}
-.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
-li.task-list-item{list-style:none}
-input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
-.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}</style><style>dfn{cursor:pointer}
-.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
-.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
-.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
-.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
-.dfn-panel *{margin:0}
-.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
-.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
-.dfn-panel>div{display:flex}
-.dfn-panel a.self-link{font-weight:700;margin-right:auto}
-.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
-.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
-.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
-.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
-.dfn-panel a[href]:hover{border-bottom-width:1px}
-.dfn-panel ul{padding:0}
-.dfn-panel li{margin-left:1em}
-.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}</style><link rel="preconnect" crossorigin="anonymous" href="https://www.w3.org" class="removeOnSave"><link rel="preload" as="style" href="https://www.w3.org/StyleSheets/TR/2021/base.css" class="removeOnSave"><link rel="preload" as="style" href="https://www.w3.org/StyleSheets/TR/2021/dark.css" class="removeOnSave"><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/base.css" class="removeOnSave">
+<!DOCTYPE html><html lang="nl"><head>
   <meta content="text/html; charset=utf-8" http-equiv="content-type">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  
+  <script src="https://cdn.jsdelivr.net/gh/digitalbazaar/respec-mermaid@1.0.1/dist/main.js" class="remove"></script>
   <!-- <script src="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/js/organisation-config.js" class="remove"></script> -->
-  
-  
-  <script>document.title = respecConfig.title</script><title>Testen van de Technische Documentatie Template (gebaseerd op VNG ReSpec) 2025-10-20</title>
+  <script src="js/organisation-config.js" class="remove"></script>
+  <script src="js/config.js"></script>
+
+  <script>document.title = respecConfig.title</script>
+
   <link rel="shortcut icon" type="image/x-icon" href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico">
-  
   <!-- 👇 Voeg hier je eigen stylesheet toe -->
   <link rel="stylesheet" href="css/custom.css">
 
-  <style id="respec-ui-styles" class="removeOnSave">.respec-modal .close-button{position:absolute;z-index:inherit;padding:.2em;font-weight:700;cursor:pointer;margin-left:5px;border:none;background:0 0}
+  <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove"></script><style id="respec-ui-styles" class="removeOnSave">.respec-modal .close-button{position:absolute;z-index:inherit;padding:.2em;font-weight:700;cursor:pointer;margin-left:5px;border:none;background:0 0}
 #respec-ui{position:fixed;display:flex;flex-direction:row-reverse;top:20px;right:20px;width:202px;text-align:right;z-index:9000}
 #respec-pill,.respec-info-button{height:2.4em;background:#fff;background:var(--bg,#fff);color:#787878;color:var(--tocnav-normal-text,#787878);border:1px solid #ccc;box-shadow:1px 1px 8px 0 rgba(100,100,100,.5);box-shadow:1px 1px 8px 0 var(--tocsidebar-shadow,rgba(100,100,100,.5));padding:.2em 0}
 .respec-info-button{border:none;opacity:.75;border-radius:2em;margin-right:1em;min-width:3.5em;will-change:opacity}
@@ -143,321 +117,36 @@ dd{margin-left:0}
 }
 @media print{
 .removeOnSave{display:none}
-}</style><link rel="dns-prefetch" crossorigin="anonymous" href="https://api.specref.org" class="removeOnSave"><link rel="preconnect" crossorigin="anonymous" href="https://respec.org" class="removeOnSave"><link rel="preload" as="script" href="https://www.w3.org/Tools/respec/respec-highlight" class="removeOnSave">
-  
+}</style>
+
   <!-- De volgende style is noodzakelijk voor de werking van imagemaps. -->
   <style>
-	.figure img,    .sidefigure img,    figure img,
-	.figure object, .sidefigure object, figure object {
-		max-width: none !important; 
-	}
-/* Wordt zelden gebruikt en heeft geen effect op standaard HTML.  */
-	/* h7 {
+    .figure img,
+    .sidefigure img,
+    figure img,
+    .figure object,
+    .sidefigure object,
+    figure object {
+      max-width: none !important;
+    }
+    /* Wordt zelden gebruikt en heeft geen effect op standaard HTML.  */
+    /* h7 {
 		font-style: italic;
-	}
-	h7::after{
-		content: "\a";
-		white-space: pre;
-	}
- 	h7::before{
-		content: "\a";
-		white-space: pre;
-	} */
+    }
+    h7::after{
+      content: "\a";
+      white-space: pre;
+    }
+    h7::before{
+      content: "\a";
+      white-space: pre;
+    } */
   </style>
-<link rel="stylesheet" href="https://gitdocumentatie.logius.nl/publicatie/respec/style/base.css"><style id="respec-nlgov">img.license{float:left;padding-right:5px;background:0 0}</style><meta name="color-scheme" content="light"><meta name="description" content="Erik gebruikt dit Document dat een uitleg van de toepassing van Respec documentatie binnen VNG Realisatie bevat."><style>.hljs{--base:#fafafa;--mono-1:#383a42;--mono-2:#686b77;--mono-3:#717277;--hue-1:#0b76c5;--hue-2:#336ae3;--hue-3:#a626a4;--hue-4:#42803c;--hue-5:#ca4706;--hue-5-2:#c91243;--hue-6:#986801;--hue-6-2:#9a6a01}
-@media (prefers-color-scheme:dark){
-.hljs{--base:#282c34;--mono-1:#abb2bf;--mono-2:#818896;--mono-3:#5c6370;--hue-1:#56b6c2;--hue-2:#61aeee;--hue-3:#c678dd;--hue-4:#98c379;--hue-5:#e06c75;--hue-5-2:#be5046;--hue-6:#d19a66;--hue-6-2:#e6c07b}
-}
-.hljs{display:block;overflow-x:auto;padding:.5em;color:#383a42;color:var(--mono-1,#383a42);background:#fafafa;background:var(--base,#fafafa)}
-.hljs-comment,.hljs-quote{color:#717277;color:var(--mono-3,#717277);font-style:italic}
-.hljs-doctag,.hljs-formula,.hljs-keyword{color:#a626a4;color:var(--hue-3,#a626a4)}
-.hljs-deletion,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-subst{color:#ca4706;color:var(--hue-5,#ca4706);font-weight:700}
-.hljs-literal{color:#0b76c5;color:var(--hue-1,#0b76c5)}
-.hljs-addition,.hljs-attribute,.hljs-meta-string,.hljs-regexp,.hljs-string{color:#42803c;color:var(--hue-4,#42803c)}
-.hljs-built_in,.hljs-class .hljs-title{color:#9a6a01;color:var(--hue-6-2,#9a6a01)}
-.hljs-attr,.hljs-number,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-pseudo,.hljs-template-variable,.hljs-type,.hljs-variable{color:#986801;color:var(--hue-6,#986801)}
-.hljs-bullet,.hljs-link,.hljs-meta,.hljs-selector-id,.hljs-symbol,.hljs-title{color:#336ae3;color:var(--hue-2,#336ae3)}
-.hljs-emphasis{font-style:italic}
-.hljs-strong{font-weight:700}
-.hljs-link{text-decoration:underline}</style><style>
-  .sidelabel {
-    position: fixed;
-    -webkit-transform-origin: top right;
-    right: 100%;
-    top: 0;
-    -webkit-transform: rotate(-90deg);
-    padding: 4px 50px 4px 10px;
-    color: white;
-    white-space: nowrap;
-    z-index: 1;
-    background-color: #f57c00;
-  }</style><script type="text/javascript">
-   /* Any custom mermaid.js scripts will go here. */
-  </script><style>
-  /* Any custom mermaid.js scripts will go here. */
-  }</style><script id="initialUserConfig" type="application/json">{
-  "nl_organisationName": "Smart-ICT B.V.",
-  "nl_organisationStylesURL": "https://gitdocumentatie.logius.nl/publicatie/respec/style/",
-  "nl_organisationPublishURL": "https://erikvisschers.github.io/publicatie",
-  "logos": [
-    {
-      "src": "media/letter_e_PNG34.png",
-      "alt": "Smart-ICT B.V.",
-      "height": 70,
-      "url": "https://www.smart-ict.com/",
-      "useLogo": true
-    }
-  ],
-  "postProcess": [
-    null
-  ],
-  "pubDomain": "cim",
-  "latestVersion": [
-    "nl_organisationPublishURL",
-    "pubDomain",
-    "/",
-    "shortName"
-  ],
-  "thisVersion": [
-    "nl_organisationPublishURL",
-    "pubDomain",
-    "/",
-    "shortName",
-    "/",
-    "publishVersion"
-  ],
-  "prevVersion": [
-    "nl_organisationPublishURL",
-    "pubDomain",
-    "/",
-    "shortName",
-    "/",
-    "previousPublishVersion"
-  ],
-  "useLogo": true,
-  "useLabel": true,
-  "license": "eupl",
-  "addSectionLinks": true,
-  "localizationStrings": {
-    "nl": {
-      "cv": "Consultatieversie",
-      "vv": "Versie ter vaststelling",
-      "ig": "In Gebruik versie",
-      "io": "In Ontwikkeling versie",
-      "im": "Informatiemodel",
-      "hl": "Handleiding",
-      "st": "Standaard"
-    }
-  },
-  "sotdText": {
-    "nl": {
-      "sotd": "Status van dit document",
-      "cv": "Dit is een door het TO goedgekeurde consultatieversie. Commentaar over dit document kan gestuurd worden naar ",
-      "vv": "Dit is een definitief concept van de nieuwe versie van dit document. Wijzigingen naar aanleiding van consultaties zijn doorgevoerd.",
-      "ig": "Dit document is 'In Gebruik'.",
-      "io": "Dit document is nog 'In Ontwikkeling'."
-    }
-  },
-  "labelColor": {
-    "ig": "#008060",
-    "io": "#f57c00"
-  },
-  "licenses": {
-    "cc0": {
-      "name": "Creative Commons 0 Public Domain Dedication",
-      "short": "CC0",
-      "url": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-zero.svg"
-    },
-    "cc-by": {
-      "name": "Creative Commons Attribution 4.0 International Public License",
-      "short": "CC-BY",
-      "url": "https://creativecommons.org/licenses/by/4.0/legalcode",
-      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by.svg"
-    },
-    "cc-by-nd": {
-      "name": "Creative Commons Naamsvermelding-GeenAfgeleideWerken 4.0 Internationaal",
-      "short": "CC-BY-ND",
-      "url": "https://creativecommons.org/licenses/by-nd/4.0/legalcode.nl",
-      "image": "https://gitdocumentatie.logius.nl/publicatie/respec/media/logos/cc-by-nd.svg"
-    },
-    "eupl": {
-      "name": "EUROPEAN UNION PUBLIC LICENCE v. 1.2",
-      "short": "EUPL",
-      "url": "https://eupl.eu/",
-      "image": "https://eupl.eu/eu.png"
-    }
-  },
-  "localBiblio": {
-    "ORICODE": {
-      "href": "https://www.unicode.org/versions/latest/",
-      "publisher": "Unicode Consortium",
-      "title": "The Unicode Standard",
-      "date": "June 2013",
-      "rawDate": "2021"
-    },
-    "MIM": {
-      "href": "https://docs.geostandaarden.nl/mim/mim/",
-      "title": "Metamodel Informatie Modellering (MIM)",
-      "publisher": "Geonovum",
-      "date": "2020",
-      "id": "mim"
-    },
-    "SemVer": {
-      "href": "https://semver.org",
-      "title": "Semantic Versioning 2.0.0",
-      "authors": [
-        "T. Preston-Werner"
-      ],
-      "date": "June 2013",
-      "id": "semver"
-    }
-  },
-  "publishVersion": "2025-10-20",
-  "previousPublishVersion": "2025-09-10",
-  "publishDate": "2025-10-20",
-  "shortName": "technische-documenten-template-test",
-  "title": "Testen van de Technische Documentatie Template (gebaseerd op VNG ReSpec)",
-  "subtitle": "Proof of Concept check check",
-  "specStatus": "io",
-  "specType": "st",
-  "edDraftURI": "https://erikvisschers.github.io/Technische-Documenten---Template-VNG/",
-  "editors": [
-    {
-      "name": "Erik Visschers",
-      "company": "Smart-ICT"
-    }
-  ],
-  "authors": [
-    {
-      "name": "Erik Visschers",
-      "company": "Smart-ICT"
-    }
-  ],
-  "github": {
-    "repoURL": "https://github.com/ErikVisschers/Technische-Documenten---Template-VNG"
-  },
-  "content": {
-    "abstract": "content/abstract.md",
-    "ch01": "content/ch01.md",
-    "ch02": "content/ch02.md",
-    "ch03": "content/ch03.md",
-    "ch04": "content/mermaid1.md"
-  }
-}</script></head>
+</head>
 
-<body class="h-entry toc-inline"><p id="toc-nav"><a id="toc-jump" href="#toc" aria-labelledby="toc-jump-text"><span aria-hidden="true">↑</span> <span id="toc-jump-text">Jump to Table of Contents</span></a><a id="toc-toggle" href="#toc" aria-labelledby="toc-expand-text"><span aria-hidden="true">→</span> <span id="toc-expand-text">Pop Out Sidebar</span></a></p><div id="respec-ui" class="removeOnSave"><button id="respec-pill" aria-controls="respec-menu" aria-expanded="false" aria-haspopup="true" aria-label="ReSpec Menu">ReSpec</button><ul id="respec-menu" role="menu" aria-labelledby="respec-pill" hidden=""><li role="menuitem"><button class="respec-option" id="respec-button-doorzoek-specref">
-      <span class="respec-cmd-icon" aria-hidden="true">🔎<!---0.678213%--></span> Doorzoek Specref<!---0.678213%-->…
-    </button><!---0.678213%--></li><li role="menuitem"><button class="respec-option" id="respec-button-search-definitions">
-      <span class="respec-cmd-icon" aria-hidden="true">📚<!---0.678213%--></span> Search definitions<!---0.678213%-->…
-    </button><!---0.678213%--></li><li role="menuitem"><button class="respec-option" id="respec-button-over-35.4.1">
-      <span class="respec-cmd-icon" aria-hidden="true">ℹ️<!---0.678213%--></span> Over 35.4.1<!---0.678213%-->…
-    </button><!---0.678213%--></li><li role="menuitem"><button class="respec-option" id="respec-button-bewaar-snapshot">
-      <span class="respec-cmd-icon" aria-hidden="true">💾<!---0.678213%--></span> Bewaar Snapshot<!---0.678213%-->…
-    </button><!---0.678213%--></li></ul><button class="respec-info-button" id="respec-pill-error" aria-expanded="false" aria-haspopup="true" aria-controls="respec-pill-error-modal" aria-label="2 ReSpec Errors">2</button></div><div class="head">
-    <a class="logo" href="https://www.smart-ict.com/"><img alt="Smart-ICT B.V." height="70" src="media/letter_e_PNG34.png">
-  </a><!---0.678213%--> <h1 id="title" class="title">Testen van de Technische Documentatie Template (gebaseerd op VNG ReSpec) 2025-10-20</h1><!---0.678213%-->
-    <h2 id="subtitle" class="subtitle">Proof of Concept check check</h2><!---0.678213%-->
-    <h2>
-      Smart-ICT B.V. <!---0.678213%-->Standaard<!---0.678213%--><br><!---0.678213%-->
-      In Ontwikkeling versie<!---0.678213%-->
-      <time class="dt-published" datetime="2025-10-20">20 oktober 2025<!---0.678213%--></time><!---0.678213%-->
-    </h2>
-    <dl>
-      <dt>Deze versie:<!---0.678213%--></dt><dd class="status">
-              <a class="u-url status" href="https://erikvisschers.github.io/publicatie/cim/technische-documenten-template-test/2025-10-20">https://erikvisschers.github.io/publicatie/cim/technische-documenten-template-test/2025-10-20<!---0.678213%--></a>
-            </dd><!---0.678213%-->
-      <dt>Laatst gepubliceerde versie:<!---0.678213%--></dt><dd>
-              <a href="https://erikvisschers.github.io/publicatie/cim/technische-documenten-template-test">https://erikvisschers.github.io/publicatie/cim/technische-documenten-template-test<!---0.678213%--></a><!---0.678213%-->
-            </dd><!---0.678213%-->
-      <dt>Laatste werkversie:<!---0.678213%--></dt><dd><a href="https://erikvisschers.github.io/Technische-Documenten---Template-VNG/">https://erikvisschers.github.io/Technische-Documenten---Template-VNG/<!---0.678213%--></a></dd><!---0.678213%-->
-      <!---0.678213%-->
-      <!---0.678213%-->
-      <!---0.678213%-->
-      <dt>Vorige versie:<!---0.678213%--></dt><dd><a href="https://erikvisschers.github.io/publicatie/cim/technische-documenten-template-test/2025-09-10">https://erikvisschers.github.io/publicatie/cim/technische-documenten-template-test/2025-09-10<!---0.678213%--></a></dd><!---0.678213%-->
-      <!---0.678213%-->
-      <dt>Redacteur:<!---0.678213%--></dt>
-      <dd class="editor p-author h-card vcard">
-    <span class="p-name fn">Erik Visschers<!---0.678213%--></span> (<span class="p-org org h-org">Smart-ICT<!---0.678213%--></span><!---0.678213%-->)<!---0.678213%-->
-  </dd><!---0.678213%-->
-      <!---0.678213%-->
-      <dt>Auteur:<!---0.678213%--></dt><dd class="editor p-author h-card vcard">
-    <span class="p-name fn">Erik Visschers<!---0.678213%--></span> (<span class="p-org org h-org">Smart-ICT<!---0.678213%--></span><!---0.678213%-->)<!---0.678213%-->
-  </dd><!---0.678213%--><!---0.678213%-->
-      <dt>Doe mee:<!---0.678213%--></dt><dd>
-    <a href="https://github.com/ErikVisschers/Technische-Documenten---Template-VNG/">GitHub ErikVisschers/Technische-Documenten---Template-VNG<!---0.678213%--></a><!---0.678213%-->
-  </dd><dd>
-    <a href="https://github.com/ErikVisschers/Technische-Documenten---Template-VNG/issues/">Dien een melding in<!---0.678213%--></a><!---0.678213%-->
-  </dd><dd>
-    <a href="https://github.com/ErikVisschers/Technische-Documenten---Template-VNG/commits/">Revisiehistorie<!---0.678213%--></a><!---0.678213%-->
-  </dd><dd>
-    <a href="https://github.com/ErikVisschers/Technische-Documenten---Template-VNG/pulls/">Pull requests<!---0.678213%--></a><!---0.678213%-->
-  </dd><!---0.678213%--><!---0.678213%-->
-    </dl>
-    <!---0.678213%-->
-    <!---0.678213%-->
-    <!---0.678213%-->
-    <p class="copyright">
-            Dit document valt onder de volgende licentie: <!---0.678213%-->
-            <a rel="license" href="https://eupl.eu/" class="subfoot"><img class="license" src="https://eupl.eu/eu.png" alt="Logo EUROPEAN UNION PUBLIC LICENCE v. 1.2"><br><!---0.678213%--> EUROPEAN UNION PUBLIC LICENCE v. 1.2<!---0.678213%--></a><!---0.678213%-->
-          </p><!---0.678213%-->
-    <hr title="Separator for header">
-  </div>
-  <section id="abstract" class="introductory"><!--OddPage--><h2>Voorbeeld tabel</h2>
-<table>
-<thead>
-<tr>
-<th>Kolom 1</th>
-<th>Kolom 2</th>
-<th>Kolom 3</th>
-<th>Kolom A</th>
-<th>Kolom B</th>
-<th>Kolom C</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>A</td>
-<td>B</td>
-<td>B</td>
-<td>A  A</td>
-<td>B   B</td>
-<td>B    D</td>
-</tr>
-<tr>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>B  B</td>
-</tr>
-<tr>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-</tr>
-<tr>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-</tr>
-</tbody></table>
-<p>Erik gebruikt dit Document dat een uitleg van de toepassing van Respec documentatie binnen VNG Realisatie bevat. </p>
-<ul>
-<li>In hoofdstuk 1 wordt de werking van het template uitgelegd. Hoe je het kunt gebruiken voor je eigen specificatie, wat er precies gebeurd als je er mee aan de gang gaat en waar je daarbij op moet letten.</li>
-<li>Hoofdstuk 2 beschrijft hoe je binnen Imvertor (indien toegepast) een deel van de content van je specificatie kan genereren. Dit hoofdstuk is optioneel aangezien je Respec document niet per definitie betrekking hoeft te hebben op een Informatiemodel.</li>
-<li>Hoofdstuk 3 beschrijft waar je op moet letten als je het GitHub Respec template kopieert (zowel als admin als als gebruiker), hoe je de Respec documentatie, evt. naast de door Imvertor gegenereerde content, nog kan voorzien van andere content en hoe je door het aanpassen van configuration properties de stijl van het document kan veranderen daarbij rekening houdend met wat wij binnen VNG Realisatie met elkaar hebben afgesproken. In de flowchart van hoofdstuk 5 wordt dit hoofdstuk met de 'Generatie tak' geïllustreerd.</li>
-<li>Hoe de gegenereerde Respec bestanden gepubliceerd kunnen worden wordt in Hoofdstuk 4 beschreven. In de flowchart van hoofdstuk 5 wordt dit hoofdstuk met de 'Publicatie tak' geïllustreerd.</li>
-<li>In hoofdstuk 5 is een flowchart van het gehele proces voor het vervaardigen van Respec documentatie uitgewerkt. Dit is echter tevens een voorbeeld van het gebruik van Mermaid, een manier om flowcharts te vervaardigen.</li>
-<li>De hoofdstukken volgend op hoofdstuk 5 hebben slechts een illustratieve functie. Op basis daarvan moet je, samen met de uitleg in hoofdstuk 3, in staat zijn de getoonde functionaliteit te gebruiken.</li>
-</ul>
-</section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave<!---0.678213%--></h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Voorbeeld tabel</a><!---0.678213%--></li><li class="tocline"><a class="tocxref" href="#voorbeeld-tabel"><bdi class="secno">1.<!---0.678213%--> </bdi>Voorbeeld tabel</a><!---0.678213%--></li><li class="tocline"><a class="tocxref" href="#niet-normatieve-deel"><bdi class="secno">2.<!---0.678213%--> </bdi>Niet-normatieve deel</a><!---0.678213%--></li><li class="tocline"><a class="tocxref" href="#meer-inhoud"><bdi class="secno">3.<!---0.678213%--> </bdi>Meer inhoud</a><!---0.678213%--><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities"><bdi class="secno">3.1<!---0.678213%--> </bdi>Definities</a><!---0.678213%--></li><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">3.2<!---0.678213%--> </bdi>Afbeeldingen</a><!---0.678213%--></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">3.3<!---0.678213%--> </bdi>Referenties</a><!---0.678213%--></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">3.4<!---0.678213%--> </bdi>Optioneel</a><!---0.678213%--></li></ol></li><li class="tocline"><a class="tocxref" href="#het-vng-r-respec-proces"><bdi class="secno">4.<!---0.678213%--> </bdi>Het VNG-R Respec proces</a><!---0.678213%--></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">5.<!---0.678213%--> </bdi>Conformiteit<!---0.678213%--></a><!---0.678213%--></li><li class="tocline"><a class="tocxref" href="#tof"><bdi class="secno">6.<!---0.678213%--> </bdi>Lijst met figuren<!---0.678213%--></a><!---0.678213%--></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A.<!---0.678213%--> </bdi>Referenties<!---0.678213%--></a><!---0.678213%--><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">A.1<!---0.678213%--> </bdi>Normatieve referenties<!---0.678213%--></a><!---0.678213%--></li></ol></li></ol></nav>
+<body>
+  <!-- Abstract section -->
+  <section id="abstract" data-include-format="markdown" data-include="content/abstract.md"></section>
 
   <!-- <section id="sotd"></section><!-- Wordt automatisch ingevuld met een standaard tekst afhankelijk van de waarde van de property 'specStatus'. -->
   <!-- <section id="ch01" data-include-format="markdown" data-include="ch01.md"></section>
@@ -466,387 +155,35 @@ dd{margin-left:0}
   <section id="assembl" data-include-format="markdown" data-include="VNG-R-Assembling.md"></section>
   <section id="publ" data-include-format="markdown" data-include="VNG-R-Publishing.md"></section>
   <section id="probl" data-include-format="markdown" data-include=" VNG-R-Foutoplossing.md"></section> -->
-  <div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-definitie" aria-label="Links in this document to definition: Definitie">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-definitie" aria-label="Permalink for definition: Definitie. Activate to close this dialog.">Permalink</a>
-        <!---0.678213%--> <!---0.678213%-->
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-      <a href="#ref-for-dfn-definitie-1" title="§ 3.3 Referenties">§ 3.3 Referenties<!---0.678213%--></a> <!---0.678213%--><!---0.678213%-->
-    </li><!---0.678213%-->
-  </ul><!---0.678213%-->
-    </div><script>
-    let content = "";
-
-    for (let contentKey in respecConfig.content) {
-      content += `<section data-include-format="markdown" data-include="${respecConfig.content[contentKey]}"></section>`;
-    }
-    document.body.insertAdjacentHTML('beforeend', content);
-  </script><section id="voorbeeld-tabel"><!--OddPage--><div class="header-wrapper"><h2 id="x1-voorbeeld-tabel"><bdi class="secno">1.<!---0.678213%--> </bdi>Voorbeeld tabel</h2><a class="self-link" href="#voorbeeld-tabel" aria-label="Permalink for Section 1."></a></div>
-<table>
-<thead>
-<tr>
-<th>Kolom 1</th>
-<th>Kolom 2</th>
-<th>Kolom 3</th>
-<th>Kolom A</th>
-<th>Kolom B</th>
-<th>Kolom C</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>A</td>
-<td>B</td>
-<td>B</td>
-<td>A  A</td>
-<td>B   B</td>
-<td>B    D</td>
-</tr>
-<tr>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>B  B</td>
-</tr>
-<tr>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-</tr>
-<tr>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-<td>C</td>
-<td>D</td>
-<td>B</td>
-</tr>
-</tbody></table>
-<p>Erik gebruikt dit Document dat een uitleg van de toepassing van Respec documentatie binnen VNG Realisatie bevat. </p>
-<ul>
-<li>In hoofdstuk 1 wordt de werking van het template uitgelegd. Hoe je het kunt gebruiken voor je eigen specificatie, wat er precies gebeurd als je er mee aan de gang gaat en waar je daarbij op moet letten.</li>
-<li>Hoofdstuk 2 beschrijft hoe je binnen Imvertor (indien toegepast) een deel van de content van je specificatie kan genereren. Dit hoofdstuk is optioneel aangezien je Respec document niet per definitie betrekking hoeft te hebben op een Informatiemodel.</li>
-<li>Hoofdstuk 3 beschrijft waar je op moet letten als je het GitHub Respec template kopieert (zowel als admin als als gebruiker), hoe je de Respec documentatie, evt. naast de door Imvertor gegenereerde content, nog kan voorzien van andere content en hoe je door het aanpassen van configuration properties de stijl van het document kan veranderen daarbij rekening houdend met wat wij binnen VNG Realisatie met elkaar hebben afgesproken. In de flowchart van hoofdstuk 5 wordt dit hoofdstuk met de 'Generatie tak' geïllustreerd.</li>
-<li>Hoe de gegenereerde Respec bestanden gepubliceerd kunnen worden wordt in Hoofdstuk 4 beschreven. In de flowchart van hoofdstuk 5 wordt dit hoofdstuk met de 'Publicatie tak' geïllustreerd.</li>
-<li>In hoofdstuk 5 is een flowchart van het gehele proces voor het vervaardigen van Respec documentatie uitgewerkt. Dit is echter tevens een voorbeeld van het gebruik van Mermaid, een manier om flowcharts te vervaardigen.</li>
-<li>De hoofdstukken volgend op hoofdstuk 5 hebben slechts een illustratieve functie. Op basis daarvan moet je, samen met de uitleg in hoofdstuk 3, in staat zijn de getoonde functionaliteit te gebruiken.</li>
-</ul>
-</section><section id="niet-normatieve-deel"><!--OddPage--><div class="header-wrapper"><h2 id="x2-niet-normatieve-deel"><bdi class="secno">2.<!---0.678213%--> </bdi>Niet-normatieve deel</h2><a class="self-link" href="#niet-normatieve-deel" aria-label="Permalink for Section 2."></a></div>
-<p>Bijvoorbeeld een introductie.</p>
-<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Noot</span><!---0.678213%--><span class="issue-label">: index<!---0.678213%--><!---0.678213%--></span></div><p class="">
-Dit hoofdstuk is toegevoegd met <code>class="informative"<!---0.678213%--></code> in <code>config.js<!---0.678213%--></code>.
-</p></div></section><section id="meer-inhoud"><!--OddPage--><div class="header-wrapper"><h2 id="x3-meer-inhoud"><bdi class="secno">3.<!---0.678213%--> </bdi>Meer inhoud</h2><a class="self-link" href="#meer-inhoud" aria-label="Permalink for Section 3."></a></div>
-<section id="definities"><div class="header-wrapper"><h3 id="x3-1-definities"><bdi class="secno">3.1<!---0.678213%--> </bdi>Definities</h3><a class="self-link" href="#definities" aria-label="Permalink for Section 3.1"></a></div>
-<p><dfn id="dfn-definitie" tabindex="0" aria-haspopup="dialog">Definitie</dfn>: Een definitie is een beschrijving van een woord. Een ander woord voor definitie is betekenis of beschrijving.
-De notatiewijze voor het definiëeren van een definitie is als volgt:</p>
-<p>&lt;dfn&gt;Definitie&lt;/dfn&gt;</p>
-<p>Deze definities worden opgenomen in de bijlage 'Index'.</p>
-</section><section id="afbeeldingen"><div class="header-wrapper"><h3 id="x3-2-afbeeldingen"><bdi class="secno">3.2<!---0.678213%--> </bdi>Afbeeldingen</h3><a class="self-link" href="#afbeeldingen" aria-label="Permalink for Section 3.2"></a></div>
-<p>Afbeeldingen krijgen een nummer en vermelding in de figurenlijst <a href="#tof" data-matched-text="[[[#tof]]]" class="sec-ref"><bdi class="secno">6. </bdi>Lijst met figuren</a>.</p>
-<p>
-      </p><figure id="fig-onderschrift">
-        <img src="media/Bomos_levenscyclus.svg" alt="Tekstueel alternatief voor toegankelijkheid">
-        <figcaption><a class="self-link" href="#fig-onderschrift">Figuur <!---0.678213%--><bdi class="figno">1<!---0.678213%--></bdi></a> <span class="fig-title">Onderschrift</span></figcaption>
-      </figure>
-    <p></p>
-</section><section id="referenties"><div class="header-wrapper"><h3 id="x3-3-referenties"><bdi class="secno">3.3<!---0.678213%--> </bdi>Referenties</h3><a class="self-link" href="#referenties" aria-label="Permalink for Section 3.3"></a></div>
-<p>Referentie uit globale [<cite><a class="bibref" data-link-type="biblio" href="#bib-semver" title="Semantic Versioning 2.0.0">SemVer<!---0.678213%--></a></cite><!---0.678213%-->] of lokale [<cite><a class="bibref" data-link-type="biblio" href="#bib-mim" title="Metamodel Informatie Modellering (MIM)">MIM<!---0.678213%--></a></cite><!---0.678213%-->] localBiblio lijst. Deze lijst staat in de  <code>organisation-config.js</code> of <code>config.js</code>, zie hieronder een voorbeeld. </p>
-<pre><code aria-busy="false" class="hljs css">  localBiblio: {
-        "MIM": {
-           "href": <span class="hljs-string">"https://docs.geostandaarden.nl/mim/mim/"</span>,
-           <span class="hljs-string">"publisher"</span>: <span class="hljs-string">"Geonovum"</span>,
-           <span class="hljs-string">"title"</span>: <span class="hljs-string">"MIM - Metamodel Informatie Modellering"</span>,
-            date: <span class="hljs-string">"Oktober 2013"</span>,
-            rawDate: <span class="hljs-string">"2023"</span>
-        },
-    },
-</code></pre>
-<p>Alleen referenties die ook echt in de tekst voorkomen worden in de bijlage 'Referenties' getoond. De notatie voor het opnemen van een referentie is [ [xxxx] ].</p>
-<p>We gebruiken de notatie &lt;a&gt;xxxxx&lt;&lt;/a&gt; om een referentie naar een in het document aangebrachte definitie te creëren.
-Het resultaat ziet er dan bijv. zo <a href="#dfn-definitie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-definitie-1">definitie</a> uit.</p>
-</section><section id="optioneel"><div class="header-wrapper"><h3 id="x3-4-optioneel"><bdi class="secno">3.4<!---0.678213%--> </bdi>Optioneel</h3><a class="self-link" href="#optioneel" aria-label="Permalink for Section 3.4"></a></div>
-<p>De onderstaande secties (<em>Conformiteit</em> e.d.) zijn optioneel, zie <code>index.html</code>:</p>
-<pre><code aria-busy="false" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"abstract"</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"abstract.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sotd"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span><span class="hljs-comment">&lt;!-- Wordt automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"informative"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch01.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch02.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- Hieronder optionele secties. Worden automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'conformance'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'tof'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"index"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-</code></pre>
-</section></section><section><p>Hoofdstuk 3 vol met ipsum loremLorem Ipsum
-"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."
-What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<p>Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-<p>Where does it come from?
-Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-<p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
-<p>Where can I get some?
-There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
-</section><section id="het-vng-r-respec-proces"><!--OddPage--><div class="header-wrapper"><h2 id="x4-het-vng-r-respec-proces"><bdi class="secno">4.<!---0.678213%--> </bdi>Het VNG-R Respec proces</h2><a class="self-link" href="#het-vng-r-respec-proces" aria-label="Permalink for Section 4."></a></div>
-<p>Onderstaande flowchart beschrijft het proces zoals we dat binnen VNG Realisatie hanteren om tot Respec documentatie te komen. Daarnaast is het echter ook een voorbeeld van het gebruik van de Mermaid syntax voor het vervaardigen van zo'n flowchart. Zie de '<a href="https://mermaid.js.org/syntax/flowchart.html">Flowchart syntax</a>' voor een uitleg van de Mermaid syntax.</p>
-<figure id="fig-het-vng-r-respec-proces-mermaid-voorbeeld">
-    
-<pre><svg id="diagram-1" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="1956.8922119140625" style="max-width: 580.1953125px;" viewBox="0 0 580.1953125 1956.8922119140625"><style>#diagram-1 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#diagram-1 .error-icon{fill:#552222;}#diagram-1 .error-text{fill:#552222;stroke:#552222;}#diagram-1 .edge-thickness-normal{stroke-width:2px;}#diagram-1 .edge-thickness-thick{stroke-width:3.5px;}#diagram-1 .edge-pattern-solid{stroke-dasharray:0;}#diagram-1 .edge-pattern-dashed{stroke-dasharray:3;}#diagram-1 .edge-pattern-dotted{stroke-dasharray:2;}#diagram-1 .marker{fill:#333333;stroke:#333333;}#diagram-1 .marker.cross{stroke:#333333;}#diagram-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#diagram-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#diagram-1 .cluster-label text{fill:#333;}#diagram-1 .cluster-label span{color:#333;}#diagram-1 .label text,#diagram-1 span{fill:#333;color:#333;}#diagram-1 .node rect,#diagram-1 .node circle,#diagram-1 .node ellipse,#diagram-1 .node polygon,#diagram-1 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#diagram-1 .node .label{text-align:center;}#diagram-1 .node.clickable{cursor:pointer;}#diagram-1 .arrowheadPath{fill:#333333;}#diagram-1 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#diagram-1 .flowchart-link{stroke:#333333;fill:none;}#diagram-1 .edgeLabel{background-color:#e8e8e8;text-align:center;}#diagram-1 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#diagram-1 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#diagram-1 .cluster text{fill:#333;}#diagram-1 .cluster span{color:#333;}#diagram-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#diagram-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-A LE-B" id="L-A-B" style="opacity: 1;"><path class="path" d="M240.400390625,99.76432349754637L223.9384765625,109.97026958128863C207.4765625,120.17621566503091,174.552734375,140.58810783251545,158.17415364583334,157.04405442488402C141.79557291666666,173.50000101725257,141.96223958333334,186.00000203450517,142.04557291666666,192.25000254313144L142.12890625,198.50000305175774" marker-end="url(#arrowhead69)" style="fill:none"></path><defs><marker id="arrowhead69" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-B LE-C" id="L-B-C" style="opacity: 1;"><path class="path" d="M178.12151744947002,360.1417668522878L185.00784006205836,372.2238671929872C191.8941626746467,384.30596753368667,205.66680789982334,408.4701682150855,212.55313051241168,426.7189352224516C219.439453125,444.9677022298177,219.439453125,457.30103556315106,219.439453125,463.4677022298177L219.439453125,469.6343688964844" marker-end="url(#arrowhead70)" style="fill:none"></path><defs><marker id="arrowhead70" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-B LE-D" id="L-B-D" style="opacity: 1;"><path class="path" d="M113.33251700890946,367.33798270715175L108.73933709075789,378.2207137387072C104.14615717260631,389.10344477026257,94.95979733630315,410.8689068333735,90.36661741815158,437.5849711982623C85.7734375,464.30103556315106,85.7734375,495.9677022298177,85.7734375,525.6343688964844C85.7734375,555.301035563151,85.7734375,582.9677022298177,88.57742689508034,600.9677022298177C91.38141629016064,618.9677022298177,96.98939508032129,627.301035563151,99.79338447540162,631.4677022298177L102.59737387048193,635.6343688964844" marker-end="url(#arrowhead71)" style="fill:none"></path><defs><marker id="arrowhead71" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-C LE-D" id="L-C-D" style="opacity: 1;"><path class="path" d="M219.439453125,585.6343688964844L219.439453125,589.801035563151C219.439453125,593.9677022298177,219.439453125,602.301035563151,215.53330117344376,610.6343688964844C211.62714922188755,618.9677022298177,203.81484531877513,627.301035563151,199.9086933672189,631.4677022298177L196.00254141566265,635.6343688964844" marker-end="url(#arrowhead72)" style="fill:none"></path><defs><marker id="arrowhead72" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-D LE-E" id="L-D-E" style="opacity: 1;"><path class="path" d="M141.62890625,751.6343688964844L141.62890625,755.801035563151C141.62890625,759.9677022298177,141.62890625,768.301035563151,141.71223958333334,776.7177022298177C141.79557291666666,785.1343688964844,141.96223958333334,793.6343688964844,142.04557291666666,797.8843688964843L142.12890625,802.1343688964843" marker-end="url(#arrowhead73)" style="fill:none"></path><defs><marker id="arrowhead73" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-E LE-F" id="L-E-F" style="opacity: 1;"><path class="path" d="M190.1825736563455,1021.3385139901387L198.05937127612128,1035.4307918911963C205.93616889589703,1049.523069792254,221.6897641354485,1077.7076255943691,229.56656175522426,1097.9665701620934C237.443359375,1118.2255147298176,237.443359375,1130.5588480631511,237.443359375,1136.7255147298176L237.443359375,1142.8921813964844" marker-end="url(#arrowhead74)" style="fill:none"></path><defs><marker id="arrowhead74" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-E LE-G" id="L-E-G" style="opacity: 1;"><path class="path" d="M108.48362887814748,1035.7469040246317L104.4381803151229,1047.437783586607C100.39273175209833,1059.1286631485825,92.30183462604917,1082.5104222725333,88.25638606302459,1110.0346351678422C84.2109375,1137.5588480631511,84.2109375,1169.2255147298176,84.2109375,1198.8921813964844C84.2109375,1228.5588480631511,84.2109375,1256.2255147298176,88.5933058313863,1278.2255147298176C92.97567416277259,1300.2255147298176,101.74041082554517,1316.5588480631511,106.12277915693147,1324.7255147298176L110.50514748831776,1332.8921813964844" marker-end="url(#arrowhead75)" style="fill:none"></path><defs><marker id="arrowhead75" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-F LE-G" id="L-F-G" style="opacity: 1;"><path class="path" d="M237.443359375,1258.8921813964844L237.443359375,1263.0588480631511C237.443359375,1267.2255147298176,237.443359375,1275.5588480631511,230.13041824863706,1287.8921813964844C222.81747712227414,1300.2255147298176,208.1915948695483,1316.5588480631511,200.87865374318537,1324.7255147298176L193.56571261682242,1332.8921813964844" marker-end="url(#arrowhead76)" style="fill:none"></path><defs><marker id="arrowhead76" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-A LE-H" id="L-A-H" style="opacity: 1;"><path class="path" d="M349.322265625,99.76432349754637L365.7841796875,109.97026958128863C382.24609375,120.17621566503091,415.169921875,140.58810783251545,431.6318359375,173.43025132429807C448.09375,206.27239481608072,448.09375,251.54478963216147,448.09375,296.8171844482422C448.09375,342.08957926432294,448.09375,387.3619740804036,448.09375,425.83150482177734C448.09375,464.30103556315106,448.09375,495.9677022298177,448.09375,525.6343688964844C448.09375,555.301035563151,448.09375,582.9677022298177,448.09375,610.6343688964844C448.09375,638.301035563151,448.09375,665.9677022298177,448.09375,693.6343688964844C448.09375,721.301035563151,448.09375,748.9677022298177,448.1770833333333,768.849863688151C448.2604166666667,788.7320251464844,448.4270833333333,800.8296813964844,448.5104166666667,806.8785095214844L448.59375,812.9273376464844" marker-end="url(#arrowhead77)" style="fill:none"></path><defs><marker id="arrowhead77" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-H LE-I" id="L-H-I" style="opacity: 1;"><path class="path" d="M478.8858943000914,1028.307068346393L483.0624640000762,1041.2379205214081C487.23903370006093,1054.1687726964235,495.5921731000305,1080.0304770464538,499.7687428000152,1099.1279958881357C503.9453125,1118.2255147298176,503.9453125,1130.5588480631511,503.9453125,1136.7255147298176L503.9453125,1142.8921813964844" marker-end="url(#arrowhead78)" style="fill:none"></path><defs><marker id="arrowhead78" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-H LE-J" id="L-H-J" style="opacity: 1;"><path class="path" d="M404.4212917211862,1014.4267543676706L395.73095924682184,1029.6709922058062C387.0406267724575,1044.9152300439418,369.65996182372874,1075.403705720213,360.96962934936437,1106.481276891682C352.279296875,1137.5588480631511,352.279296875,1169.2255147298176,352.279296875,1198.8921813964844C352.279296875,1228.5588480631511,352.279296875,1256.2255147298176,356.01038928640963,1274.2255147298176C359.7414816978193,1292.2255147298176,367.2036665206386,1300.5588480631511,370.9347589320482,1304.7255147298176L374.6658513434579,1308.8921813964844" marker-end="url(#arrowhead79)" style="fill:none"></path><defs><marker id="arrowhead79" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-I LE-J" id="L-I-J" style="opacity: 1;"><path class="path" d="M503.9453125,1258.8921813964844L503.9453125,1263.0588480631511C503.9453125,1267.2255147298176,503.9453125,1275.5588480631511,501.7704074182243,1283.8921813964844C499.5955023364486,1292.2255147298176,495.2456921728972,1300.5588480631511,493.0707870911215,1304.7255147298176L490.89588200934577,1308.8921813964844" marker-end="url(#arrowhead80)" style="fill:none"></path><defs><marker id="arrowhead80" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-G LE-K" id="L-G-K" style="opacity: 1;"><path class="path" d="M141.62890625,1448.8921813964844L141.62890625,1457.0588480631511C141.62890625,1465.2255147298176,141.62890625,1481.5588480631511,154.6806640625,1501.905713569917C167.732421875,1522.252579076683,193.8359375,1546.6129767568818,206.8876953125,1558.7931755969814L219.939453125,1570.9733744370808" marker-end="url(#arrowhead81)" style="fill:none"></path><defs><marker id="arrowhead81" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-J LE-K" id="L-J-K" style="opacity: 1;"><path class="path" d="M448.09375,1472.8921813964844L448.09375,1477.0588480631511C448.09375,1481.2255147298176,448.09375,1489.5588480631511,435.0419921875,1505.905713569917C421.990234375,1522.252579076683,395.88671875,1546.6129767568818,382.8349609375,1558.7931755969814L369.783203125,1570.9733744370808" marker-end="url(#arrowhead82)" style="fill:none"></path><defs><marker id="arrowhead82" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-K LE-L" id="L-K-L" style="opacity: 1;"><path class="path" d="M294.861328125,1758.8921813964844L294.861328125,1763.0588480631511C294.861328125,1767.2255147298176,294.861328125,1775.5588480631511,294.861328125,1783.8921813964844C294.861328125,1792.2255147298176,294.861328125,1800.5588480631511,294.861328125,1804.7255147298176L294.861328125,1808.8921813964844" marker-end="url(#arrowhead83)" style="fill:none"></path><defs><marker id="arrowhead83" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(141.62890625,161)" style="opacity: 1;"><g transform="translate(-48.03125,-12)" class="label"><rect rx="0" ry="0" width="96.0625"></rect><foreignObject width="96.0625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-B" class="edgeLabel L-LS-A' L-LE-B">Generatie tak</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(219.439453125,432.6343688964844)" style="opacity: 1;"><g transform="translate(-14.6796875,-12)" class="label"><rect rx="0" ry="0" width="29.359375" height="24"></rect><foreignObject width="29.359375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-B-C" class="edgeLabel L-LS-B' L-LE-C">Nee</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(85.7734375,527.6343688964844)" style="opacity: 1;"><g transform="translate(-8.453125,-12)" class="label"><rect rx="0" ry="0" width="16.90625" height="24"></rect><foreignObject width="16.90625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-B-D" class="edgeLabel L-LS-B' L-LE-D">Ja</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-C-D" class="edgeLabel L-LS-C' L-LE-D"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-D-E" class="edgeLabel L-LS-D' L-LE-E"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(237.443359375,1105.8921813964844)" style="opacity: 1;"><g transform="translate(-14.6796875,-12)" class="label"><rect rx="0" ry="0" width="29.359375" height="24"></rect><foreignObject width="29.359375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-E-F" class="edgeLabel L-LS-E' L-LE-F">Nee</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(84.2109375,1200.8921813964844)" style="opacity: 1;"><g transform="translate(-8.453125,-12)" class="label"><rect rx="0" ry="0" width="16.90625" height="24"></rect><foreignObject width="16.90625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-E-G" class="edgeLabel L-LS-E' L-LE-G">Ja</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-F-G" class="edgeLabel L-LS-F' L-LE-G"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(448.09375,527.6343688964844)" style="opacity: 1;"><g transform="translate(-47.5859375,-12)" class="label"><rect rx="0" ry="0" width="95.171875" height="24"></rect><foreignObject width="95.171875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-H" class="edgeLabel L-LS-A' L-LE-H">Publicatie tak</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(503.9453125,1105.8921813964844)" style="opacity: 1;"><g transform="translate(-14.6796875,-12)" class="label"><rect rx="0" ry="0" width="29.359375" height="24"></rect><foreignObject width="29.359375" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-H-I" class="edgeLabel L-LS-H' L-LE-I">Nee</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(352.279296875,1200.8921813964844)" style="opacity: 1;"><g transform="translate(-8.453125,-12)" class="label"><rect rx="0" ry="0" width="16.90625" height="24"></rect><foreignObject width="16.90625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-H-J" class="edgeLabel L-LS-H' L-LE-J">Ja</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-I-J" class="edgeLabel L-LS-I' L-LE-J"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-G-K" class="edgeLabel L-LS-G' L-LE-K"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-J-K" class="edgeLabel L-LS-J' L-LE-K"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-K-L" class="edgeLabel L-LS-K' L-LE-L"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-30" transform="translate(294.861328125,66)" style="opacity: 1;"><rect rx="5" ry="5" x="-54.4609375" y="-58" width="108.921875" height="116" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-44.4609375,-48)"><foreignObject width="88.921875" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>1</b><br>Genereer<br>Respec html<br>in Imvertor</div></foreignObject></g></g></g><g class="node default" id="flowchart-B-31" transform="translate(141.62890625,296.8171844482422)" style="opacity: 1;"><polygon points="98.8171875,0 197.634375,-98.8171875 98.8171875,-197.634375 0,-98.8171875" transform="translate(-98.8171875,98.8171875)" class="label-container"></polygon><g class="label" transform="translate(0,0)"><g transform="translate(-41.796875,-48)"><foreignObject width="83.59375" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>2</b><br>Repo<br>voor project<br>aanwezig?</div></foreignObject></g></g></g><g class="node default" id="flowchart-C-33" transform="translate(219.439453125,527.6343688964844)" style="opacity: 1;"><rect rx="5" ry="5" x="-68.2578125" y="-58" width="136.515625" height="116" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-58.2578125,-48)"><foreignObject width="116.515625" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>3</b><br>Creëer en<br>configureer repo<br>voor project</div></foreignObject></g></g></g><g class="node default" id="flowchart-D-35" transform="translate(141.62890625,693.6343688964844)" style="opacity: 1;"><rect rx="5" ry="5" x="-62.9140625" y="-58" width="125.828125" height="116" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-52.9140625,-48)"><foreignObject width="105.828125" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>4</b><br>Plaats<br>Respec html in<br>project</div></foreignObject></g></g></g><g class="node default" id="flowchart-E-39" transform="translate(141.62890625,935.2632751464844)" style="opacity: 1;"><polygon points="133.62890625,0 267.2578125,-133.62890625 133.62890625,-267.2578125 0,-133.62890625" transform="translate(-133.62890625,133.62890625)" class="label-container"></polygon><g class="label" transform="translate(0,0)"><g transform="translate(-56.4765625,-72)"><foreignObject width="112.953125" height="144"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>5</b><br>Overige content<br>voor Respec<br>document<br>aanwezig en<br>up to date?</div></foreignObject></g></g></g><g class="node default" id="flowchart-F-41" transform="translate(237.443359375,1200.8921813964844)" style="opacity: 1;"><rect rx="5" ry="5" x="-71.3828125" y="-58" width="142.765625" height="116" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-61.3828125,-48)"><foreignObject width="122.765625" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>6</b><br>Creëer overige<br>content en/of pas<br>deze aan</div></foreignObject></g></g></g><g class="node default" id="flowchart-G-43" transform="translate(141.62890625,1390.8921813964844)" style="opacity: 1;"><rect rx="5" ry="5" x="-61.1484375" y="-58" width="122.296875" height="116" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-51.1484375,-48)"><foreignObject width="102.296875" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>7</b><br>Pas document<br>configuratie<br>properties aan</div></foreignObject></g></g></g><g class="node default" id="flowchart-H-47" transform="translate(448.09375,935.2632751464844)" style="opacity: 1;"><polygon points="122.8359375,0 245.671875,-122.8359375 122.8359375,-245.671875 0,-122.8359375" transform="translate(-122.8359375,122.8359375)" class="label-container"></polygon><g class="label" transform="translate(0,0)"><g transform="translate(-68.484375,-48)"><foreignObject width="136.96875" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>8</b><br>Basisstructuur voor<br>project aanwezig in<br>'publicatie' repo?</div></foreignObject></g></g></g><g class="node default" id="flowchart-I-49" transform="translate(503.9453125,1200.8921813964844)" style="opacity: 1;"><rect rx="5" ry="5" x="-68.25" y="-58" width="136.5" height="116" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-58.25,-48)"><foreignObject width="116.5" height="96"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>9</b><br>Creëer<br>basisstructuur in<br>'publicatie' repo</div></foreignObject></g></g></g><g class="node default" id="flowchart-J-51" transform="translate(448.09375,1390.8921813964844)" style="opacity: 1;"><rect rx="5" ry="5" x="-81.5390625" y="-82" width="163.078125" height="164" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-71.5390625,-72)"><foreignObject width="143.078125" height="144"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>10</b><br>Creëer in<br>basisstructuur voor<br>project in 'publicatie'<br>repo folder voor<br>versienr</div></foreignObject></g></g></g><g class="node default" id="flowchart-K-55" transform="translate(294.861328125,1640.8921813964844)" style="opacity: 1;"><rect rx="5" ry="5" x="-74.921875" y="-118" width="149.84375" height="236" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-64.921875,-108)"><foreignObject width="129.84375" height="216"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>11</b><br>Plaats<br>gegenereerde<br>snapshot.html (als<br>index.html) en pdf<br>in versienr. folder<br>en in de project<br>folder van<br>'publicatie' repo</div></foreignObject></g></g></g><g class="node default" id="flowchart-L-59" transform="translate(294.861328125,1878.8921813964844)" style="opacity: 1;"><rect rx="5" ry="5" x="-74.484375" y="-70" width="148.96875" height="140" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-64.484375,-60)"><foreignObject width="128.96875" height="120"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><b>12</b><br>Gebruik link van<br>Respec document<br>in 'publicatie' repo<br>in GitHub Pages</div></foreignObject></g></g></g></g></g></g></svg></pre>
-<figcaption><a class="self-link" href="#fig-het-vng-r-respec-proces-mermaid-voorbeeld">Figuur <!---0.678213%--><bdi class="figno">2<!---0.678213%--></bdi></a> <span class="fig-title">Het VNG-R Respec proces (Mermaid voorbeeld)</span></figcaption>
-</figure></section>
-
-  <section id="conformance"><!--OddPage--><div class="header-wrapper"><h2 id="x5-conformiteit"><bdi class="secno">5.<!---0.678213%--> </bdi>Conformiteit<!---0.678213%--></h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 5."></a></div><p>Naast onderdelen die als niet normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet normatief. Verder is alles in dit document normatief.<!---0.678213%--></p><!---0.678213%--></section>
-  <section id="tof"><!--OddPage--><div class="header-wrapper"><h2 id="x6-lijst-met-figuren"><bdi class="secno">6.<!---0.678213%--> </bdi>Lijst met figuren<!---0.678213%--></h2><a class="self-link" href="#tof" aria-label="Permalink for Section 6."></a></div><ul class="tof">
-        <li class="tofline">
-    <a class="tocxref" href="#fig-onderschrift"><span class="self-link">Figuur <!---0.678213%--><bdi class="figno">1<!---0.678213%--></bdi></span> <span class="fig-title">Onderschrift</span><!---0.678213%--></a>
-  </li><li class="tofline">
-    <a class="tocxref" href="#fig-het-vng-r-respec-proces-mermaid-voorbeeld"><span class="self-link">Figuur <!---0.678213%--><bdi class="figno">2<!---0.678213%--></bdi></span> <span class="fig-title">Het VNG-R Respec proces (Mermaid voorbeeld)</span><!---0.678213%--></a>
-  </li><!---0.678213%-->
-      </ul></section>
   
+  <script>
+    // Merge organisation config and local config first
+    respecConfig = { ...organisationConfig, ...respecConfig };
 
-
-
-
-<section id="references" class="appendix"><!--OddPage--><div class="header-wrapper"><h2 id="a-referenties"><bdi class="secno">A.<!---0.678213%--> </bdi>Referenties<!---0.678213%--></h2><a class="self-link" href="#references" aria-label="Permalink for Appendix A."></a></div><section id="normatieve-referenties">
-    <div class="header-wrapper"><h3 id="a-1-normatieve-referenties"><bdi class="secno">A.1<!---0.678213%--> </bdi>Normatieve referenties<!---0.678213%--></h3><a class="self-link" href="#normatieve-referenties" aria-label="Permalink for Appendix A.1"></a></div>
-    <dl class="bibliography"><dt id="bib-mim">[MIM<!---0.678213%-->]</dt><dd>
-      <a href="https://docs.geostandaarden.nl/mim/mim/"><cite>Metamodel Informatie Modellering (MIM)</cite></a>.  Geonovum. 2020. URL: <a href="https://docs.geostandaarden.nl/mim/mim/">https://docs.geostandaarden.nl/mim/mim/</a><!---0.678213%-->
-    </dd><dt id="bib-semver">[SemVer<!---0.678213%-->]</dt><dd>
-      <a href="https://semver.org"><cite>Semantic Versioning 2.0.0</cite></a>. T. Preston-Werner. June 2013. URL: <a href="https://semver.org">https://semver.org</a><!---0.678213%-->
-    </dd><!---0.678213%--></dl>
-  </section></section><p role="navigation" id="back-to-top">
-    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
-  </p><script id="respec-dfn-panel">(() => {
-// @ts-check
-if (document.respec) {
-  document.respec.ready.then(setupPanel);
-} else {
-  setupPanel();
-}
-
-function setupPanel() {
-  const listener = panelListener();
-  document.body.addEventListener("keydown", listener);
-  document.body.addEventListener("click", listener);
-}
-
-function panelListener() {
-  /** @type {HTMLElement} */
-  let panel = null;
-  return event => {
-    const { target, type } = event;
-
-    if (!(target instanceof HTMLElement)) return;
-
-    // For keys, we only care about Enter key to activate the panel
-    // otherwise it's activated via a click.
-    if (type === "keydown" && event.key !== "Enter") return;
-
-    const action = deriveAction(event);
-
-    switch (action) {
-      case "show": {
-        hidePanel(panel);
-        /** @type {HTMLElement} */
-        const dfn = target.closest("dfn, .index-term");
-        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
-        const coords = deriveCoordinates(event);
-        displayPanel(dfn, panel, coords);
-        break;
-      }
-      case "dock": {
-        panel.style.left = null;
-        panel.style.top = null;
-        panel.classList.add("docked");
-        break;
-      }
-      case "hide": {
-        hidePanel(panel);
-        panel = null;
-        break;
+    let content = "";
+    for (let key in respecConfig.content) {
+      const item = respecConfig.content[key];
+      if (typeof item === "string") {
+        // Markdown file
+        content += `<section data-include-format="markdown" data-include="${item}"></section>`;
+      } else {
+        // HTML already loaded in Node
+        content += `<section id="${key}">${item}</section>`;
       }
     }
-  };
-}
 
-/**
- * @param {MouseEvent|KeyboardEvent} event
- */
-function deriveCoordinates(event) {
-  const target = /** @type HTMLElement */ (event.target);
-
-  // We prevent synthetic AT clicks from putting
-  // the dialog in a weird place. The AT events sometimes
-  // lack coordinates, so they have clientX/Y = 0
-  const rect = target.getBoundingClientRect();
-  if (
-    event instanceof MouseEvent &&
-    event.clientX >= rect.left &&
-    event.clientY >= rect.top
-  ) {
-    // The event probably happened inside the bounding rect...
-    return { x: event.clientX, y: event.clientY };
-  }
-
-  // Offset to the middle of the element
-  const x = rect.x + rect.width / 2;
-  // Placed at the bottom of the element
-  const y = rect.y + rect.height;
-  return { x, y };
-}
-
-/**
- * @param {Event} event
- */
-function deriveAction(event) {
-  const target = /** @type {HTMLElement} */ (event.target);
-  const hitALink = !!target.closest("a");
-  if (target.closest("dfn:not([data-cite]), .index-term")) {
-    return hitALink ? "none" : "show";
-  }
-  if (target.closest(".dfn-panel")) {
-    if (hitALink) {
-      return target.classList.contains("self-link") ? "hide" : "dock";
+    document.body.insertAdjacentHTML('beforeend', content);
+    
+    // Force ReSpec to parse dynamically added sections
+    if (document.respec) {
+      document.respec.flush();
     }
-    const panel = target.closest(".dfn-panel");
-    return panel.classList.contains("docked") ? "hide" : "none";
-  }
-  if (document.querySelector(".dfn-panel:not([hidden])")) {
-    return "hide";
-  }
-  return "none";
-}
+  </script>
 
-/**
- * @param {HTMLElement} dfn
- * @param {HTMLElement} panel
- * @param {{ x: number, y: number }} clickPosition
- */
-function displayPanel(dfn, panel, { x, y }) {
-  panel.hidden = false;
-  // distance (px) between edge of panel and the pointing triangle (caret)
-  const MARGIN = 20;
+  <section id="conformance"></section>
+  <section id="tof"></section>
+  <script class="remove"> respecConfig = { ...organisationConfig, ...respecConfig }</script>
 
-  const dfnRects = dfn.getClientRects();
-  // Find the `top` offset when the `dfn` can be spread across multiple lines
-  let closestTop = 0;
-  let minDiff = Infinity;
-  for (const rect of dfnRects) {
-    const { top, bottom } = rect;
-    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
-    if (diffFromClickY < minDiff) {
-      minDiff = diffFromClickY;
-      closestTop = top;
-    }
-  }
 
-  const top = window.scrollY + closestTop + dfnRects[0].height;
-  const left = x - MARGIN;
-  panel.style.left = `${left}px`;
-  panel.style.top = `${top}px`;
 
-  // Find if the panel is flowing out of the window
-  const panelRect = panel.getBoundingClientRect();
-  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
-  if (panelRect.right > SCREEN_WIDTH) {
-    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
-    const newCaretOffset = left - newLeft;
-    panel.style.left = `${newLeft}px`;
-    /** @type {HTMLElement} */
-    const caret = panel.querySelector(".caret");
-    caret.style.left = `${newCaretOffset}px`;
-  }
-
-  // As it's a dialog, we trap focus.
-  // TODO: when <dialog> becomes a implemented, we should really
-  // use that.
-  trapFocus(panel, dfn);
-}
-
-/**
- * @param {HTMLElement} panel
- * @param {HTMLElement} dfn
- * @returns
- */
-function trapFocus(panel, dfn) {
-  /** @type NodeListOf<HTMLAnchorElement> elements */
-  const anchors = panel.querySelectorAll("a[href]");
-  // No need to trap focus
-  if (!anchors.length) return;
-
-  // Move focus to first anchor element
-  const first = anchors.item(0);
-  first.focus();
-
-  const trapListener = createTrapListener(anchors, panel, dfn);
-  panel.addEventListener("keydown", trapListener);
-
-  // Hiding the panel releases the trap
-  const mo = new MutationObserver(records => {
-    const [record] = records;
-    const target = /** @type HTMLElement */ (record.target);
-    if (target.hidden) {
-      panel.removeEventListener("keydown", trapListener);
-      mo.disconnect();
-    }
-  });
-  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
-}
-
-/**
- *
- * @param {NodeListOf<HTMLAnchorElement>} anchors
- * @param {HTMLElement} panel
- * @param {HTMLElement} dfn
- * @returns
- */
-function createTrapListener(anchors, panel, dfn) {
-  const lastIndex = anchors.length - 1;
-  let currentIndex = 0;
-  return event => {
-    switch (event.key) {
-      // Hitting "Tab" traps us in a nice loop around elements.
-      case "Tab": {
-        event.preventDefault();
-        currentIndex += event.shiftKey ? -1 : +1;
-        if (currentIndex < 0) {
-          currentIndex = lastIndex;
-        } else if (currentIndex > lastIndex) {
-          currentIndex = 0;
-        }
-        anchors.item(currentIndex).focus();
-        break;
-      }
-
-      // Hitting "Enter" on an anchor releases the trap.
-      case "Enter":
-        hidePanel(panel);
-        break;
-
-      // Hitting "Escape" returns focus to dfn.
-      case "Escape":
-        hidePanel(panel);
-        dfn.focus();
-        return;
-    }
-  };
-}
-
-/** @param {HTMLElement} panel */
-function hidePanel(panel) {
-  if (!panel) return;
-  panel.hidden = true;
-  panel.classList.remove("docked");
-}
-})()</script><div class="sidelabel">Smart-ICT B.V. Standaard - In Ontwikkeling versie</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
+</body></html>
