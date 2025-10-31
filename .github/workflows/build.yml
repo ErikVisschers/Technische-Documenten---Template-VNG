@@ -16,7 +16,7 @@ jobs:
       # 1️⃣ Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       # 1️⃣.1️⃣ Check if Imvertor file exists
       - name: Check imvertor file exists
         run: |
@@ -60,38 +60,43 @@ jobs:
           node -e "
           const puppeteer = require('puppeteer');
           const fs = require('fs');
+
           (async () => {
             const browser = await puppeteer.launch({
               headless: true,
               args: ['--no-sandbox', '--disable-setuid-sandbox']
             });
+
             const page = await browser.newPage();
-            
             console.log('Navigating to local HTML...');
             await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
 
             try {
+              // Wait for ReSpec ready AND imvertor section to appear
               await page.waitForFunction(
-                () => document.respec && document.respec.ready && document.querySelectorAll('section').length > 3,
-                { timeout: 180000 }
+                () => {
+                  const respecReady = document.respec && document.respec.ready;
+                  const imvertorLoaded = !!document.querySelector('#imvertor');
+                  const enoughSections = document.querySelectorAll('section').length > 3;
+                  return respecReady && imvertorLoaded && enoughSections;
+                },
+                { timeout: 180000 } // wait up to 3 minutes
               );
+
+              console.log('✅ ReSpec and imvertor content ready.');
               await page.evaluate(() => document.respec.flush());
-
-              console.log('ReSpec is ready.');
-
             } catch (err) {
-              console.warn('⚠️ ReSpec.ready not detected. Proceeding after fallback wait.');
-              await new Promise(resolve => setTimeout(resolve, 5000));
+              console.warn('⚠️ ReSpec or imvertor not fully detected. Falling back to 15s wait.');
+              await new Promise(resolve => setTimeout(resolve, 15000));
             }
 
+            // Generate snapshots
             await page.pdf({ path: 'snapshot.pdf', format: 'A4', printBackground: true });
             await page.screenshot({ path: 'snapshot.png', fullPage: true });
             const htmlContent = await page.content();
             fs.writeFileSync('snapshot.html', htmlContent);
-            console.log('Preview of snapshot.html:', htmlContent.substring(0, 200));
-
+            console.log('✅ Snapshots generated successfully.');
             await browser.close();
-            console.log('Snapshots generated successfully.');
           })();"
 
       # 5️⃣.1️⃣ Verify snapshot files

@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 var respecConfig = {
 // 👇 Versie-informatie
   publishVersion: "2025-10-20",
@@ -47,8 +49,9 @@ var respecConfig = {
     "ch01": "content/ch01.md",
     "ch02": "content/ch02.md",
     "imvertor": { 
-        src: "content/generated/LOGICAL-JZV-1-20251001.respec.html",
-        format: "html"
+      src: "content/generated/LOGICAL-JZV-1-20251001.respec.html",
+      format: "html",
+      wrapper: filePath => `<section id="imvertor">${fs.readFileSync(filePath, 'utf-8')}</section>`
         },
     "ch03": "content/ch03.md",
     "ch04": "content/mermaid1.md"
