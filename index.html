@@ -285,19 +285,20 @@ dd{margin-left:0}
       const item = respecConfig.content[key];
       if (typeof item === "object" && item.format === "html") {
         if (item.wrapper) {
-          // Dynamically fetch and insert wrapped content (works in Node/CI)
+          // Use fetched HTML content in the wrapper
           fetch(item.src)
             .then(r => r.text())
             .then(html => {
-              document.body.insertAdjacentHTML('beforeend', item.wrapper(item.src));
+              document.body.insertAdjacentHTML('beforeend', item.wrapper(html));
             });
         } else {
-          content += `<section data-include-format="html" data-include="${item.src}"></section>`;
+          document.body.insertAdjacentHTML('beforeend', `<section data-include-format="html" data-include="${item.src}"></section>`);
         }
       } else {
-        content += `<section data-include-format="markdown" data-include="${item}"></section>`;
+        document.body.insertAdjacentHTML('beforeend', `<section data-include-format="markdown" data-include="${item}"></section>`);
       }
     }
+
     document.body.insertAdjacentHTML('beforeend', content);
     
     // Force ReSpec to parse dynamically added sections
