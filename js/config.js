@@ -1,7 +1,7 @@
 var respecConfig = {
   specStatus: "io", // in ontwikkeling versie / draft
   edDraftURI: "https://erikvisschers.github.io/Technische-Documenten---Template-VNG/", //aanbevolen door W3C / ReSpec
-  license: "eupl"
+  license: "eupl",
   shortName: "technische-documenten-template-test",
   title: "Testen van de Technische Documentatie Template (VNG ReSpec)",
   subtitle: "Proof of Concept",
