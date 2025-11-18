@@ -7,7 +7,7 @@ var organisationConfig = {
     logos: [{
         src: "https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.jpg",
         alt: "VNG-Realisatie",
-        id: "VNG-Realisatie id",
+        id: "VNG-Realisatie",
         height: 77,
         url: "https://www.vng.nl",
     }],
@@ -39,8 +39,8 @@ var organisationConfig = {
             // Specificatie-statussen	
             cv: "Consultatieversie",
             vv: "Versie ter vaststelling",
-	        ig: "In Gebruik versie",
-	        io: "In Ontwikkeling versie",
+	    ig: "In Gebruik versie",
+	    io: "In Ontwikkeling versie",
  //           tg: "Teruggetrokken versie",
 	    // Specificatie-types
             im: "Informatiemodel",
@@ -135,12 +135,6 @@ var organisationConfig = {
            "title": "The Unicode Standard",
             date: "June 2013",
             rawDate: "2021"
-        },
-        "MIM": {
-            href: "https://docs.geostandaarden.nl/mim/mim/",
-            title: "Metamodel Informatie Modellering (MIM)",
-            publisher: "Geonovum",
-            date: "2020",
         },
         "SemVer": {
             href: "https://semver.org",
