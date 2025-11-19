@@ -1,6 +1,5 @@
 name: Build and Deploy Docs
 
-
 permissions:
   contents: write
 
@@ -8,30 +7,24 @@ on:
   push:
     branches: [ main ]
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-
       - name: Install Puppeteer
         run: npm install puppeteer
 
-
       - name: Start local server
         run: python3 -m http.server 8080 --bind 127.0.0.1 &
-
 
       - name: Wait for server
         run: |
@@ -42,7 +35,6 @@ jobs:
             echo "waiting... ($i)"; sleep 3
           done
 
-
       - name: Render snapshot (puppeteer)
         run: |
           npx puppeteer browsers install chrome
@@ -50,27 +42,31 @@ jobs:
           const puppeteer = require('puppeteer');
           const fs = require('fs');
           (async () => {
-            const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox','--disable-setuid-sandbox'] });
+            const browser = await puppeteer.launch({
+              headless: true,
+              args: ['--no-sandbox','--disable-setuid-sandbox']
+            });
             const page = await browser.newPage();
             console.log('goto index...');
             await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
 
+            // wait for ReSpec to be ready
+            try {
+              await page.waitForFunction(() =>
+                document.respec && document.respec.ready,
+                { timeout: 90000 }
+              );
+              await page.evaluate(() => document.respec.flush());
+            } catch (e) {
+              console.log('Fallback: waiting 10 seconds for ReSpec…');
+              await page.waitForTimeout(10000);
+            }
 
-          // wait for ReSpec to be ready (long timeout)
-          try {
-            await page.waitForFunction(() => document.respec && document.respec.ready, { timeout: 90000 });
-            await page.evaluate(() => document.respec.flush());
-          } catch (e) {
-            console.warn('Respec.ready not detected — continuing after fallback wait.');
-            await new Promise(r => setTimeout(r, 5000));
-          }
-
-          await page.screenshot({ path: 'snapshot.png', fullPage: true });
-          await page.pdf({ path: 'snapshot.pdf', format: 'A4', printBackground: true });
-          fs.writeFileSync('snapshot.html', await page.content());
-          await browser.close();
+            await page.screenshot({ path: 'snapshot.png', fullPage: true });
+            await page.pdf({ path: 'snapshot.pdf', format: 'A4', printBackground: true });
+            fs.writeFileSync('snapshot.html', await page.content());
+            await browser.close();
           })();"
-
 
       - name: Upload snapshots
         uses: actions/upload-artifact@v4
@@ -81,20 +77,16 @@ jobs:
             snapshot.pdf
             snapshot.png
 
-
       - name: Prepare docs folder for GH Pages
         run: |
           rm -rf docs || true
           mkdir -p docs
-          # copy the source site (index + assets + content)
           cp -v index.html docs/index.html
           cp -rv js docs/ || true
           cp -rv css docs/ || true
           cp -rv media docs/ || true
           cp -rv content docs/ || true
-          cp -rv md docs/ || true
           touch docs/.nojekyll
-
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
@@ -104,7 +96,6 @@ jobs:
           publish_branch: gh-pages
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
-
 
       - name: Done
         run: echo "Published to gh-pages"
