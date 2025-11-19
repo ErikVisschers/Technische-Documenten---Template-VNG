@@ -1,0 +1,487 @@
+<!DOCTYPE HTML><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Imvert - Run analysis</title><link href="../web/css/report.css" rel="stylesheet"><link href="../web/themes/blue/style.css" rel="stylesheet"><script src="../web/script/jquery/jquery-latest.js" type="text/javascript"></script><script src="../web/script/tablesorter/jquery.tablesorter.min.js" type="text/javascript"></script><script>
+                    $(function() { 
+                    
+                        $("#table-calls").tablesorter(); 
+                    
+                    });  
+                </script></head><body><h1>Transformations overview</h1><p>
+                    Info on the XSLT transformations made.
+                </p><p>Type columns signs are:</p><ul>
+            <li>[ ↩ ] A step result used in a subsequent transformation</li>
+            <li>[ ∎ ] A step result that is final</li>
+            <li>[ x ] A step result used that is created by several transformations and may be considerd dummy output</li>
+            <li>[ = ] A step result that replaces the input</li>
+         </ul><table class="tablesorter">
+            <table id="table-calls" class="tablesorter">
+               <col style="width:5%">
+               <col style="width:10%">
+               <col style="width:25%">
+               <col style="width:25%">
+               <col style="width:25%">
+               <col style="width:5%">
+               <col style="width:10%">
+               <thead>
+                  <tr class="tableHeader">
+                     <th>#</th>
+                     <th>Step</th>
+                     <th>Input</th>
+                     <th>XSLT</th>
+                     <th>Output</th>
+                     <th>Ty</th>
+                     <th>Dur</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="cmp-system">
+                     <td class="ix">00001</td>
+                     <td>RunInitializer</td>
+                     <td>parms.xml</td>
+                     <td>xsl\RunInitializer\RunInitializer-report.xsl</td>
+                     <td>RunInitializer-report.xml</td>
+                     <td>∎</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00002</td>
+                     <td>XmiCompiler</td>
+                     <td>7KB04p9o.zip.xmi</td>
+                     <td>xsl\XmiCompiler\XMI1config.xsl</td>
+                     <td>7KB04p9o.zip.xmi.compact.xmi</td>
+                     <td>↩</td>
+                     <td>94</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00003</td>
+                     <td>XmiCompiler</td>
+                     <td>7KB04p9o.zip.xmi</td>
+                     <td>xsl\XmiCompiler\XMI1Compact.xsl</td>
+                     <td>7KB04p9o.zip.xmi.compact.xmi</td>
+                     <td>↩</td>
+                     <td>94</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00004</td>
+                     <td>XmiCompiler</td>
+                     <td>parms.xml</td>
+                     <td>xsl\XmiCompiler\XmiCompiler-report.xsl</td>
+                     <td>XmiCompiler-report.xml</td>
+                     <td>∎</td>
+                     <td>32</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00005</td>
+                     <td>ConfigCompiler</td>
+                     <td>imvertor.01.init.xml</td>
+                     <td>xsl\ConfigCompiler\Imvert2configuration.xsl</td>
+                     <td>imvertor.00.config.xml</td>
+                     <td>↩</td>
+                     <td>360</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00006</td>
+                     <td>ConfigCompiler</td>
+                     <td>imvertor.00.config.xml</td>
+                     <td>xsl\ConfigCompiler\Imvert2ea-profile.xsl</td>
+                     <td>imvertor.00.eaprofile.xml</td>
+                     <td>∎</td>
+                     <td>125</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00007</td>
+                     <td>ConfigCompiler</td>
+                     <td>imvertor.00.config.xml</td>
+                     <td>xsl\ConfigCompiler\Imvert2ea-profile.xsl</td>
+                     <td>imvertor.00.eaprofile.xml</td>
+                     <td>∎</td>
+                     <td>125</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00008</td>
+                     <td>ConfigCompiler</td>
+                     <td>imvertor.00.config.xml</td>
+                     <td>xsl\ConfigCompiler\Imvert2metamodel.xsl</td>
+                     <td>imvertor.00.metamodel.xml</td>
+                     <td>∎</td>
+                     <td>391</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00009</td>
+                     <td>ConfigCompiler</td>
+                     <td>parms.xml</td>
+                     <td>xsl\ConfigCompiler\ConfigCompiler-report.xsl</td>
+                     <td>ConfigCompiler-report.xml</td>
+                     <td>∎</td>
+                     <td>297</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00010</td>
+                     <td>XmiTranslator</td>
+                     <td>7KB04p9o.zip.xmi.compact.xmi</td>
+                     <td>xsl\XmiTranslator\XMI1Imvert.xsl</td>
+                     <td>imvertor.01.init.xml</td>
+                     <td>↩</td>
+                     <td>1297</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00011</td>
+                     <td>XmiTranslator</td>
+                     <td>7KB04p9o.zip.xmi.compact.xmi</td>
+                     <td>xsl\XmiTranslator\XMI1imagemap.xsl</td>
+                     <td>imvertor.01.imagemap.xml</td>
+                     <td>∎</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00012</td>
+                     <td>XmiTranslator</td>
+                     <td>parms.xml</td>
+                     <td>xsl\XmiTranslator\XmiTranslator-report.xsl</td>
+                     <td>XmiTranslator-report.xml</td>
+                     <td>∎</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00013</td>
+                     <td>Validator</td>
+                     <td>imvertor.01.init.xml</td>
+                     <td>xsl\Validator\Imvert2canonical.xsl</td>
+                     <td>imvertor.02.1.base.xml</td>
+                     <td>↩</td>
+                     <td>203</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00014</td>
+                     <td>Validator</td>
+                     <td>imvertor.02.1.base.xml</td>
+                     <td>xsl\Validator\Imvert2canonical-MIM-10.xsl</td>
+                     <td>imvertor.02.2.base.xml</td>
+                     <td>↩</td>
+                     <td>47</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00015</td>
+                     <td>Validator</td>
+                     <td>imvertor.02.2.base.xml</td>
+                     <td>xsl\Validator\Imvert2canonical-MIM-11.xsl</td>
+                     <td>imvertor.02.3.base.xml</td>
+                     <td>↩</td>
+                     <td>79</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00016</td>
+                     <td>Validator</td>
+                     <td>imvertor.02.3.base.xml</td>
+                     <td>xsl\Validator\Imvert2canonical-MIM-12.xsl</td>
+                     <td>imvertor.02.4.base.xml</td>
+                     <td>↩</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00017</td>
+                     <td>Validator</td>
+                     <td>imvertor.02.4.base.xml</td>
+                     <td>xsl\Validator\Imvert2proxy.xsl</td>
+                     <td>imvertor.031.proxy.xml</td>
+                     <td>↩</td>
+                     <td>63</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00018</td>
+                     <td>Validator</td>
+                     <td>imvertor.031.proxy.xml</td>
+                     <td>xsl\Validator\Imvert2interface.xsl</td>
+                     <td>imvertor.032.interface.xml</td>
+                     <td>↩</td>
+                     <td>79</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00019</td>
+                     <td>Validator</td>
+                     <td>imvertor.032.interface.xml</td>
+                     <td>xsl\Validator\Imvert2validation.xsl</td>
+                     <td>imvertor.13.1.validate.xml</td>
+                     <td>∎</td>
+                     <td>203</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00020</td>
+                     <td>Validator</td>
+                     <td>imvertor.032.interface.xml</td>
+                     <td>xsl\Validator\Imvert2validation-MIM-10.xsl</td>
+                     <td>imvertor.13.2.validate.xml</td>
+                     <td>∎</td>
+                     <td>16</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00021</td>
+                     <td>Validator</td>
+                     <td>imvertor.032.interface.xml</td>
+                     <td>xsl\Validator\Imvert2validation-MIM-11.xsl</td>
+                     <td>imvertor.13.3.validate.xml</td>
+                     <td>∎</td>
+                     <td>78</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00022</td>
+                     <td>Validator</td>
+                     <td>imvertor.032.interface.xml</td>
+                     <td>xsl\Validator\Imvert2validation-MIM-12.xsl</td>
+                     <td>imvertor.13.4.validate.xml</td>
+                     <td>∎</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00023</td>
+                     <td>Validator</td>
+                     <td>parms.xml</td>
+                     <td>xsl\Validator\Validator-report.xsl</td>
+                     <td>Validator-report.xml</td>
+                     <td>∎</td>
+                     <td>32</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00024</td>
+                     <td>ModelHistoryAnalyzer</td>
+                     <td>parms.xml</td>
+                     <td>xsl\ModelHistoryAnalyzer\ModelHistoryAnalyzer-report.xsl</td>
+                     <td>ModelHistoryAnalyzer-report.xml</td>
+                     <td>∎</td>
+                     <td>78</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00025</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.032.interface.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2domain.xsl</td>
+                     <td>imvertor.034.domains.xml</td>
+                     <td>↩</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00026</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.034.domains.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2dependencies.xsl</td>
+                     <td>imvertor.04.dependencies.xml</td>
+                     <td>∎</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00027</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.034.domains.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2application.xsl</td>
+                     <td>imvertor.05.application.xml</td>
+                     <td>↩</td>
+                     <td>16</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00028</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.05.application.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2copydown.xsl</td>
+                     <td>imvertor.06.copydown.xml</td>
+                     <td>↩</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00029</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.06.copydown.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2intern.xsl</td>
+                     <td>imvertor.061.intern.xml</td>
+                     <td>↩</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00030</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.061.intern.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2concreteSchema.xsl</td>
+                     <td>imvertor.08.concrete.xml</td>
+                     <td>↩</td>
+                     <td>62</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00031</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.08.concrete.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2trace-check.xsl</td>
+                     <td>imvertor.11.3.trace-check.xml</td>
+                     <td>∎</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00032</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.08.concrete.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2embellish.xsl</td>
+                     <td>imvertor.12.1.embellish.xml</td>
+                     <td>↩</td>
+                     <td>46</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00033</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.12.1.embellish.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2schema.xsl</td>
+                     <td>imvertor.24.schema.xml</td>
+                     <td>∎</td>
+                     <td>78</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00034</td>
+                     <td>ImvertCompiler</td>
+                     <td>imvertor.12.1.embellish.xml</td>
+                     <td>xsl\ImvertCompiler\Imvert2validate-derivation.xsl</td>
+                     <td>imvertor.15.derive.xml</td>
+                     <td>∎</td>
+                     <td>1375</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00035</td>
+                     <td>ImvertCompiler</td>
+                     <td>parms.xml</td>
+                     <td>xsl\ImvertCompiler\ImvertCompiler-report.xsl</td>
+                     <td>ImvertCompiler-report.xml</td>
+                     <td>∎</td>
+                     <td>438</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00036</td>
+                     <td>MIMCompiler</td>
+                     <td>imvertor.12.1.embellish.xml</td>
+                     <td>xsl\MIMCompiler\v2\MIM1.2\MIMCompiler.xsl</td>
+                     <td>imvertor.27.mimformat.xml</td>
+                     <td>↩</td>
+                     <td>1017</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00037</td>
+                     <td>MIMCompiler</td>
+                     <td>parms.xml</td>
+                     <td>xsl\MIMCompiler\MIMCompiler-report.xsl</td>
+                     <td>MIMCompiler-report.xml</td>
+                     <td>∎</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00038</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>imvertor.27.mimformat.xml</td>
+                     <td>xsl\SourceCodeGenerator\MIM11-to-MIM12.xsl</td>
+                     <td>imvertor.41.codegen.mim-1.1-to-1.2.xml</td>
+                     <td>↩</td>
+                     <td>16</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00039</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>imvertor.41.codegen.mim-1.1-to-1.2.xml</td>
+                     <td>xsl\SourceCodeGenerator\MIM1.2\mim-resolve-model-sugar.xsl</td>
+                     <td>imvertor.41.codegen.mim-resolved.xml</td>
+                     <td>↩</td>
+                     <td>140</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00040</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>imvertor.41.codegen.mim-resolved.xml</td>
+                     <td>xsl\SourceCodeGenerator\MIM1.2\java-openapi-model.xsl</td>
+                     <td>imvertor.41.codegen.java-openapi-model.xml</td>
+                     <td>∎</td>
+                     <td>375</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00041</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>imvertor.27.mimformat.xml</td>
+                     <td>xsl\SourceCodeGenerator\MIM11-to-MIM12.xsl</td>
+                     <td>imvertor.41.codegen.mim-1.1-to-1.2.xml</td>
+                     <td>↩</td>
+                     <td>15</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00042</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>imvertor.41.codegen.mim-1.1-to-1.2.xml</td>
+                     <td>xsl\SourceCodeGenerator\MIM1.2\mim-resolve-model-sugar.xsl</td>
+                     <td>imvertor.41.codegen.mim-resolved.xml</td>
+                     <td>↩</td>
+                     <td>47</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00043</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>imvertor.41.codegen.mim-resolved.xml</td>
+                     <td>xsl\SourceCodeGenerator\MIM1.2\java-openapi-resource.xsl</td>
+                     <td>imvertor.41.codegen.java-openapi-resource.xml</td>
+                     <td>∎</td>
+                     <td>171</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00044</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>parms.xml</td>
+                     <td>xsl\SourceCodeGenerator\SourcecodeGenerator-report.xsl</td>
+                     <td>SourcecodeGenerator-report.xml</td>
+                     <td>∎</td>
+                     <td>32</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00045</td>
+                     <td>OfficeCompiler</td>
+                     <td>imvertor.12.1.embellish.xml</td>
+                     <td>xsl\OfficeCompiler\Imvert2modeldoc-lists.xsl</td>
+                     <td>imvertor.25.1.lists.xml</td>
+                     <td>↩</td>
+                     <td>0</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00046</td>
+                     <td>OfficeCompiler</td>
+                     <td>imvertor.25.1.lists.xml</td>
+                     <td>xsl\OfficeCompiler\Imvert2modeldoc-EIGENAAR-MIM-12-LOGICAL.xsl</td>
+                     <td>imvertor.25.2.1.embellish.xml</td>
+                     <td>↩</td>
+                     <td>1156</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00047</td>
+                     <td>OfficeCompiler</td>
+                     <td>imvertor.25.2.1.embellish.xml</td>
+                     <td>xsl\OfficeCompiler\Imvert2modeldoc-xhtml-respec.xsl</td>
+                     <td>imvertor.25.4.respec.html</td>
+                     <td>∎</td>
+                     <td>109</td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00048</td>
+                     <td>OfficeCompiler</td>
+                     <td>imvertor.25.2.1.embellish.xml</td>
+                     <td>xsl\OfficeCompiler\Imvert2modeldoc-EIGENAAR-MIM-12-LOGICAL-html-respec.xsl</td>
+                     <td>imvertor.25.4.respec.html</td>
+                     <td>∎</td>
+                     <td>109</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00049</td>
+                     <td>OfficeCompiler</td>
+                     <td>parms.xml</td>
+                     <td>xsl\OfficeCompiler\OfficeCompiler-report.xsl</td>
+                     <td>OfficeCompiler-report.xml</td>
+                     <td>∎</td>
+                     <td>31</td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00050</td>
+                     <td>EapCompiler</td>
+                     <td>parms.xml</td>
+                     <td>xsl\EapCompiler\EapCompiler-report.xsl</td>
+                     <td>EapCompiler-report.xml</td>
+                     <td>∎</td>
+                     <td>31</td>
+                  </tr>
+               </tbody>
+            </table>
+         </table></body></html>

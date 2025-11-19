@@ -1,0 +1,2134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imvert:packages xmlns:imvert="http://www.imvertor.org/schema/system"
+                 display-name="model:JZV::"
+                 formal-name="packages">
+   <imvert:subpath>LOGICAL/JZV/20251001</imvert:subpath>
+   <imvert:model-id>LOGICAL-JZV-1.0-1-20251001-20251015-111924</imvert:model-id>
+   <imvert:is-fixed>false</imvert:is-fixed>
+   <imvert:allow-docrelease>true</imvert:allow-docrelease>
+   <imvert:process>
+      <imvert:job>2025-10-15-11-19-20-226</imvert:job>
+      <imvert:owner>MinJenV</imvert:owner>
+      <imvert:user>EwoutBoter</imvert:user>
+      <imvert:errors>0</imvert:errors>
+      <imvert:warnings>2</imvert:warnings>
+   </imvert:process>
+   <imvert:debug>false</imvert:debug>
+   <imvert:task>compile</imvert:task>
+   <imvert:project>LOGICAL</imvert:project>
+   <imvert:application>JZV</imvert:application>
+   <imvert:release>20251001</imvert:release>
+   <imvert:metamodel>EIGENAAR-MIM-1-LOGICAL;MIM 1.2;MIM 1.1;MIM 1.1 scalar;MIM 1.0 scalar;MIM 1.1 metamodel (common extensions);Grouping for MIM12;Grouping for MIM11;Armatiek-OpenAPI</imvert:metamodel>
+   <imvert:generated>2025-10-15T09:19:22Z</imvert:generated>
+   <imvert:generator>Nightly-build.0</imvert:generator>
+   <imvert:exported>2025-10-15T11:19:19Z</imvert:exported>
+   <imvert:exporter>Enterprise Architect v 2.5</imvert:exporter>
+   <imvert:supports>
+      <imvert:support>
+         <imvert:level>STEREOID</imvert:level>
+      </imvert:support>
+   </imvert:supports>
+   <imvert:base-namespace>JZV</imvert:base-namespace>
+   <imvert:version>1.0</imvert:version>
+   <imvert:phase>1</imvert:phase>
+   <imvert:id>EAPK_2998BA91_D137_4986_9790_58EC9E5FE507</imvert:id>
+   <imvert:stereotype id="stereotype-name-informatiemodel-package">INFORMATIEMODEL</imvert:stereotype>
+   <imvert:stereotype id="stereotype-name-openapi-informatiemodel-package">OPENAPI DEFINITION</imvert:stereotype>
+   <imvert:documentation>
+      <section>
+         <title>Definitie</title>
+         <body>
+            <text>
+               <line>Dit is de tekst van de tag *Definitie * bij de package «Informatiemodel» JZV. Dit is een [link](https://www.justid.nl/). </line>
+            </text>
+         </body>
+      </section>
+      <section>
+         <title>OA Description</title>
+         <body>
+            <text>
+               <line>Dit is de tekst van de tag *OA Description * bij de package «Informatiemodel» JZV. Dit is een [link](https://www.justid.nl/). </line>
+            </text>
+         </body>
+      </section>
+   </imvert:documentation>
+   <imvert:tagged-values>
+      <imvert:tagged-value id="CFG-TV-DATERECORDED" level="2">
+         <imvert:name original="Datum opname">datum opname</imvert:name>
+         <imvert:value original="20251001">20251001</imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value id="CFG-TV-IMVERTOR" level="2">
+         <imvert:name original="Imvertor">imvertor</imvert:name>
+         <imvert:value original="model">model</imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value id="CFG-TV-IMTYPE" level="2">
+         <imvert:name original="Informatiemodel type">informatiemodel type</imvert:name>
+         <imvert:value original="Conceptueel">Conceptueel</imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value id="CFG-TV-MIMLANGUAGE" level="2">
+         <imvert:name original="MIM taal">mim taal</imvert:name>
+         <imvert:value original="NL">NL</imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value id="CFG-TV-MIMVERSION" level="2">
+         <imvert:name original="MIM versie">mim versie</imvert:name>
+         <imvert:value original="1.2">1.2</imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value id="CFG-TV-LEVEL" level="2">
+         <imvert:name original="Niveau">niveau</imvert:name>
+         <imvert:value original="specifiek">SPECIFIEK</imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value id="CFG-TV-OPENAPI-AUTOMODE" level="2">
+         <imvert:name original="OA Auto mode">oa auto mode</imvert:name>
+         <imvert:value original="All objecttypes">All objecttypes</imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value id="CFG-TV-IMRELATIONMODELINGTYPE" level="2">
+         <imvert:name original="Relatiemodelleringstype">relatiemodelleringstype</imvert:name>
+         <imvert:value original="Relatiesoort leidend">Relatiesoort leidend</imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value id="CFG-TV-RELEASE" level="2">
+         <imvert:name original="Release">release</imvert:name>
+         <imvert:value original="20251001">20251001</imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+         <imvert:name original="Definitie">DEFINITIE</imvert:name>
+         <imvert:value format="markdown">
+            <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+               <p>Dit is de tekst van de tag <em>Definitie</em> bij de package «Informatiemodel» JZV. Dit is een <a href="https://www.justid.nl/" shape="rect">link</a>. </p>
+            </body>
+         </imvert:value>
+      </imvert:tagged-value>
+      <imvert:tagged-value origin="notes" id="CFG-TV-OPENAPI-DESCRIPTION">
+         <imvert:name original="OA Description">OA DESCRIPTION</imvert:name>
+         <imvert:value format="markdown">
+            <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+               <p>Dit is de tekst van de tag <em>OA Description</em> bij de package «Informatiemodel» JZV. Dit is een <a href="https://www.justid.nl/" shape="rect">link</a>. </p>
+            </body>
+         </imvert:value>
+      </imvert:tagged-value>
+   </imvert:tagged-values>
+   <imvert:filters>
+      <imvert:filter>
+         <imvert:name>XMI1Imvert.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:29.3081527+02:00</imvert:date>
+         <imvert:version>XMI1Imvert.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2canonical.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:31.8549956+02:00</imvert:date>
+         <imvert:version>Imvert2canonical.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2canonical-MIM-10.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:32.2456195+02:00</imvert:date>
+         <imvert:version>Imvert2canonical-MIM-10.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2proxy.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:32.9671196+02:00</imvert:date>
+         <imvert:version>Imvert2proxy.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2interface.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:33.170232+02:00</imvert:date>
+         <imvert:version>Imvert2interface.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2domain.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:34.7952167+02:00</imvert:date>
+         <imvert:version>Imvert2domain.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2application.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:35.1545879+02:00</imvert:date>
+         <imvert:version>Imvert2application.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2copydown.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:35.3577156+02:00</imvert:date>
+         <imvert:version>Imvert2copydown.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2intern.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:35.5139604+02:00</imvert:date>
+         <imvert:version>Imvert2intern.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2concreteSchema.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:35.7483359+02:00</imvert:date>
+         <imvert:version>Imvert2concreteSchema.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+      <imvert:filter>
+         <imvert:name>Imvert2embellish.xsl</imvert:name>
+         <imvert:date>2025-10-15T11:19:36.1406215+02:00</imvert:date>
+         <imvert:version>Imvert2embellish.xsl dd October 15, 2025 at 00:00:00</imvert:version>
+      </imvert:filter>
+   </imvert:filters>
+   <imvert:package display-name="JZV::" formal-name="package_JZV">
+      <imvert:name original="JZV">JZV</imvert:name>
+      <imvert:short-name>JZV</imvert:short-name>
+      <imvert:id>EAPK_942E87BA_BF77_4b79_9B8F_F12F1812EC88</imvert:id>
+      <imvert:derived reason="No indication of derivation">false</imvert:derived>
+      <imvert:documentation/>
+      <imvert:created>2025-09-26T14:14:40</imvert:created>
+      <imvert:modified>2025-10-01T11:43:47</imvert:modified>
+      <imvert:version>1.0</imvert:version>
+      <imvert:phase original="1.0">1</imvert:phase>
+      <imvert:author>botere</imvert:author>
+      <imvert:stereotype id="stereotype-name-domain-package">DOMEIN</imvert:stereotype>
+      <imvert:release>20251001</imvert:release>
+      <imvert:tagged-values>
+         <imvert:tagged-value id="CFG-TV-DATERECORDED" level="4">
+            <imvert:name original="Datum opname">datum opname</imvert:name>
+            <imvert:value original="20251001">20251001</imvert:value>
+         </imvert:tagged-value>
+         <imvert:tagged-value id="CFG-TV-ISDERIVED" level="4">
+            <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+            <imvert:value original="Zie package">Zie package</imvert:value>
+         </imvert:tagged-value>
+         <imvert:tagged-value id="CFG-TV-RELEASE" level="4">
+            <imvert:name original="Release">release</imvert:name>
+            <imvert:value original="20251001">20251001</imvert:value>
+         </imvert:tagged-value>
+      </imvert:tagged-values>
+      <imvert:class display-name="JZV::Naam" formal-name="class_JZV_Naam">
+         <imvert:name original="Naam">Naam</imvert:name>
+         <imvert:id>EAID_04187C94_07E8_4268_8D4A_C0A6D4BE66B8</imvert:id>
+         <imvert:designation>class</imvert:designation>
+         <imvert:abstract>false</imvert:abstract>
+         <imvert:documentation/>
+         <imvert:created>2025-10-08T09:35:33</imvert:created>
+         <imvert:modified>2025-10-08T09:35:33</imvert:modified>
+         <imvert:version>1.0</imvert:version>
+         <imvert:phase original="1.0">1</imvert:phase>
+         <imvert:author>botere</imvert:author>
+         <imvert:stereotype id="stereotype-name-composite">GEGEVENSGROEPTYPE</imvert:stereotype>
+         <imvert:attributes>
+            <imvert:attribute display-name="JZV::Naam.Voornaam (attrib)"
+                              formal-name="attribute_JZV_Naam_voornaam"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="Voornaam">voornaam</imvert:name>
+               <imvert:id>{76883787-6CDE-4cfa-99CA-567516FFAD81}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Naam.Tussenvoegsel (attrib)"
+                              formal-name="attribute_JZV_Naam_tussenvoegsel"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="Tussenvoegsel">tussenvoegsel</imvert:name>
+               <imvert:id>{FAE3116D-53FC-4941-8F55-6A2F967A029E}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Naam.Geslachtsnaam (attrib)"
+                              formal-name="attribute_JZV_Naam_geslachtsnaam"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="Geslachtsnaam">geslachtsnaam</imvert:name>
+               <imvert:id>{8FD5C117-6FBA-4b26-9B02-72C5F9A1B4C8}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+         </imvert:attributes>
+         <imvert:associations/>
+         <imvert:tagged-values>
+            <imvert:tagged-value id="CFG-TV-DEFINITION" level="2">
+               <imvert:name original="Definitie">definitie</imvert:name>
+               <imvert:value original="Gegevensgroeptype voor naamgegevens.">Gegevensgroeptype voor naamgegevens.</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-ISDERIVED" level="2">
+               <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+               <imvert:value original="Zie package">Zie package</imvert:value>
+            </imvert:tagged-value>
+         </imvert:tagged-values>
+         <imvert:subpackage>JZV</imvert:subpackage>
+         <imvert:subpackage>JZV</imvert:subpackage>
+      </imvert:class>
+      <imvert:class display-name="JZV::Afspraak" formal-name="class_JZV_Afspraak">
+         <imvert:name original="Afspraak">Afspraak</imvert:name>
+         <imvert:id>EAID_1CA8478C_CAAC_4f11_946C_3905066531FD</imvert:id>
+         <imvert:designation>class</imvert:designation>
+         <imvert:abstract>false</imvert:abstract>
+         <imvert:documentation>
+            <section>
+               <title>Definitie</title>
+               <body>
+                  <text>
+                     <line>Een toezegging van een ketenpartner bepaalde handelingen of interventies zo snel mogelijk uit te gaan voeren. </line>
+                  </text>
+               </body>
+            </section>
+         </imvert:documentation>
+         <imvert:created>2025-09-26T16:58:23</imvert:created>
+         <imvert:modified>2025-10-08T10:47:44</imvert:modified>
+         <imvert:version>1.0</imvert:version>
+         <imvert:phase original="1.0">1</imvert:phase>
+         <imvert:author>botere</imvert:author>
+         <imvert:stereotype id="stereotype-name-objecttype">OBJECTTYPE</imvert:stereotype>
+         <imvert:stereotype id="stereotype-name-openapi-objecttype">OPENAPI OBJECTTYPE</imvert:stereotype>
+         <imvert:attributes>
+            <imvert:attribute display-name="JZV::Afspraak.id (attrib)"
+                              formal-name="attribute_JZV_Afspraak_id"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="id">id</imvert:name>
+               <imvert:id>{5B474F38-F58D-46fe-8AC7-1190242DC615}</imvert:id>
+               <imvert:is-id>true</imvert:is-id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation>
+                  <section>
+                     <title>Definitie</title>
+                     <body>
+                        <text>
+                           <line>De unieke identificatie van de afspraak.</line>
+                        </text>
+                     </body>
+                  </section>
+               </imvert:documentation>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-DATERECORDED" level="1">
+                     <imvert:name original="Datum opname">datum opname</imvert:name>
+                     <imvert:value original="20251001">20251001</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+                     <imvert:name original="Definitie">DEFINITIE</imvert:name>
+                     <imvert:value format="markdown">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+                           <p>De unieke identificatie van de afspraak.</p>
+                        </body>
+                     </imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Afspraak.omschrijving (attrib)"
+                              formal-name="attribute_JZV_Afspraak_omschrijving"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="omschrijving">omschrijving</imvert:name>
+               <imvert:id>{5DA11C46-C982-4838-AC8C-8B617B2F732D}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation>
+                  <section>
+                     <title>Definitie</title>
+                     <body>
+                        <text>
+                           <line>De beschrijving van de gemaakte afspraak.</line>
+                        </text>
+                     </body>
+                  </section>
+               </imvert:documentation>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-DATERECORDED" level="1">
+                     <imvert:name original="Datum opname">datum opname</imvert:name>
+                     <imvert:value original="20251001">20251001</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-PATTERN" level="1">
+                     <imvert:name original="Patroon">patroon</imvert:name>
+                     <imvert:value original="De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.">De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+                     <imvert:name original="Definitie">DEFINITIE</imvert:name>
+                     <imvert:value format="markdown">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+                           <p>De beschrijving van de gemaakte afspraak.</p>
+                        </body>
+                     </imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Afspraak.verantwoordelijkeOrganisatie (attrib)"
+                              formal-name="attribute_JZV_Afspraak_verantwoordelijkeOrganisatie"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="verantwoordelijkeOrganisatie">verantwoordelijkeOrganisatie</imvert:name>
+               <imvert:id>{5C982A20-BD10-4dc9-9D6B-F764C9EBDE21}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+         </imvert:attributes>
+         <imvert:associations/>
+         <imvert:tagged-values>
+            <imvert:tagged-value id="CFG-TV-DATERECORDED" level="2">
+               <imvert:name original="Datum opname">datum opname</imvert:name>
+               <imvert:value original="20251001">20251001</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-ISDERIVED" level="2">
+               <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+               <imvert:value original="Zie package">Zie package</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-EXPOSE" level="2">
+               <imvert:name original="OA Expose">oa expose</imvert:name>
+               <imvert:value original="yes">yes</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+               <imvert:name original="Definitie">DEFINITIE</imvert:name>
+               <imvert:value format="markdown">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+                     <p>Een toezegging van een ketenpartner bepaalde handelingen of interventies zo snel mogelijk uit te gaan voeren. </p>
+                  </body>
+               </imvert:value>
+            </imvert:tagged-value>
+         </imvert:tagged-values>
+         <imvert:subpackage>JZV</imvert:subpackage>
+         <imvert:subpackage>JZV</imvert:subpackage>
+      </imvert:class>
+      <imvert:class display-name="JZV::Casus" formal-name="class_JZV_Casus">
+         <imvert:name original="Casus">Casus</imvert:name>
+         <imvert:id>EAID_35626D52_0C8E_4b40_A140_673EFC8CB3A2</imvert:id>
+         <imvert:designation>class</imvert:designation>
+         <imvert:abstract>false</imvert:abstract>
+         <imvert:documentation/>
+         <imvert:created>2025-10-15T10:15:33</imvert:created>
+         <imvert:modified>2025-10-15T10:15:33</imvert:modified>
+         <imvert:version>1.0</imvert:version>
+         <imvert:phase original="1.0">1</imvert:phase>
+         <imvert:author>botere</imvert:author>
+         <imvert:stereotype id="stereotype-name-objecttype">OBJECTTYPE</imvert:stereotype>
+         <imvert:stereotype id="stereotype-name-openapi-objecttype">OPENAPI OBJECTTYPE</imvert:stereotype>
+         <imvert:attributes>
+            <imvert:attribute display-name="JZV::Casus.id (attrib)"
+                              formal-name="attribute_JZV_Casus_id"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="id">id</imvert:name>
+               <imvert:id>{D494F754-31FB-4452-B4C9-ED584C302602}</imvert:id>
+               <imvert:is-id>true</imvert:is-id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Casus.startDatum (attrib)"
+                              formal-name="attribute_JZV_Casus_startDatum"
+                              type-display-name="MIM111::Date">
+               <imvert:name original="startDatum">startDatum</imvert:name>
+               <imvert:id>{7B387901-3A6C-43f3-8A18-7DBBF8E8EF0B}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>Date</imvert:baretype>
+               <imvert:conceptual-schema-type>Date</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:date</imvert:primitive>
+               <imvert:type-name>xs:date</imvert:type-name>
+               <imvert:attribute-type-name>xs:date</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>date</imvert:primitive-oas>
+               <imvert:type-name-oas>date</imvert:type-name-oas>
+               <imvert:type-id>EAID_3E6F5023_BF71_4da0_8747_0B8D334A8D04</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+         </imvert:attributes>
+         <imvert:associations>
+            <imvert:association display-name="JZV::Casus.heeft nevenbetrokkene (assoc)"
+                                formal-name="association_JZV_Casus_heeftNevenbetrokkene"
+                                type-display-name="JZV::Betrokkene"
+                                type-formal-name="class_JZV_Betrokkene">
+               <imvert:name original="heeft nevenbetrokkene">heeftNevenbetrokkene</imvert:name>
+               <imvert:id>EAID_26D53D20_3FEB_4efd_9300_06392F7E995D</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:type-name original="Betrokkene">Betrokkene</imvert:type-name>
+               <imvert:type-id>EAID_71F44404_98A9_4b4a_8F3B_16621828CAAF</imvert:type-id>
+               <imvert:type-package original="JZV">JZV</imvert:type-package>
+               <imvert:min-occurs>0</imvert:min-occurs>
+               <imvert:max-occurs>unbounded</imvert:max-occurs>
+               <imvert:min-occurs-source>1</imvert:min-occurs-source>
+               <imvert:max-occurs-source>1</imvert:max-occurs-source>
+               <imvert:direction>destination</imvert:direction>
+               <imvert:position original="200">200</imvert:position>
+               <imvert:source>
+                  <imvert:id>EAID_26D53D20_3FEB_4efd_9300_06392F7E995D_S</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:source>
+               <imvert:target display-name="JZV::Casus.{heeft nevenbetrokkene:}"
+                              formal-name="target_JZV_Casus">
+                  <imvert:id>EAID_26D53D20_3FEB_4efd_9300_06392F7E995D_T</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:target>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-relatiesoort">RELATIESOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:association>
+            <imvert:association display-name="JZV::Casus.heeftScenario (assoc)"
+                                formal-name="association_JZV_Casus_heeftScenario"
+                                type-display-name="JZV::Scenario"
+                                type-formal-name="class_JZV_Scenario">
+               <imvert:name original="heeftScenario">heeftScenario</imvert:name>
+               <imvert:id>EAID_74C37097_2C76_4d70_A665_5E939D8D6CB2</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:type-name original="Scenario">Scenario</imvert:type-name>
+               <imvert:type-id>EAID_F0C60722_84A0_4303_8482_0E54CD6A1233</imvert:type-id>
+               <imvert:type-package original="JZV">JZV</imvert:type-package>
+               <imvert:min-occurs>0</imvert:min-occurs>
+               <imvert:max-occurs>unbounded</imvert:max-occurs>
+               <imvert:min-occurs-source>1</imvert:min-occurs-source>
+               <imvert:max-occurs-source>1</imvert:max-occurs-source>
+               <imvert:direction>destination</imvert:direction>
+               <imvert:position original="200">200</imvert:position>
+               <imvert:source>
+                  <imvert:id>EAID_74C37097_2C76_4d70_A665_5E939D8D6CB2_S</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:source>
+               <imvert:target display-name="JZV::Casus.{heeftScenario:}"
+                              formal-name="target_JZV_Casus">
+                  <imvert:id>EAID_74C37097_2C76_4d70_A665_5E939D8D6CB2_T</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:target>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-relatiesoort">RELATIESOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:association>
+            <imvert:association display-name="JZV::Casus.heeftAfspraak (assoc)"
+                                formal-name="association_JZV_Casus_heeftAfspraak"
+                                type-display-name="JZV::Afspraak"
+                                type-formal-name="class_JZV_Afspraak">
+               <imvert:name original="heeftAfspraak">heeftAfspraak</imvert:name>
+               <imvert:id>EAID_78DFE17D_8D4D_4070_B9B0_A08C3DEE208B</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:type-name original="Afspraak">Afspraak</imvert:type-name>
+               <imvert:type-id>EAID_1CA8478C_CAAC_4f11_946C_3905066531FD</imvert:type-id>
+               <imvert:type-package original="JZV">JZV</imvert:type-package>
+               <imvert:min-occurs>0</imvert:min-occurs>
+               <imvert:max-occurs>unbounded</imvert:max-occurs>
+               <imvert:min-occurs-source>1</imvert:min-occurs-source>
+               <imvert:max-occurs-source>1</imvert:max-occurs-source>
+               <imvert:direction>destination</imvert:direction>
+               <imvert:position original="200">200</imvert:position>
+               <imvert:source>
+                  <imvert:id>EAID_78DFE17D_8D4D_4070_B9B0_A08C3DEE208B_S</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:source>
+               <imvert:target display-name="JZV::Casus.{heeftAfspraak:}"
+                              formal-name="target_JZV_Casus">
+                  <imvert:id>EAID_78DFE17D_8D4D_4070_B9B0_A08C3DEE208B_T</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:target>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-relatiesoort">RELATIESOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:association>
+            <imvert:association display-name="JZV::Casus.heeftBesluit (assoc)"
+                                formal-name="association_JZV_Casus_heeftBesluit"
+                                type-display-name="JZV::Besluit"
+                                type-formal-name="class_JZV_Besluit">
+               <imvert:name original="heeftBesluit">heeftBesluit</imvert:name>
+               <imvert:id>EAID_F46EE033_A3F9_4be9_B757_BCB5CB8BCA81</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:type-name original="Besluit">Besluit</imvert:type-name>
+               <imvert:type-id>EAID_8AAB0C72_4D6B_4f11_91B9_FD622D4CFE0A</imvert:type-id>
+               <imvert:type-package original="JZV">JZV</imvert:type-package>
+               <imvert:min-occurs>0</imvert:min-occurs>
+               <imvert:max-occurs>unbounded</imvert:max-occurs>
+               <imvert:min-occurs-source>1</imvert:min-occurs-source>
+               <imvert:max-occurs-source>1</imvert:max-occurs-source>
+               <imvert:direction>destination</imvert:direction>
+               <imvert:position original="200">200</imvert:position>
+               <imvert:source>
+                  <imvert:id>EAID_F46EE033_A3F9_4be9_B757_BCB5CB8BCA81_S</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:source>
+               <imvert:target display-name="JZV::Casus.{heeftBesluit:}"
+                              formal-name="target_JZV_Casus">
+                  <imvert:id>EAID_F46EE033_A3F9_4be9_B757_BCB5CB8BCA81_T</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:target>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-relatiesoort">RELATIESOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:association>
+            <imvert:association display-name="JZV::Casus.heeft hoofdbetrokkene (assoc)"
+                                formal-name="association_JZV_Casus_heeftHoofdbetrokkene"
+                                type-display-name="JZV::Betrokkene"
+                                type-formal-name="class_JZV_Betrokkene">
+               <imvert:name original="heeft hoofdbetrokkene">heeftHoofdbetrokkene</imvert:name>
+               <imvert:id>EAID_F8AD8748_3E8C_45f6_B83E_FC3C3710F46B</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:type-name original="Betrokkene">Betrokkene</imvert:type-name>
+               <imvert:type-id>EAID_71F44404_98A9_4b4a_8F3B_16621828CAAF</imvert:type-id>
+               <imvert:type-package original="JZV">JZV</imvert:type-package>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:min-occurs-source>1</imvert:min-occurs-source>
+               <imvert:max-occurs-source>1</imvert:max-occurs-source>
+               <imvert:direction>destination</imvert:direction>
+               <imvert:position original="200">200</imvert:position>
+               <imvert:source>
+                  <imvert:id>EAID_F8AD8748_3E8C_45f6_B83E_FC3C3710F46B_S</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:source>
+               <imvert:target display-name="JZV::Casus.{heeft hoofdbetrokkene:}"
+                              formal-name="target_JZV_Casus">
+                  <imvert:id>EAID_F8AD8748_3E8C_45f6_B83E_FC3C3710F46B_T</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:target>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-relatiesoort">RELATIESOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:association>
+         </imvert:associations>
+         <imvert:tagged-values>
+            <imvert:tagged-value id="CFG-TV-ISDERIVED" level="2">
+               <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+               <imvert:value original="Zie package">Zie package</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-EXPOSE" level="2">
+               <imvert:name original="OA Expose">oa expose</imvert:name>
+               <imvert:value original="yes">yes</imvert:value>
+            </imvert:tagged-value>
+         </imvert:tagged-values>
+         <imvert:subpackage>JZV</imvert:subpackage>
+         <imvert:subpackage>JZV</imvert:subpackage>
+      </imvert:class>
+      <imvert:class display-name="JZV::Casusoverleg" formal-name="class_JZV_Casusoverleg">
+         <imvert:name original="Casusoverleg">Casusoverleg</imvert:name>
+         <imvert:id>EAID_538AF407_C986_417c_9B68_462CA5A52ABF</imvert:id>
+         <imvert:designation>class</imvert:designation>
+         <imvert:abstract>false</imvert:abstract>
+         <imvert:documentation>
+            <section>
+               <title>Definitie</title>
+               <body>
+                  <text>
+                     <line>Een periodiek beraad waarbij meerdere bij de casus betrokken ketenpartners in een samenwerking samenwerken.</line>
+                     <line/>
+                     <line>Zie deze [link](https://www.justid.nl/) voor meer informatie. </line>
+                  </text>
+               </body>
+            </section>
+         </imvert:documentation>
+         <imvert:created>2025-09-26T14:16:24</imvert:created>
+         <imvert:modified>2025-10-14T08:50:09</imvert:modified>
+         <imvert:version>1.0</imvert:version>
+         <imvert:phase original="1.0">1</imvert:phase>
+         <imvert:author>botere</imvert:author>
+         <imvert:stereotype id="stereotype-name-objecttype">OBJECTTYPE</imvert:stereotype>
+         <imvert:stereotype id="stereotype-name-openapi-objecttype">OPENAPI OBJECTTYPE</imvert:stereotype>
+         <imvert:attributes>
+            <imvert:attribute display-name="JZV::Casusoverleg.id (attrib)"
+                              formal-name="attribute_JZV_Casusoverleg_id"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="id">id</imvert:name>
+               <imvert:id>{FC67FC16-3A2E-415c-B30A-6328DC6F1C20}</imvert:id>
+               <imvert:is-id>true</imvert:is-id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation>
+                  <section>
+                     <title>Definitie</title>
+                     <body>
+                        <text>
+                           <line>De unieke identificatie van het casusoverleg.</line>
+                        </text>
+                     </body>
+                  </section>
+               </imvert:documentation>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-DATERECORDED" level="1">
+                     <imvert:name original="Datum opname">datum opname</imvert:name>
+                     <imvert:value original="20251001">20251001</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+                     <imvert:name original="Definitie">DEFINITIE</imvert:name>
+                     <imvert:value format="markdown">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+                           <p>De unieke identificatie van het casusoverleg.</p>
+                        </body>
+                     </imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Casusoverleg.datum (attrib)"
+                              formal-name="attribute_JZV_Casusoverleg_datum"
+                              type-display-name="MIM111::Date">
+               <imvert:name original="datum">datum</imvert:name>
+               <imvert:id>{3E67FC83-B5F7-4080-8E79-97AF6A7D8162}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>Date</imvert:baretype>
+               <imvert:conceptual-schema-type>Date</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:date</imvert:primitive>
+               <imvert:type-name>xs:date</imvert:type-name>
+               <imvert:attribute-type-name>xs:date</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>date</imvert:primitive-oas>
+               <imvert:type-name-oas>date</imvert:type-name-oas>
+               <imvert:type-id>EAID_3E6F5023_BF71_4da0_8747_0B8D334A8D04</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation>
+                  <section>
+                     <title>Definitie</title>
+                     <body>
+                        <text>
+                           <line>De datum waarop het casusoverleg heeft plaatsgevonden.</line>
+                        </text>
+                     </body>
+                  </section>
+               </imvert:documentation>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-DATERECORDED" level="1">
+                     <imvert:name original="Datum opname">datum opname</imvert:name>
+                     <imvert:value original="20251001">20251001</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-PATTERN" level="1">
+                     <imvert:name original="Patroon">patroon</imvert:name>
+                     <imvert:value original="De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.">De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+                     <imvert:name original="Definitie">DEFINITIE</imvert:name>
+                     <imvert:value format="markdown">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+                           <p>De datum waarop het casusoverleg heeft plaatsgevonden.</p>
+                        </body>
+                     </imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Casusoverleg.notulen (attrib)"
+                              formal-name="attribute_JZV_Casusoverleg_notulen"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="notulen">notulen</imvert:name>
+               <imvert:id>{7C54CF64-3B02-4c05-B7D3-B169CEBDD7A0}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+         </imvert:attributes>
+         <imvert:associations>
+            <imvert:association display-name="JZV::Casusoverleg.heeft agendapunt (assoc)"
+                                formal-name="association_JZV_Casusoverleg_heeftAgendapunt"
+                                type-display-name="JZV::Casus"
+                                type-formal-name="class_JZV_Casus">
+               <imvert:name original="heeft agendapunt">heeftAgendapunt</imvert:name>
+               <imvert:id>EAID_07684391_6D75_484c_B8F8_C6E0EB2B4156</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:type-name original="Casus">Casus</imvert:type-name>
+               <imvert:type-id>EAID_35626D52_0C8E_4b40_A140_673EFC8CB3A2</imvert:type-id>
+               <imvert:type-package original="JZV">JZV</imvert:type-package>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>unbounded</imvert:max-occurs>
+               <imvert:min-occurs-source>1</imvert:min-occurs-source>
+               <imvert:max-occurs-source>1</imvert:max-occurs-source>
+               <imvert:direction>destination</imvert:direction>
+               <imvert:position original="200">200</imvert:position>
+               <imvert:source>
+                  <imvert:id>EAID_07684391_6D75_484c_B8F8_C6E0EB2B4156_S</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:source>
+               <imvert:target display-name="JZV::Casusoverleg.{heeft agendapunt:}"
+                              formal-name="target_JZV_Casusoverleg">
+                  <imvert:id>EAID_07684391_6D75_484c_B8F8_C6E0EB2B4156_T</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:target>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-relatiesoort">RELATIESOORT</imvert:stereotype>
+               <imvert:tagged-values/>
+            </imvert:association>
+         </imvert:associations>
+         <imvert:tagged-values>
+            <imvert:tagged-value id="CFG-TV-DATERECORDED" level="2">
+               <imvert:name original="Datum opname">datum opname</imvert:name>
+               <imvert:value original="20251001">20251001</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-ISDERIVED" level="2">
+               <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+               <imvert:value original="Zie package">Zie package</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-EXPOSE" level="2">
+               <imvert:name original="OA Expose">oa expose</imvert:name>
+               <imvert:value original="yes">yes</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+               <imvert:name original="Definitie">DEFINITIE</imvert:name>
+               <imvert:value format="markdown">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+                     <p>Een periodiek beraad waarbij meerdere bij de casus betrokken ketenpartners in een samenwerking samenwerken.</p>
+                     <p>Zie deze <a href="https://www.justid.nl/" shape="rect">link</a> voor meer informatie. </p>
+                  </body>
+               </imvert:value>
+            </imvert:tagged-value>
+         </imvert:tagged-values>
+         <imvert:subpackage>JZV</imvert:subpackage>
+         <imvert:subpackage>JZV</imvert:subpackage>
+      </imvert:class>
+      <imvert:class display-name="JZV::Betrokkene" formal-name="class_JZV_Betrokkene">
+         <imvert:name original="Betrokkene">Betrokkene</imvert:name>
+         <imvert:id>EAID_71F44404_98A9_4b4a_8F3B_16621828CAAF</imvert:id>
+         <imvert:designation>class</imvert:designation>
+         <imvert:abstract>false</imvert:abstract>
+         <imvert:documentation>
+            <section>
+               <title>Definitie</title>
+               <body>
+                  <text>
+                     <line>Een persoon die onderwerp is van de casus. </line>
+                  </text>
+               </body>
+            </section>
+         </imvert:documentation>
+         <imvert:created>2025-10-08T09:18:02</imvert:created>
+         <imvert:modified>2025-10-08T10:49:07</imvert:modified>
+         <imvert:version>1.0</imvert:version>
+         <imvert:phase original="1.0">1</imvert:phase>
+         <imvert:author>botere</imvert:author>
+         <imvert:stereotype id="stereotype-name-objecttype">OBJECTTYPE</imvert:stereotype>
+         <imvert:attributes>
+            <imvert:attribute display-name="JZV::Betrokkene.burgerservicenummer (attrib)"
+                              formal-name="attribute_JZV_Betrokkene_burgerservicenummer"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="burgerservicenummer">burgerservicenummer</imvert:name>
+               <imvert:id>{677BF128-E825-4e11-A794-7826F9E5A1E5}</imvert:id>
+               <imvert:is-id>true</imvert:is-id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation>
+                  <section>
+                     <title>Definitie</title>
+                     <body>
+                        <text>
+                           <line>Het burgerservicenummer van de betrokkene. </line>
+                        </text>
+                     </body>
+                  </section>
+               </imvert:documentation>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+                     <imvert:name original="Definitie">DEFINITIE</imvert:name>
+                     <imvert:value format="markdown">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+                           <p>Het burgerservicenummer van de betrokkene. </p>
+                        </body>
+                     </imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Betrokkene.naam (attrib)"
+                              formal-name="attribute_JZV_Betrokkene_naam"
+                              type-display-name="JZV::Naam">
+               <imvert:name original="naam">naam</imvert:name>
+               <imvert:id>{FDC5F50C-82DA-4499-A964-32FCB1EFA38B}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>Naam</imvert:baretype>
+               <imvert:type-name original="Naam">Naam</imvert:type-name>
+               <imvert:type-id>EAID_04187C94_07E8_4268_8D4A_C0A6D4BE66B8</imvert:type-id>
+               <imvert:type-package>JZV</imvert:type-package>
+               <imvert:type-package-id>EAPK_942E87BA_BF77_4b79_9B8F_F12F1812EC88</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation>
+                  <section>
+                     <title>Definitie</title>
+                     <body>
+                        <text>
+                           <line>De naam van de betrokkene.</line>
+                        </text>
+                     </body>
+                  </section>
+               </imvert:documentation>
+               <imvert:stereotype id="stereotype-name-attributegroup">GEGEVENSGROEP</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-DEFINITION" level="1">
+                     <imvert:name original="Definitie">definitie</imvert:name>
+                     <imvert:value original="De naam van de betrokkene.">De naam van de betrokkene.</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+         </imvert:attributes>
+         <imvert:associations/>
+         <imvert:tagged-values>
+            <imvert:tagged-value id="CFG-TV-ISDERIVED" level="2">
+               <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+               <imvert:value original="Zie package">Zie package</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+               <imvert:name original="Definitie">DEFINITIE</imvert:name>
+               <imvert:value format="markdown">
+                  <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+                     <p>Een persoon die onderwerp is van de casus. </p>
+                  </body>
+               </imvert:value>
+            </imvert:tagged-value>
+         </imvert:tagged-values>
+         <imvert:subpackage>JZV</imvert:subpackage>
+         <imvert:subpackage>JZV</imvert:subpackage>
+      </imvert:class>
+      <imvert:class display-name="JZV::Besluit" formal-name="class_JZV_Besluit">
+         <imvert:name original="Besluit">Besluit</imvert:name>
+         <imvert:id>EAID_8AAB0C72_4D6B_4f11_91B9_FD622D4CFE0A</imvert:id>
+         <imvert:designation>class</imvert:designation>
+         <imvert:abstract>false</imvert:abstract>
+         <imvert:documentation/>
+         <imvert:created>2025-10-15T10:31:11</imvert:created>
+         <imvert:modified>2025-10-15T10:31:11</imvert:modified>
+         <imvert:version>1.0</imvert:version>
+         <imvert:phase original="1.0">1</imvert:phase>
+         <imvert:author>botere</imvert:author>
+         <imvert:stereotype id="stereotype-name-objecttype">OBJECTTYPE</imvert:stereotype>
+         <imvert:stereotype id="stereotype-name-openapi-objecttype">OPENAPI OBJECTTYPE</imvert:stereotype>
+         <imvert:attributes>
+            <imvert:attribute display-name="JZV::Besluit.id (attrib)"
+                              formal-name="attribute_JZV_Besluit_id"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="id">id</imvert:name>
+               <imvert:id>{9D595890-D30B-4021-AC6C-FE6327D3B84F}</imvert:id>
+               <imvert:is-id>true</imvert:is-id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Besluit.omschrijving (attrib)"
+                              formal-name="attribute_JZV_Besluit_omschrijving"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="omschrijving">omschrijving</imvert:name>
+               <imvert:id>{EE86D1B1-4460-4d80-B5E3-F8F11CD1972A}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+         </imvert:attributes>
+         <imvert:associations/>
+         <imvert:tagged-values>
+            <imvert:tagged-value id="CFG-TV-ISDERIVED" level="2">
+               <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+               <imvert:value original="Zie package">Zie package</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-EXPOSE" level="2">
+               <imvert:name original="OA Expose">oa expose</imvert:name>
+               <imvert:value original="yes">yes</imvert:value>
+            </imvert:tagged-value>
+         </imvert:tagged-values>
+         <imvert:subpackage>JZV</imvert:subpackage>
+         <imvert:subpackage>JZV</imvert:subpackage>
+      </imvert:class>
+      <imvert:class display-name="JZV::vindCasusoverlegOpDatum"
+                    formal-name="class_JZV_VindCasusoverlegOpDatum">
+         <imvert:name original="vindCasusoverlegOpDatum">VindCasusoverlegOpDatum</imvert:name>
+         <imvert:id>EAID_EA5A0F68_BB40_4e65_A1E4_3CCA5AFA0150</imvert:id>
+         <imvert:designation>class</imvert:designation>
+         <imvert:abstract>false</imvert:abstract>
+         <imvert:documentation/>
+         <imvert:created>2025-10-01T15:31:05</imvert:created>
+         <imvert:modified>2025-10-01T17:20:08</imvert:modified>
+         <imvert:version>1.0</imvert:version>
+         <imvert:phase original="1.0">1</imvert:phase>
+         <imvert:author>botere</imvert:author>
+         <imvert:stereotype id="stereotype-name-openapi-operation">OPENAPI OPERATION</imvert:stereotype>
+         <imvert:attributes>
+            <imvert:attribute display-name="JZV::vindCasusoverlegOpDatum.zoekdatum (attrib)"
+                              formal-name="attribute_JZV_VindCasusoverlegOpDatum_zoekdatum"
+                              type-display-name="MIM111::Date">
+               <imvert:name original="zoekdatum">zoekdatum</imvert:name>
+               <imvert:id>{40F2F2DD-B4CD-44be-8851-AE143E52F7E9}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>Date</imvert:baretype>
+               <imvert:conceptual-schema-type>Date</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:date</imvert:primitive>
+               <imvert:type-name>xs:date</imvert:type-name>
+               <imvert:attribute-type-name>xs:date</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>date</imvert:primitive-oas>
+               <imvert:type-name-oas>date</imvert:type-name-oas>
+               <imvert:type-id>EAID_3E6F5023_BF71_4da0_8747_0B8D334A8D04</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation>
+                  <section>
+                     <title>Definitie</title>
+                     <body>
+                        <text>
+                           <line>De datum waarop gezocht moet worden. </line>
+                        </text>
+                     </body>
+                  </section>
+               </imvert:documentation>
+               <imvert:stereotype id="stereotype-name-openapi-parameter">OPENAPI PARAMETER</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-OPENAPI-DESCRIPTION" level="1">
+                     <imvert:name original="OA Description">oa description</imvert:name>
+                     <imvert:value original="De datum waarop het overleg heeft plaatsgevonden.">De datum waarop het overleg heeft plaatsgevonden.</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-OPENAPI-EXAMPLE" level="1">
+                     <imvert:name original="OA Example">oa example</imvert:name>
+                     <imvert:value original="2025-10-01">2025-10-01</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-OPENAPI-PARM-TYPE" level="1">
+                     <imvert:name original="OA Parameter type">oa parameter type</imvert:name>
+                     <imvert:value original="query">query</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value origin="notes" id="CFG-TV-DEFINITION">
+                     <imvert:name original="Definitie">DEFINITIE</imvert:name>
+                     <imvert:value format="markdown">
+                        <body xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml">
+                           <p>De datum waarop gezocht moet worden. </p>
+                        </body>
+                     </imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+         </imvert:attributes>
+         <imvert:associations>
+            <imvert:association display-name="JZV::vindCasusoverlegOpDatum.payload (assoc)"
+                                formal-name="association_JZV_VindCasusoverlegOpDatum_payload"
+                                type-display-name="JZV::Casusoverleg"
+                                type-formal-name="class_JZV_Casusoverleg">
+               <imvert:name original="payload">payload</imvert:name>
+               <imvert:id>EAID_9A0C9C25_FCF6_48ef_97A5_D81293CD746D</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:type-name original="Casusoverleg">Casusoverleg</imvert:type-name>
+               <imvert:type-id>EAID_538AF407_C986_417c_9B68_462CA5A52ABF</imvert:type-id>
+               <imvert:type-package original="JZV">JZV</imvert:type-package>
+               <imvert:min-occurs>0</imvert:min-occurs>
+               <imvert:max-occurs>unbounded</imvert:max-occurs>
+               <imvert:min-occurs-source>1</imvert:min-occurs-source>
+               <imvert:max-occurs-source>1</imvert:max-occurs-source>
+               <imvert:direction>destination</imvert:direction>
+               <imvert:position original="200">200</imvert:position>
+               <imvert:source>
+                  <imvert:id>EAID_9A0C9C25_FCF6_48ef_97A5_D81293CD746D_S</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:source>
+               <imvert:target display-name="JZV::vindCasusoverlegOpDatum.{payload:}"
+                              formal-name="target_JZV_VindCasusoverlegOpDatum">
+                  <imvert:id>EAID_9A0C9C25_FCF6_48ef_97A5_D81293CD746D_T</imvert:id>
+                  <imvert:navigable>false</imvert:navigable>
+                  <imvert:tagged-values/>
+               </imvert:target>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-openapi-responsebody">OPENAPI RESPONSE BODY</imvert:stereotype>
+               <imvert:tagged-values/>
+            </imvert:association>
+         </imvert:associations>
+         <imvert:tagged-values>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-DESCRIPTION" level="2">
+               <imvert:name original="OA Description">oa description</imvert:name>
+               <imvert:value original="Retourneert de Overleggen die hebben plaatsgevonden op de gespecificeerde datum. ">Retourneert de Overleggen die hebben plaatsgevonden op de gespecificeerde datum. </imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-HTTPMETHOD" level="2">
+               <imvert:name original="OA HTTP method">oa http method</imvert:name>
+               <imvert:value original="GET">GET</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-PATH" level="2">
+               <imvert:name original="OA Path">oa path</imvert:name>
+               <imvert:value original="/casusoverleg-datum">/casusoverleg-datum</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-SUMMARY" level="2">
+               <imvert:name original="OA Summary">oa summary</imvert:name>
+               <imvert:value original="Zoek overleg op datum">Zoek overleg op datum</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-TAG" level="2">
+               <imvert:name original="OA Tag">oa tag</imvert:name>
+               <imvert:value original="Casusoverleg">Casusoverleg</imvert:value>
+            </imvert:tagged-value>
+         </imvert:tagged-values>
+         <imvert:subpackage>JZV</imvert:subpackage>
+         <imvert:subpackage>JZV</imvert:subpackage>
+      </imvert:class>
+      <imvert:class display-name="JZV::Scenario" formal-name="class_JZV_Scenario">
+         <imvert:name original="Scenario">Scenario</imvert:name>
+         <imvert:id>EAID_F0C60722_84A0_4303_8482_0E54CD6A1233</imvert:id>
+         <imvert:designation>class</imvert:designation>
+         <imvert:abstract>false</imvert:abstract>
+         <imvert:documentation/>
+         <imvert:created>2025-10-15T10:31:23</imvert:created>
+         <imvert:modified>2025-10-15T10:31:23</imvert:modified>
+         <imvert:version>1.0</imvert:version>
+         <imvert:phase original="1.0">1</imvert:phase>
+         <imvert:author>botere</imvert:author>
+         <imvert:stereotype id="stereotype-name-objecttype">OBJECTTYPE</imvert:stereotype>
+         <imvert:stereotype id="stereotype-name-openapi-objecttype">OPENAPI OBJECTTYPE</imvert:stereotype>
+         <imvert:attributes>
+            <imvert:attribute display-name="JZV::Scenario.id (attrib)"
+                              formal-name="attribute_JZV_Scenario_id"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="id">id</imvert:name>
+               <imvert:id>{6ADC3E71-0E8E-4162-AAD0-2870A9E5350F}</imvert:id>
+               <imvert:is-id>true</imvert:is-id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Scenario.omschrijving (attrib)"
+                              formal-name="attribute_JZV_Scenario_omschrijving"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="omschrijving">omschrijving</imvert:name>
+               <imvert:id>{EC760542-9E1B-45f5-B735-D01E6F0E0BC5}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+            <imvert:attribute display-name="JZV::Scenario.verantwoordelijkeOrganisatie (attrib)"
+                              formal-name="attribute_JZV_Scenario_verantwoordelijkeOrganisatie"
+                              type-display-name="MIM111::CharacterString">
+               <imvert:name original="verantwoordelijkeOrganisatie">verantwoordelijkeOrganisatie</imvert:name>
+               <imvert:id>{AA5B155D-FB18-4cff-98B0-4402391D940C}</imvert:id>
+               <imvert:visibility>public</imvert:visibility>
+               <imvert:static>false</imvert:static>
+               <imvert:baretype>CharacterString</imvert:baretype>
+               <imvert:conceptual-schema-type>CharacterString</imvert:conceptual-schema-type>
+               <imvert:primitive>xs:string</imvert:primitive>
+               <imvert:type-name>xs:string</imvert:type-name>
+               <imvert:attribute-type-name>xs:string</imvert:attribute-type-name>
+               <imvert:attribute-type-designation>simpletype</imvert:attribute-type-designation>
+               <imvert:primitive-oas>string</imvert:primitive-oas>
+               <imvert:type-name-oas>string</imvert:type-name-oas>
+               <imvert:type-id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:type-id>
+               <imvert:type-package>MIM111</imvert:type-package>
+               <imvert:type-package-id>OUTSIDE-1</imvert:type-package-id>
+               <imvert:min-occurs>1</imvert:min-occurs>
+               <imvert:max-occurs>1</imvert:max-occurs>
+               <imvert:position original="100">100</imvert:position>
+               <imvert:documentation/>
+               <imvert:stereotype id="stereotype-name-attribute">ATTRIBUUTSOORT</imvert:stereotype>
+               <imvert:tagged-values>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONAUTHENTIC" level="1">
+                     <imvert:name original="Authentiek">authentiek</imvert:name>
+                     <imvert:value original="Authentiek">Authentiek</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNGELDIGHEID" level="1">
+                     <imvert:name original="Heeft tijdlijn geldigheid">heeft tijdlijn geldigheid</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-HEEFTTIJDLIJNREGISTRATIE" level="1">
+                     <imvert:name original="Heeft tijdlijn registratie">heeft tijdlijn registratie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONCLASSIFICATION" level="1">
+                     <imvert:name original="Indicatie classificerend">indicatie classificerend</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONFORMALHISTORY" level="1">
+                     <imvert:name original="Indicatie formele historie">indicatie formele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-INDICATIONMATERIALHISTORY" level="1">
+                     <imvert:name original="Indicatie materiële historie">indicatie materiele historie</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-ISDERIVED" level="1">
+                     <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+                     <imvert:value original="Zie package">Zie package</imvert:value>
+                  </imvert:tagged-value>
+                  <imvert:tagged-value id="CFG-TV-VOIDABLE" level="1">
+                     <imvert:name original="Mogelijk geen waarde">mogelijk geen waarde</imvert:name>
+                     <imvert:value original="Nee">Nee</imvert:value>
+                  </imvert:tagged-value>
+               </imvert:tagged-values>
+            </imvert:attribute>
+         </imvert:attributes>
+         <imvert:associations/>
+         <imvert:tagged-values>
+            <imvert:tagged-value id="CFG-TV-ISDERIVED" level="2">
+               <imvert:name original="Is afgeleid">is afgeleid</imvert:name>
+               <imvert:value original="Zie package">Zie package</imvert:value>
+            </imvert:tagged-value>
+            <imvert:tagged-value id="CFG-TV-OPENAPI-EXPOSE" level="2">
+               <imvert:name original="OA Expose">oa expose</imvert:name>
+               <imvert:value original="yes">yes</imvert:value>
+            </imvert:tagged-value>
+         </imvert:tagged-values>
+         <imvert:subpackage>JZV</imvert:subpackage>
+         <imvert:subpackage>JZV</imvert:subpackage>
+      </imvert:class>
+   </imvert:package>
+   <imvert:package origin="system" display-name="Xlinks::" formal-name="package">
+      <imvert:name original="Xlinks">Xlinks</imvert:name>
+      <imvert:short-name>xlinks</imvert:short-name>
+      <imvert:id>XLINKS</imvert:id>
+      <imvert:conceptual-schema-name>XLINKS</imvert:conceptual-schema-name>
+      <imvert:namespace>http://www.w3.org/1999/xlink</imvert:namespace>
+      <imvert:documentation>
+         <html:body xmlns:html="http://www.w3.org/1999/xhtml">
+            <html:p>XLinks is an external specification. For documentation please consult http://www.w3.org/TR/xlink/</html:p>
+         </html:body>
+      </imvert:documentation>
+      <imvert:created>2014-10-30T17:01:50</imvert:created>
+      <imvert:modified>2014-10-30T17:01:50</imvert:modified>
+      <imvert:version>1.0.0</imvert:version>
+      <imvert:phase original="3">3</imvert:phase>
+      <imvert:author>Simon Cox</imvert:author>
+      <imvert:stereotype id="stereotype-name-system-package">SYSTEM</imvert:stereotype>
+      <imvert:location>http://schemas.opengis.net/xlink/1.0.0/xlinks.xsd</imvert:location>
+      <imvert:release>20010627</imvert:release>
+      <imvert:owner>W3C</imvert:owner>
+   </imvert:package>
+   <imvert:package origin="system"
+                   display-name="MIM111:: = http://www.geonovum.nl/conceptual-schemas/MIM111"
+                   formal-name="package">
+      <imvert:id>OUTSIDE-1</imvert:id>
+      <imvert:conceptual-schema-version>1.0.0</imvert:conceptual-schema-version>
+      <imvert:version>1.0.0</imvert:version>
+      <imvert:conceptual-schema-phase>3</imvert:conceptual-schema-phase>
+      <imvert:phase>3</imvert:phase>
+      <imvert:name original="MIM111">MIM111</imvert:name>
+      <imvert:short-name>mim111</imvert:short-name>
+      <imvert:alias>http://www.geonovum.nl/conceptual-schemas/MIM111</imvert:alias>
+      <imvert:conceptual-schema-name>MIM111</imvert:conceptual-schema-name>
+      <imvert:conceptual-schema-namespace>http://www.geonovum.nl/conceptual-schemas/MIM111</imvert:conceptual-schema-namespace>
+      <imvert:namespace>http://www.geonovum.nl/MIM111</imvert:namespace>
+      <imvert:location>http://schemas.geonovum.nl/mim111.xsd</imvert:location>
+      <imvert:owner>MIM</imvert:owner>
+      <imvert:release>20220217</imvert:release>
+      <imvert:stereotype id="stereotype-name-external-package">EXTERN</imvert:stereotype>
+      <imvert:tagged-values>
+         <imvert:tagged-value origin="system" id="CFG-TV-FAMILY">
+            <imvert:name original="familie">familie</imvert:name>
+            <imvert:value original=""/>
+         </imvert:tagged-value>
+         <imvert:tagged-value origin="system" id="CFG-TV-SOURCE">
+            <imvert:name original="herkomst">herkomst</imvert:name>
+            <imvert:value original="MIM">MIM</imvert:value>
+         </imvert:tagged-value>
+         <imvert:tagged-value origin="system" id="CFG-TV-DEFINITION">
+            <imvert:name original="definitie">definitie</imvert:name>
+            <imvert:value original="De primitieve datatypen zoals vastgesteld in de MIM 1.1.1 specificatie">De primitieve datatypen zoals vastgesteld in de MIM 1.1.1 specificatie</imvert:value>
+         </imvert:tagged-value>
+         <imvert:tagged-value origin="system" id="CFG-TV-DATALOCATION">
+            <imvert:name original="locatie">locatie</imvert:name>
+            <imvert:value original="https://docs.geostandaarden.nl/mim/">https://docs.geostandaarden.nl/mim/</imvert:value>
+         </imvert:tagged-value>
+      </imvert:tagged-values>
+      <imvert:class display-name="MIM111::CharacterString" formal-name="class_xsstring">
+         <imvert:conceptual-schema-class-name>CharacterString</imvert:conceptual-schema-class-name>
+         <imvert:name original="CharacterString">xs:string</imvert:name>
+         <imvert:id>EAID_18BFBA8D_E3F4_4d8c_9A8F_4429FA54B041</imvert:id>
+         <imvert:catalog>https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes</imvert:catalog>
+         <imvert:stereotype id="stereotype-name-interface">INTERFACE</imvert:stereotype>
+         <imvert:subpackage>MIM111</imvert:subpackage>
+      </imvert:class>
+      <imvert:class display-name="MIM111::Date" formal-name="class_xsdate">
+         <imvert:conceptual-schema-class-name>Date</imvert:conceptual-schema-class-name>
+         <imvert:name original="Date">xs:date</imvert:name>
+         <imvert:id>EAID_3E6F5023_BF71_4da0_8747_0B8D334A8D04</imvert:id>
+         <imvert:catalog>https://docs.geostandaarden.nl/mim/def-st-mim-20220217/#primitive-datatypes</imvert:catalog>
+         <imvert:stereotype id="stereotype-name-interface">INTERFACE</imvert:stereotype>
+         <imvert:subpackage>MIM111</imvert:subpackage>
+      </imvert:class>
+   </imvert:package>
+   <imvert:package origin="system"
+                   display-name="GML:: = http://www.opengis.net/conceptual-schemas/ISO19107"
+                   formal-name="package">
+      <imvert:sentinel>true</imvert:sentinel>
+      <imvert:id>OUTSIDE-2</imvert:id>
+      <imvert:conceptual-schema-version>3.2.2</imvert:conceptual-schema-version>
+      <imvert:version>3.2.2</imvert:version>
+      <imvert:conceptual-schema-phase>3</imvert:conceptual-schema-phase>
+      <imvert:phase>3</imvert:phase>
+      <imvert:name original="GML">GML</imvert:name>
+      <imvert:short-name>gml</imvert:short-name>
+      <imvert:alias>http://www.opengis.net/conceptual-schemas/ISO19107</imvert:alias>
+      <imvert:conceptual-schema-name>GML322</imvert:conceptual-schema-name>
+      <imvert:conceptual-schema-namespace>http://www.opengis.net/conceptual-schemas/ISO19107</imvert:conceptual-schema-namespace>
+      <imvert:namespace>http://www.opengis.net/gml/3.2</imvert:namespace>
+      <imvert:location>gml/3.2/[owner]-gml-gml.xsd</imvert:location>
+      <imvert:owner>OGC</imvert:owner>
+      <imvert:release>20160101</imvert:release>
+      <imvert:stereotype id="stereotype-name-external-package">EXTERN</imvert:stereotype>
+      <imvert:tagged-values>
+         <imvert:tagged-value origin="system" id="CFG-TV-FAMILY">
+            <imvert:name original="familie">familie</imvert:name>
+            <imvert:value original="GML">GML</imvert:value>
+         </imvert:tagged-value>
+         <imvert:tagged-value origin="system" id="CFG-TV-SOURCE">
+            <imvert:name original="herkomst">herkomst</imvert:name>
+            <imvert:value original="OGC">OGC</imvert:value>
+         </imvert:tagged-value>
+         <imvert:tagged-value origin="system" id="CFG-TV-DEFINITION">
+            <imvert:name original="definitie">definitie</imvert:name>
+            <imvert:value original="ISO19107 Geographic information – Spatial schema">ISO19107 Geographic information – Spatial schema</imvert:value>
+         </imvert:tagged-value>
+         <imvert:tagged-value origin="system" id="CFG-TV-DATALOCATION">
+            <imvert:name original="locatie">locatie</imvert:name>
+            <imvert:value original="X">X</imvert:value>
+         </imvert:tagged-value>
+      </imvert:tagged-values>
+      <imvert:class display-name="GML::GM_SENTINEL" formal-name="class_">
+         <imvert:conceptual-schema-class-name>GM_SENTINEL</imvert:conceptual-schema-class-name>
+         <imvert:name original="GM_SENTINEL"/>
+         <imvert:sentinel>true</imvert:sentinel>
+         <imvert:stereotype id="stereotype-name-interface">INTERFACE</imvert:stereotype>
+         <imvert:subpackage>GML</imvert:subpackage>
+      </imvert:class>
+   </imvert:package>
+</imvert:packages>

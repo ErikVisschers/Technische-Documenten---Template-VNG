@@ -1,0 +1,410 @@
+<!DOCTYPE HTML><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Imvert - Imvert compiler</title><link href="../web/css/report.css" rel="stylesheet"><link href="../web/themes/blue/style.css" rel="stylesheet"><script src="../web/script/jquery/jquery-latest.js" type="text/javascript"></script><script src="../web/script/tablesorter/jquery.tablesorter.min.js" type="text/javascript"></script><script>
+                    $(function() { 
+                    
+                        $("#table-shortview-objecttypes").tablesorter(); 
+                    
+                        $("#table-shortview-objecttypes").tablesorter(); 
+                    
+                        $("#table-shortview-valuelists").tablesorter(); 
+                    
+                    });  
+                </script></head><body><h1>Short view</h1><p>Contents:</p><ol><li><a href="#d26212e2375">Object types</a></li><li><a href="#d26212e2952">Groups</a></li><li><a href="#d26212e3092">Value lists</a></li></ol><div>
+            <a name="d26212e2375"></a><h1>Object types</h1>
+            <p>
+                            This table reports on object types, attributes and some properties of these constructs.
+                            The view is originally defined by BRO, and intended to load into a spreadsheet.
+                        </p>
+            <p>
+                            For each construct the following is specified:
+                        </p>
+            <ul>
+               <li>Name (Naam)</li>
+               <li>Multiplicity</li>
+               <li>Type (Waarde)</li>
+               <li>Definition (Definitie)</li>
+               <li>Rules (Regels)</li>
+               <li>Description (Toelichting)</li>
+               <li>Remarks (Opmerkingen) (empty, for convenience)</li>
+            </ul>
+            <table>
+               <table class="tablesorter">
+                  <table id="table-shortview-objecttypes" class="tablesorter">
+                     <col style="width:5%">
+                     <col style="width:20%">
+                     <col style="width:5%">
+                     <col style="width:15%">
+                     <col style="width:15%">
+                     <col style="width:15%">
+                     <col style="width:15%">
+                     <col style="width:15%">
+                     <thead>
+                        <tr class="tableHeader">
+                           <th>#</th>
+                           <th>Naam</th>
+                           <th>Mult</th>
+                           <th>Waarde</th>
+                           <th>Definitie</th>
+                           <th>Regels</th>
+                           <th>Toelichting</th>
+                           <th>Opmerkingen</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr class="shortviewHeader">
+                           <td class="ix">00001</td>
+                           <td>JZV::Afspraak</td>
+                           <td></td>
+                           <td></td>
+                           <td>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                 <p>Een toezegging van een ketenpartner bepaalde handelingen of interventies zo snel mogelijk uit te gaan voeren. </p>
+                              </body>
+                           </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00002</td>
+                           <td>JZV::Afspraak.id (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                 <p>De unieke identificatie van de afspraak.</p>
+                              </body>
+                           </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00003</td>
+                           <td>JZV::Afspraak.omschrijving (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                 <p>De beschrijving van de gemaakte afspraak.</p>
+                              </body>
+                           </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00004</td>
+                           <td>JZV::Afspraak.verantwoordelijkeOrganisatie (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr class="shortviewHeader">
+                           <td class="ix">00005</td>
+                           <td>JZV::Casus</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00006</td>
+                           <td>JZV::Casus.id (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00007</td>
+                           <td>JZV::Casus.startDatum (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr class="shortviewHeader">
+                           <td class="ix">00008</td>
+                           <td>JZV::Casusoverleg</td>
+                           <td></td>
+                           <td></td>
+                           <td>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                 <p>Een periodiek beraad waarbij meerdere bij de casus betrokken ketenpartners in een samenwerking samenwerken.</p>
+                                 <p>Zie deze <a href="https://www.justid.nl/" shape="rect">link</a> voor meer informatie. </p>
+                              </body>
+                           </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00009</td>
+                           <td>JZV::Casusoverleg.id (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                 <p>De unieke identificatie van het casusoverleg.</p>
+                              </body>
+                           </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00010</td>
+                           <td>JZV::Casusoverleg.datum (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                 <p>De datum waarop het casusoverleg heeft plaatsgevonden.</p>
+                              </body>
+                           </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00011</td>
+                           <td>JZV::Casusoverleg.notulen (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr class="shortviewHeader">
+                           <td class="ix">00012</td>
+                           <td>JZV::Betrokkene</td>
+                           <td></td>
+                           <td></td>
+                           <td>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                 <p>Een persoon die onderwerp is van de casus. </p>
+                              </body>
+                           </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00013</td>
+                           <td>JZV::Betrokkene.burgerservicenummer (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td>
+                              <body xmlns="http://www.w3.org/1999/xhtml" xmlns:imvert="http://www.imvertor.org/schema/system">
+                                 <p>Het burgerservicenummer van de betrokkene. </p>
+                              </body>
+                           </td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00014</td>
+                           <td>JZV::Betrokkene.naam (attrib)</td>
+                           <td></td>
+                           <td>Naam</td>
+                           <td>De naam van de betrokkene.</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr class="shortviewHeader">
+                           <td class="ix">00015</td>
+                           <td>JZV::Besluit</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00016</td>
+                           <td>JZV::Besluit.id (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00017</td>
+                           <td>JZV::Besluit.omschrijving (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr class="shortviewHeader">
+                           <td class="ix">00018</td>
+                           <td>JZV::Scenario</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00019</td>
+                           <td>JZV::Scenario.id (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00020</td>
+                           <td>JZV::Scenario.omschrijving (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                        <tr>
+                           <td class="ix">00021</td>
+                           <td>JZV::Scenario.verantwoordelijkeOrganisatie (attrib)</td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                           <td></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </table>
+            </table>
+         </div><div>
+            <a name="d26212e2952"></a><h1>Groups</h1>
+            <p>
+                            This table reports on "gegevensgroeptype" types, attributes and some properties of these constructs.
+                        </p>
+            <table class="tablesorter">
+               <table id="table-shortview-objecttypes" class="tablesorter">
+                  <col style="width:5%">
+                  <col style="width:20%">
+                  <col style="width:5%">
+                  <col style="width:15%">
+                  <col style="width:15%">
+                  <col style="width:15%">
+                  <col style="width:15%">
+                  <col style="width:15%">
+                  <thead>
+                     <tr class="tableHeader">
+                        <th>#</th>
+                        <th>Naam</th>
+                        <th>Mult</th>
+                        <th>Waarde</th>
+                        <th>Definitie</th>
+                        <th>Regels</th>
+                        <th>Toelichting</th>
+                        <th>Opmerkingen</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr class="shortviewHeader">
+                        <td class="ix">00001</td>
+                        <td>JZV::Naam</td>
+                        <td></td>
+                        <td></td>
+                        <td>Gegevensgroeptype voor naamgegevens.</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td class="ix">00002</td>
+                        <td>JZV::Naam.Voornaam (attrib)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td class="ix">00003</td>
+                        <td>JZV::Naam.Tussenvoegsel (attrib)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td class="ix">00004</td>
+                        <td>JZV::Naam.Geslachtsnaam (attrib)</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </tbody>
+               </table>
+            </table>
+         </div><div class="intro">
+            <a name="d26212e3092"></a><h1>Value lists</h1>
+            <p>
+                            This table reports on value lists.
+                            The view is originally defined by BRO, and intended to load into a spreadsheet.
+                        </p>
+            <p>
+                            For each construct the following is specified:
+                        </p>
+            <ul>
+               <li>Name or value (Naam)</li>
+               <li>IMBRO</li>
+               <li>IMBRO/A (archived)</li>
+               <li>Definition (Definitie)</li>
+               <li>Description (Omschrijving)</li>
+            </ul>
+            <table>
+               <table class="tablesorter">
+                  <table id="table-shortview-valuelists" class="tablesorter">
+                     <col style="width:5%">
+                     <col style="width:30%">
+                     <col style="width:5%">
+                     <col style="width:5%">
+                     <col style="width:30%">
+                     <col style="width:30%">
+                     <thead>
+                        <tr class="tableHeader">
+                           <th>#</th>
+                           <th>Naam</th>
+                           <th>IMBRO</th>
+                           <th>IMBRO/A</th>
+                           <th>Definitie</th>
+                           <th>Omschrijving</th>
+                        </tr>
+                     </thead>
+                     <tbody></tbody>
+                  </table>
+               </table>
+            </table>
+         </div></body></html>
