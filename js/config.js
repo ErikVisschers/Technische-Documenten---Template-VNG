@@ -23,6 +23,8 @@ var respecConfig = {
     "ch01": "content/ch01.md",
     "ch02": "content/ch02.md",
     "ch03": "content/ch03.md",
+    // imvertor (example) -> include the imvertor index.html as HTML
+    "imvertor-merge-test": "content/imvertor/20251118-import-logical-name/doc/index.html",
     "Leon's Chapter 1 - Generating": "content/mermaid1.md",
     "Leon's Chapter 2 - Assembling": "content/mermaid1.md",
     "Leon's Chapter 3 - Publishing": "content/mermaid.md",

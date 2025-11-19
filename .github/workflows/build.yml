@@ -103,6 +103,24 @@ jobs:
             snapshot.pdf
             snapshot.png
 
+      # 6️⃣ Prepare docs folder – copy source index and assets so GH Pages can render ReSpec
+      - name: Prepare docs folder
+        run: |
+          rm -rf docs || true
+          mkdir -p docs
+          # Copy the source index.html and all asset folders you need
+          cp -v index.html docs/index.html
+          cp -rv js docs/ || true
+          cp -rv css docs/ || true
+          cp -rv media docs/ || true
+          # copy your content folder (markdown + imvertor HTML export)
+          cp -rv content docs/ || true
+          # optionally copy md folder if you use it
+          cp -rv md docs/ || true
+          # keep snapshots as artifacts but don't publish them to top-level docs/
+          cp -v snapshot.pdf docs/ || true
+          cp -v snapshot.png docs/ || true
+          touch docs/.nojekyll
       # 6️⃣ Prepare docs folder
       - name: Prepare docs folder
         run: |
@@ -124,13 +142,17 @@ jobs:
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
 
-      # 8️⃣ Commit generated snapshots to main for local availability
-      - name: Commit snapshots to main
+      - name: (Optional) Commit snapshots to main
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          mkdir -p docs/generated
-          cp snapshot.html snapshot.pdf snapshot.png docs/generated/
-          git add docs/generated/*
-          git commit -m "Update generated docs [skip ci]" || echo "No changes to commit"
-          git push origin main
+          echo "Skipping commit of generated snapshots to main. Snapshots are uploaded as artifacts."
+
+      # # 8️⃣ Commit generated snapshots to main for local availability
+      # - name: Commit snapshots to main
+      #   run: |
+      #     git config user.name "github-actions[bot]"
+      #     git config user.email "github-actions[bot]@users.noreply.github.com"
+      #     mkdir -p docs/generated
+      #     cp snapshot.html snapshot.pdf snapshot.png docs/generated/
+      #     git add docs/generated/*
+      #     git commit -m "Update generated docs [skip ci]" || echo "No changes to commit"
+      #     git push origin main
