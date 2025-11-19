@@ -45,14 +45,14 @@ let respecConfig = {
   // Content: keys are section titles (can be any unique keys)
   // values can be string paths or objects { path: '...', class: '...' }
   // ------------------------
-  content: {
-  "abstract": "content/abstract.md",
-  "ch01": "content/ch01.md",
-  "ch02": "content/ch02.md",
-  "imvertor-logical": { path: "content/imvertor/doc/index.html", class: "imvertor-section" },
-  "Leon's Chapter 1 - Generating": "content/mermaid1.md",
-  "Leon's Chapter 2 - Assembling": "content/mermaid1.md"
-  },
+  // content: {
+  // "abstract": "content/abstract.md",
+  // "ch01": "content/ch01.md",
+  // "ch02": "content/ch02.md",
+  // "imvertor-logical": { path: "content/imvertor/doc/index.html", class: "imvertor-section" },
+  // "Leon's Chapter 1 - Generating": "content/mermaid1.md",
+  // "Leon's Chapter 2 - Assembling": "content/mermaid1.md"
+  // },
 
   // ------------------------
   // Bibliography
