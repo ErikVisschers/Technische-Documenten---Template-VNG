@@ -21,7 +21,7 @@ jobs:
           node-version: 20
 
       - name: Install Puppeteer
-        run: npm install puppeteer
+        run: npm install puppeteer@latest
 
       - name: Start local server
         run: python3 -m http.server 8080 --bind 127.0.0.1 &
@@ -59,7 +59,7 @@ jobs:
               await page.evaluate(() => document.respec.flush());
             } catch (e) {
               console.log('Fallback: waiting 10 seconds for ReSpec…');
-              await page.waitForTimeout(10000);
+              await new Promise(resolve => setTimeout(resolve, 10000));
             }
 
             await page.screenshot({ path: 'snapshot.png', fullPage: true });
