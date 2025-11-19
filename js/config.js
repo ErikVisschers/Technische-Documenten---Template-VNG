@@ -1,9 +1,13 @@
 var respecConfig = {
 specStatus: "io",
+license: "eupl",
 shortName: "technische-documenten-template-test",
 title: "Testen van de Technische Documentatie Template (VNG ReSpec)",
+subtitle: "Proof of Concept",
+
 editors: [{ name: "Erik Visschers", company: "Smart-ICT" }],
 authors: [{ name: "Erik Visschers", company: "Smart-ICT" }],
+
 github: { repoURL: "https://github.com/ErikVisschers/Technische-Documenten---Template-VNG" },
 
 
@@ -18,6 +22,8 @@ content: {
 "abstract": "content/abstract.md",
 "ch01": "content/ch01.md",
 "ch02": "content/ch02.md",
-"imvertor-logical": { path: "content/imvertor/doc/index.html", class: "imvertor-section" }
+"imvertor-logical": { path: "content/imvertor/doc/index.html", class: "imvertor-section" },
+"Leon's Chapter 1 - Generating": "content/mermaid1.md",
+"Leon's Chapter 2 - Assembling": "content/mermaid1.md"
 }
 };
