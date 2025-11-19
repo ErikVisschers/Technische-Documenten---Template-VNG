@@ -12,9 +12,7 @@
   <script src="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/js/organisation-config.js" class="remove"></script>
   <!-- <script src="js/organisation-config.js" class="remove"></script> -->
   <script src="js/config.js" class="remove"></script>
-  <script class="remove">
-    respecConfig = { ...organisationConfig, ...respecConfig };
-  </script>
+ 
   <script>document.title = respecConfig.title || "Default Title";</script>
 
   <!-- Favicon -->
@@ -45,15 +43,8 @@
 <body>
 
   <!-- Required sections for ReSpec -->
-  <section id="abstract" data-include-format="markdown" data-include="abstract.md"></section>
   <section id="sotd"></section>
 
-  <!-- Main content sections -->
-  <section id="rm" data-include-format="markdown" data-include="README.md"></section>
-  <section id="gen" data-include-format="markdown" data-include="VNG-R-Generating.md"></section>
-  <section id="assembl" data-include-format="markdown" data-include="VNG-R-Assembling.md"></section>
-  <section id="publ" data-include-format="markdown" data-include="VNG-R-Publishing.md"></section>
-  <section id="probl" data-include-format="markdown" data-include="VNG-R-Foutoplossing.md"></section>
 
   <!-- Dynamic inclusion from respecConfig.content -->
   <script>
@@ -88,7 +79,7 @@
       }
 
       // Insert dynamic content after the "probl" section
-      const problSection = document.getElementById("probl");
+      const problSection = document.getElementById("sotd");
       if (problSection) {
         problSection.insertAdjacentHTML("afterend", content);
       } else {
@@ -99,7 +90,7 @@
 
   <!-- Other required ReSpec sections -->
   <section id="conformance"></section>
-  <section id="tof"></section>
+  <section id="toc"></section>
   <section id="index"></section>
 
 </body>
