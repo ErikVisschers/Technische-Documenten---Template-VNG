@@ -1,85 +1,105 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <!-- Mermaid for diagrams -->
+  <script src="https://cdn.jsdelivr.net/gh/digitalbazaar/respec-mermaid@1.0.1/dist/main.js" class="remove"></script>
 
-<!-- organisation-config must define `organisationConfig` object -->
-<script src="js/organisation-config.js" class="remove"></script>
-<!-- your respecConfig should be defined in js/config.js -->
-<script src="js/config.js" class="remove"></script>
+  <!-- Organization config -->
+  <script src="js/organisation-config.js" class="remove"></script>
+  <script src="js/config.js" class="remove"></script>
+  <script class="remove">
+    respecConfig = { ...organisationConfig, ...respecConfig };
+  </script>
+  <script>document.title = respecConfig.title || "Default Title";</script>
 
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico" />
 
-<script>
-// Merge organisationConfig and respecConfig into window.respecConfig
-window.respecConfig = Object.assign({}, window.organisationConfig || {}, window.respecConfig || {});
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
 
+  <!-- ReSpec NL Gov build -->
+  <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" async></script>
 
-// Build include sections *before* ReSpec is loaded so ReSpec picks them up
-(function() {
-const map = window.respecConfig.content || {};
-const parts = [];
-
-
-function getFormat(path) {
-if (!path || typeof path !== 'string') return 'markdown';
-const ext = path.split('.').pop().toLowerCase();
-if (ext === 'html' || ext === 'htm') return 'html';
-if (ext === 'md' || ext === 'markdown') return 'markdown';
-// fallback
-return 'markdown';
-}
-
-
-for (const key of Object.keys(map)) {
-const cfg = map[key];
-let path = '';
-let cls = '';
-if (typeof cfg === 'string') {
-path = cfg;
-} else if (typeof cfg === 'object' && cfg !== null) {
-path = cfg.path || '';
-cls = cfg.class || '';
-}
-if (!path) continue;
-const fmt = getFormat(path);
-parts.push(`<section data-include="${path}" data-include-format="${fmt}"${cls ? ` class="${cls}"` : ''}></section>`);
-}
-
-
-// Write sections synchronously so they exist when ReSpec loads
-if (parts.length) document.write(parts.join('\n'));
-})();
-</script>
-
-
-<!-- load ReSpec (nlgov build used in your repo) -->
-<script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove"></script>
-
-
-<!-- Optional: mermaid plugin if you have diagrams -->
-<script src="https://cdn.jsdelivr.net/gh/digitalbazaar/respec-mermaid@1.0.1/dist/main.js" class="remove"></script>
-
-
-<!-- Page title will be taken from respecConfig.title set in js/config.js -->
-<script>
-try { document.title = window.respecConfig.title || document.title; } catch (e) {}
-</script>
-
-
-<link rel="shortcut icon" href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico" />
-<link rel="stylesheet" href="css/custom.css">
-
-
-<style>
-.figure img, .sidefigure img, figure img,
-.figure object, .sidefigure object, figure object { max-width: none !important; }
-</style>
+  <!-- Styles for images and h7 -->
+  <style>
+    .figure img, .sidefigure img, figure img,
+    .figure object, .sidefigure object, figure object {
+      max-width: none !important;
+    }
+    h7 {
+      font-style: italic;
+    }
+    h7::after, h7::before {
+      content: "\a";
+      white-space: pre;
+    }
+  </style>
 </head>
+
 <body>
-<!-- ReSpec will fill these sections as usual -->
-<section id="conformance"></section>
-<section id="tof"></section>
+
+  <!-- Required sections for ReSpec -->
+  <section id="abstract" data-include-format="markdown" data-include="abstract.md"></section>
+  <section id="sotd"></section>
+
+  <!-- Main content sections -->
+  <section id="rm" data-include-format="markdown" data-include="README.md"></section>
+  <section id="gen" data-include-format="markdown" data-include="VNG-R-Generating.md"></section>
+  <section id="assembl" data-include-format="markdown" data-include="VNG-R-Assembling.md"></section>
+  <section id="publ" data-include-format="markdown" data-include="VNG-R-Publishing.md"></section>
+  <section id="probl" data-include-format="markdown" data-include="VNG-R-Foutoplossing.md"></section>
+
+  <!-- Dynamic inclusion from respecConfig.content -->
+  <script>
+    (function() {
+      const map = respecConfig.content || {};
+      let content = "";
+
+      function extOf(path) {
+        const m = path.match(/\.([a-z0-9]+)$/i);
+        return m ? m[1].toLowerCase() : "";
+      }
+
+      function includeFormatFromExt(ext) {
+        if (ext === "md" || ext === "markdown") return "markdown";
+        if (ext === "html" || ext === "htm") return "html";
+        return "markdown";
+      }
+
+      for (const key of Object.keys(map)) {
+        const path = map[key] || "";
+        if (!path) continue;
+
+        let actualPath = path;
+        let cls = "";
+        if (typeof path === "object") {
+          actualPath = path.path || "";
+          cls = path.class || "";
+        }
+        const ext = extOf(actualPath);
+        const fmt = includeFormatFromExt(ext);
+        content += `<section data-include-format="${fmt}" data-include="${actualPath}"${cls ? ` class="${cls}"` : ""}></section>\n`;
+      }
+
+      // Insert dynamic content after the "probl" section
+      const problSection = document.getElementById("probl");
+      if (problSection) {
+        problSection.insertAdjacentHTML("afterend", content);
+      } else {
+        document.body.insertAdjacentHTML("beforeend", content);
+      }
+    })();
+  </script>
+
+  <!-- Other required ReSpec sections -->
+  <section id="conformance"></section>
+  <section id="tof"></section>
+  <section id="index"></section>
+
 </body>
 </html>
