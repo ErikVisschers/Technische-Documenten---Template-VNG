@@ -40,58 +40,56 @@
   </style>
 </head>
 
-<body>
+  <body>
+    <!-- Required sections for ReSpec -->
+    <section id="sotd"></section>
 
-  <!-- Required sections for ReSpec -->
-  <section id="sotd"></section>
+    <!-- Explicit dynamic inclusion of Markdown and Imvertor content -->
+    <script>
+      (function() {
+        const contentMap = {
+          "abstract": "content/abstract.md",
+          "introduction": "content/ch01.md",
+          "requirements": "content/ch02.md",
+          "imvertor-logical": { path: "content/imvertor/doc/index.html", class: "imvertor-section" }
+        };
 
-
-  <!-- Dynamic inclusion from respecConfig.content -->
-  <script>
-    (function() {
-      const map = respecConfig.content || {};
-      let content = "";
-
-      function extOf(path) {
-        const m = path.match(/\.([a-z0-9]+)$/i);
-        return m ? m[1].toLowerCase() : "";
-      }
-
-      function includeFormatFromExt(ext) {
-        if (ext === "md" || ext === "markdown") return "markdown";
-        if (ext === "html" || ext === "htm") return "html";
-        return "markdown";
-      }
-
-      for (const key of Object.keys(map)) {
-        const path = map[key] || "";
-        if (!path) continue;
-
-        let actualPath = path;
-        let cls = "";
-        if (typeof path === "object") {
-          actualPath = path.path || "";
-          cls = path.class || "";
+        function extOf(path) {
+          const m = path.match(/\.([a-z0-9]+)$/i);
+          return m ? m[1].toLowerCase() : "";
         }
-        const ext = extOf(actualPath);
-        const fmt = includeFormatFromExt(ext);
-        content += `<section data-include-format="${fmt}" data-include="${actualPath}"${cls ? ` class="${cls}"` : ""}></section>\n`;
-      }
 
-      // Insert dynamic content after the "probl" section
-      const problSection = document.getElementById("sotd");
-      if (problSection) {
-        problSection.insertAdjacentHTML("afterend", content);
-      } else {
-        document.body.insertAdjacentHTML("beforeend", content);
-      }
-    })();
-  </script>
+        function includeFormatFromExt(ext) {
+          if (ext === "md" || ext === "markdown") return "markdown";
+          if (ext === "html" || ext === "htm") return "html";
+          return "markdown";
+        }
 
-  <!-- Other required ReSpec sections -->
-  <section id="conformance"></section>
-  <section id="toc"></section>
-  <section id="index"></section>
+        let contentHTML = "";
 
-</body>
+        for (const key of Object.keys(contentMap)) {
+          const item = contentMap[key];
+          const actualPath = typeof item === "string" ? item : item.path || "";
+          const cls = (typeof item === "object" && item.class) ? item.class : "";
+          if (!actualPath) continue;
+
+          const fmt = includeFormatFromExt(extOf(actualPath));
+          contentHTML += `<section data-include-format="${fmt}" data-include="${actualPath}"${cls ? ` class="${cls}"` : ""}></section>\n`;
+        }
+
+        const sotdSection = document.getElementById("sotd");
+        if (sotdSection) {
+          sotdSection.insertAdjacentHTML("afterend", contentHTML);
+        } else {
+          document.body.insertAdjacentHTML("beforeend", contentHTML);
+        }
+      })();
+    </script>
+
+    <!-- Other required ReSpec sections -->
+    <section id="conformance"></section>
+    <section id="toc"></section>
+    <section id="index"></section>
+
+  </body>
 </html>
