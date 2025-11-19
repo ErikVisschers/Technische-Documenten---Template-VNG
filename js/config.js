@@ -6,16 +6,16 @@ let respecConfig = {
   subtitle: "Proof of Concept",
   shortName: "technische-documenten-template-test",
   specType: "HL", // e.g. NO, ST, IM, PR, HR, WD
-  specStatus: "io", //e.g. WD, CR, PR, GN-WV,
-  license: "eupl",
+  specStatus: "IO", //e.g. WD, CR, PR, GN-WV,
 
 
   // ------------------------
   // Versioning
   // ------------------------
-  thisVersion: [...organisationConfig.thisVersion],
-  latestVersion: [...organisationConfig.latestVersion],
-  prevVersion: [...organisationConfig.prevVersion],
+  thisVersion: organisationConfig.thisVersion,
+  latestVersion: organisationConfig.latestVersion,
+  prevVersion: organisationConfig.prevVersion,
+
   // // keep publish metadata as you need
   // publishVersion: "2025-10-20",
   // publishDate: "2025-10-20",
