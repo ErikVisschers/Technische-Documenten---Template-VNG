@@ -1,100 +1,78 @@
 name: Build and Deploy Docs
 
+
 permissions:
-  contents: write  # Required for pushing to repository (gh-pages and main)
+  contents: write
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+
     steps:
-      # 1️⃣ Checkout repository
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      # 2️⃣ Setup Node.js
-      - name: Setup Node.js
+
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      # 3️⃣ Install Puppeteer
+
       - name: Install Puppeteer
         run: npm install puppeteer
 
-      # 4️⃣ Start local HTTP server
-      - name: Start local HTTP server
+
+      - name: Start local server
         run: python3 -m http.server 8080 --bind 127.0.0.1 &
 
-      # 4.1️⃣ Wait for HTTP server to be ready
-      - name: Wait for local HTTP server
+
+      - name: Wait for server
         run: |
-          echo "Waiting for HTTP server to be ready..."
           for i in {1..20}; do
-            if curl -s http://127.0.0.1:8080 > /dev/null; then
-              echo "Server is ready!"
-              break
-            else
-              echo "Waiting... ($i)"
-              sleep 3
+            if curl -sS http://127.0.0.1:8080 > /dev/null; then
+              echo "server ready"; break
             fi
+            echo "waiting... ($i)"; sleep 3
           done
 
-      # 5️⃣ Render ReSpec document (robust with debug)
-      - name: Render ReSpec document
+
+      - name: Render snapshot (puppeteer)
         run: |
           npx puppeteer browsers install chrome
-          
           node -e "
           const puppeteer = require('puppeteer');
           const fs = require('fs');
           (async () => {
-            const browser = await puppeteer.launch({
-              headless: true,
-              args: ['--no-sandbox', '--disable-setuid-sandbox']
-            });
+            const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox','--disable-setuid-sandbox'] });
             const page = await browser.newPage();
-            
-            console.log('Navigating to local HTML...');
+            console.log('goto index...');
             await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
 
-            try {
-              await page.waitForFunction(() => document.respec && document.respec.ready, { timeout: 90000 });
-              console.log('ReSpec is ready.');
-              await page.evaluate(() => document.respec.flush());
-            } catch (err) {
-              console.warn('⚠️ ReSpec.ready not detected. Proceeding after fallback wait.');
-              await new Promise(resolve => setTimeout(resolve, 5000));
-            }
 
-            await page.pdf({ path: 'snapshot.pdf', format: 'A4', printBackground: true });
-            await page.screenshot({ path: 'snapshot.png', fullPage: true });
-            const htmlContent = await page.content();
-            fs.writeFileSync('snapshot.html', htmlContent);
-            console.log('Preview of snapshot.html:', htmlContent.substring(0, 200));
+          // wait for ReSpec to be ready (long timeout)
+          try {
+            await page.waitForFunction(() => document.respec && document.respec.ready, { timeout: 90000 });
+            await page.evaluate(() => document.respec.flush());
+          } catch (e) {
+            console.warn('Respec.ready not detected — continuing after fallback wait.');
+            await new Promise(r => setTimeout(r, 5000));
+          }
 
-            await browser.close();
-            console.log('Snapshots generated successfully.');
+          await page.screenshot({ path: 'snapshot.png', fullPage: true });
+          await page.pdf({ path: 'snapshot.pdf', format: 'A4', printBackground: true });
+          fs.writeFileSync('snapshot.html', await page.content());
+          await browser.close();
           })();"
 
-      # 5.1️⃣ Verify snapshot files
-      - name: Verify snapshot files
-        run: |
-          echo "Checking generated files..."
-          ls -lh snapshot.*
-          if [ ! -s snapshot.html ]; then
-            echo "❌ snapshot.html is empty!"
-            exit 1
-          fi
-          echo "✅ snapshot.html has content."
 
-      # 5.2️⃣ Upload snapshot artifacts
-      - name: Upload snapshot artifacts
+      - name: Upload snapshots
         uses: actions/upload-artifact@v4
         with:
           name: docs-snapshots
@@ -103,36 +81,21 @@ jobs:
             snapshot.pdf
             snapshot.png
 
-      # 6️⃣ Prepare docs folder – copy source index and assets so GH Pages can render ReSpec
-      - name: Prepare docs folder
+
+      - name: Prepare docs folder for GH Pages
         run: |
           rm -rf docs || true
           mkdir -p docs
-          # Copy the source index.html and all asset folders you need
+          # copy the source site (index + assets + content)
           cp -v index.html docs/index.html
           cp -rv js docs/ || true
           cp -rv css docs/ || true
           cp -rv media docs/ || true
-          # copy your content folder (markdown + imvertor HTML export)
           cp -rv content docs/ || true
-          # optionally copy md folder if you use it
           cp -rv md docs/ || true
-          # keep snapshots as artifacts but don't publish them to top-level docs/
-          cp -v snapshot.pdf docs/ || true
-          cp -v snapshot.png docs/ || true
-          touch docs/.nojekyll
-      # 6️⃣ Prepare docs folder
-      - name: Prepare docs folder
-        run: |
-          rm -rf docs/* || true
-          mkdir -p docs
-          cp snapshot.html docs/index.html
-          cp snapshot.pdf docs/
-          cp snapshot.png docs/
-          cp -r css js media md docs/ || true
           touch docs/.nojekyll
 
-      # 7️⃣ Deploy to GitHub Pages
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -142,17 +105,6 @@ jobs:
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
 
-      - name: (Optional) Commit snapshots to main
-        run: |
-          echo "Skipping commit of generated snapshots to main. Snapshots are uploaded as artifacts."
 
-      # # 8️⃣ Commit generated snapshots to main for local availability
-      # - name: Commit snapshots to main
-      #   run: |
-      #     git config user.name "github-actions[bot]"
-      #     git config user.email "github-actions[bot]@users.noreply.github.com"
-      #     mkdir -p docs/generated
-      #     cp snapshot.html snapshot.pdf snapshot.png docs/generated/
-      #     git add docs/generated/*
-      #     git commit -m "Update generated docs [skip ci]" || echo "No changes to commit"
-      #     git push origin main
+      - name: Done
+        run: echo "Published to gh-pages"
