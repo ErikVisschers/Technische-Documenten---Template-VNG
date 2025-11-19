@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imvert-imap:diagrams xmlns:imvert-imap="http://www.imvertor.org/schema/imagemap">
+   <imvert-imap:diagram>
+      <imvert-imap:name>JZV - Overzicht</imvert-imap:name>
+      <imvert-imap:id>EAID_8A8B39C6_CE2D_4198_9C1F_F01037B89746</imvert-imap:id>
+      <imvert-imap:type>ClassDiagram</imvert-imap:type>
+      <imvert-imap:in-package>EAPK_942E87BA_BF77_4b79_9B8F_F12F1812EC88</imvert-imap:in-package>
+      <imvert-imap:documentation>
+         <p xmlns="http://www.w3.org/1999/xhtml" xmlns:html="http://www.w3.org/1999/xhtml"/>
+      </imvert-imap:documentation>
+      <imvert-imap:show-caption>false</imvert-imap:show-caption>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_8AAB0C72_4D6B_4f11_91B9_FD622D4CFE0A</imvert-imap:for-id>
+         <imvert-imap:loc type="imgL">1285</imvert-imap:loc>
+         <imvert-imap:loc type="imgT">63</imvert-imap:loc>
+         <imvert-imap:loc type="imgR">1515</imvert-imap:loc>
+         <imvert-imap:loc type="imgB">250</imvert-imap:loc>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_F0C60722_84A0_4303_8482_0E54CD6A1233</imvert-imap:for-id>
+         <imvert-imap:loc type="imgL">836</imvert-imap:loc>
+         <imvert-imap:loc type="imgT">63</imvert-imap:loc>
+         <imvert-imap:loc type="imgR">1124</imvert-imap:loc>
+         <imvert-imap:loc type="imgB">250</imvert-imap:loc>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_35626D52_0C8E_4b40_A140_673EFC8CB3A2</imvert-imap:for-id>
+         <imvert-imap:loc type="imgL">865</imvert-imap:loc>
+         <imvert-imap:loc type="imgT">400</imvert-imap:loc>
+         <imvert-imap:loc type="imgR">1094</imvert-imap:loc>
+         <imvert-imap:loc type="imgB">587</imvert-imap:loc>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_71F44404_98A9_4b4a_8F3B_16621828CAAF</imvert-imap:for-id>
+         <imvert-imap:loc type="imgL">846</imvert-imap:loc>
+         <imvert-imap:loc type="imgT">736</imvert-imap:loc>
+         <imvert-imap:loc type="imgR">1114</imvert-imap:loc>
+         <imvert-imap:loc type="imgB">922</imvert-imap:loc>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_EA5A0F68_BB40_4e65_A1E4_3CCA5AFA0150</imvert-imap:for-id>
+         <imvert-imap:loc type="imgL">41</imvert-imap:loc>
+         <imvert-imap:loc type="imgT">401</imvert-imap:loc>
+         <imvert-imap:loc type="imgR">232</imvert-imap:loc>
+         <imvert-imap:loc type="imgB">588</imvert-imap:loc>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_1CA8478C_CAAC_4f11_946C_3905066531FD</imvert-imap:for-id>
+         <imvert-imap:loc type="imgL">1257</imvert-imap:loc>
+         <imvert-imap:loc type="imgT">400</imvert-imap:loc>
+         <imvert-imap:loc type="imgR">1545</imvert-imap:loc>
+         <imvert-imap:loc type="imgB">587</imvert-imap:loc>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_538AF407_C986_417c_9B68_462CA5A52ABF</imvert-imap:for-id>
+         <imvert-imap:loc type="imgL">445</imvert-imap:loc>
+         <imvert-imap:loc type="imgT">400</imvert-imap:loc>
+         <imvert-imap:loc type="imgR">674</imvert-imap:loc>
+         <imvert-imap:loc type="imgB">587</imvert-imap:loc>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_07684391_6D75_484c_B8F8_C6E0EB2B4156</imvert-imap:for-id>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_9A0C9C25_FCF6_48ef_97A5_D81293CD746D</imvert-imap:for-id>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_F8AD8748_3E8C_45f6_B83E_FC3C3710F46B</imvert-imap:for-id>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_26D53D20_3FEB_4efd_9300_06392F7E995D</imvert-imap:for-id>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_78DFE17D_8D4D_4070_B9B0_A08C3DEE208B</imvert-imap:for-id>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_74C37097_2C76_4d70_A665_5E939D8D6CB2</imvert-imap:for-id>
+      </imvert-imap:map>
+      <imvert-imap:map>
+         <imvert-imap:for-id>EAID_F46EE033_A3F9_4be9_B757_BCB5CB8BCA81</imvert-imap:for-id>
+      </imvert-imap:map>
+   </imvert-imap:diagram>
+</imvert-imap:diagrams>

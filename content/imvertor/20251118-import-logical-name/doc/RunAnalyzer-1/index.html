@@ -1,0 +1,2404 @@
+<!DOCTYPE HTML><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Imvert - Run analysis</title><link href="../web/css/report.css" rel="stylesheet"><link href="../web/themes/blue/style.css" rel="stylesheet"><script src="../web/script/jquery/jquery-latest.js" type="text/javascript"></script><script src="../web/script/tablesorter/jquery.tablesorter.min.js" type="text/javascript"></script><script>
+                    $(function() { 
+                    
+                        $("#table-cli").tablesorter(); 
+                    
+                    });  
+                </script></head><body><h1>Properties passed</h1><p>
+                    Info on the properties for this run, and their values.
+                </p><p>
+                    Properties are passed in files, in this order:
+                    <ol>
+               <li>(File) tmpA56C.tmp</li>
+            </ol>
+         </p><p>In the column "Defined in" the default for this property is specified after "Default:".</p><table class="tablesorter">
+            <table id="table-cli" class="tablesorter">
+               <col style="width:5%">
+               <col style="width:10%">
+               <col style="width:10%">
+               <col style="width:10%">
+               <col style="width:20%">
+               <col style="width:5%">
+               <col style="width:10%">
+               <col style="width:30%">
+               <thead>
+                  <tr class="tableHeader">
+                     <th>#</th>
+                     <th>Name</th>
+                     <th>Args</th>
+                     <th>Value</th>
+                     <th>Explain</th>
+                     <th>Required?</th>
+                     <th>Step</th>
+                     <th>Defined in</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr class="">
+                     <td class="ix">00001</td>
+                     <td>STUBnilreason</td>
+                     <td>Release number</td>
+                     <td>
+                        <b></b>
+                     </td>
+                     <td>When specified, pass the release number of Imvertor which nilreason approach must be used. Currently supported: 1.28.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b></b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00002</td>
+                     <td>allowduplicatetv</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if the tagged values may be duplicated, recording several values</td>
+                     <td>false</td>
+                     <td>XmiTranslator</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00003</td>
+                     <td>allowemptymodel</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if the model or any model domain may be empty; this is feasible in development phases</td>
+                     <td>false</td>
+                     <td>Validator</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00004</td>
+                     <td>allowmultiplesuppliers</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Allow any construct to have multiple suppliers</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00005</td>
+                     <td>apcfile</td>
+                     <td>path</td>
+                     <td>
+                        <b></b>
+                     </td>
+                     <td>Path to the application specific configuration Excel file</td>
+                     <td>false</td>
+                     <td>ApcModifier</td>
+                     <td>Default:
+                                        <b></b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00006</td>
+                     <td>application</td>
+                     <td>name</td>
+                     <td>
+                        <b>JZV</b>
+                     </td>
+                     <td>Name of the application, i.e. root package in UML</td>
+                     <td>true</td>
+                     <td>common</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>JZV</b>
+                        <br>(File) MinJenV.xlsx.properties:
+                                        (unspecified)<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00007</td>
+                     <td>assocbyreference</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Associations to an objecttype/featuretype must be realized "by reference" in ISO 19136 XML instances</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00008</td>
+                     <td>attributeisqualified</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>The XML schema attributes are qualified.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00009</td>
+                     <td>buildcollection</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if collections (and referencing) are used, no if referencing is not used</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00010</td>
+                     <td>chop</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if all references to classes/datatypes outside the application should be removed</td>
+                     <td>false</td>
+                     <td>ImvertCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00011</td>
+                     <td>cleanupschemas</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if schemas should be indented and cleared of insignificant whitespace</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00012</td>
+                     <td>codelistoption</td>
+                     <td>Name</td>
+                     <td>
+                        <b>Option1</b>
+                     </td>
+                     <td>The codelist option to apply in the ISO19136 schema.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>Option1</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00013</td>
+                     <td>compare</td>
+                     <td>supplier|release|none</td>
+                     <td>
+                        <b>none</b>
+                     </td>
+                     <td>Compare the model to the supplier, a release, or do not compare.</td>
+                     <td>false</td>
+                     <td>ReleaseComparer</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>none</b>
+                        <br>Default:
+                                        none<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00014</td>
+                     <td>comparekey</td>
+                     <td>id|name</td>
+                     <td>
+                        <b>id</b>
+                     </td>
+                     <td>Assume the same construct has the same name, or the same ID.</td>
+                     <td>false</td>
+                     <td>ReleaseComparer</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>id</b>
+                        <br>Default:
+                                        name<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00015</td>
+                     <td>comparerules</td>
+                     <td>name</td>
+                     <td>
+                        <b>MinJenVBSM</b>
+                     </td>
+                     <td>The name of the file recording the rules for comparison.</td>
+                     <td>false</td>
+                     <td>ReleaseComparer</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>MinJenVBSM</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00016</td>
+                     <td>comparewith</td>
+                     <td>YYYYMMDD</td>
+                     <td>
+                        <b>unspecified</b>
+                     </td>
+                     <td>Compare the new model to the same model released at the specified date.</td>
+                     <td>false</td>
+                     <td>ReleaseComparer</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>unspecified</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00017</td>
+                     <td>contactemail</td>
+                     <td>email-address</td>
+                     <td>
+                        <b>info@minJenV.nl</b>
+                     </td>
+                     <td>The email address for support on the (form of the) distributed release</td>
+                     <td>false</td>
+                     <td>ReadmeCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>info@minJenV.nl</b>
+                        <br>Default:
+                                        no_contactemail<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00018</td>
+                     <td>contacturl</td>
+                     <td>url</td>
+                     <td>
+                        <b>https://www.minJenV.nl/</b>
+                     </td>
+                     <td>The URL for support on the (form of the) distributed release</td>
+                     <td>false</td>
+                     <td>ReadmeCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>https://www.minJenV.nl/</b>
+                        <br>Default:
+                                        no_contacturl<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00019</td>
+                     <td>copyxmi</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if the XMI file must be copied to the result folder.</td>
+                     <td>false</td>
+                     <td>XmiCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00020</td>
+                     <td>createcomplyexcel</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if a compliancy Excel should be generated for this application</td>
+                     <td>false</td>
+                     <td>ComplyCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00021</td>
+                     <td>createcvafile</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if CVA files must be generated</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00022</td>
+                     <td>createderivedeap</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if an full representation of all derived information should be created. If EAP provided, return full EA project. If XMI provided, return adapted XMI.  </td>
+                     <td>false</td>
+                     <td>EapCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00023</td>
+                     <td>createeaprofile</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Should an EA profile be generated?</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00024</td>
+                     <td>createeatoolbox</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Should an EA toolbox be generated?</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00025</td>
+                     <td>creategmlprofile</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Generate a GML profile for the model from XSD files configured. Only avaiable for GML 3.2.2.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>yes</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00026</td>
+                     <td>createhistory</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if history info should be read from Excel file</td>
+                     <td>false</td>
+                     <td>HistoryCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00027</td>
+                     <td>createimagemap</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Specify if an image map should be compiled.</td>
+                     <td>false</td>
+                     <td>XmiCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00028</td>
+                     <td>createjsonconcepts</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if JSON concepts must be generated</td>
+                     <td>false</td>
+                     <td>JsonConceptsCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00029</td>
+                     <td>createjsonschema</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if JSON schema must be generated</td>
+                     <td>false</td>
+                     <td>JsonSchemaCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00030</td>
+                     <td>createjsonschemavariant</td>
+                     <td>name</td>
+                     <td>
+                        <b>MinJenVBSM</b>
+                     </td>
+                     <td>The name of the variant of the JSON schema generated</td>
+                     <td>false</td>
+                     <td>JsonSchemaCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>MinJenVBSM</b>
+                        <br>Default:
+                                        plain<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00031</td>
+                     <td>createld</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if Linked Data Turtle must be generated</td>
+                     <td>false</td>
+                     <td>LDCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00032</td>
+                     <td>createmimformat</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if MIM format must be generated</td>
+                     <td>false</td>
+                     <td>MIMCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00033</td>
+                     <td>createoffice</td>
+                     <td>html | doc | none</td>
+                     <td>
+                        <b>html</b>
+                     </td>
+                     <td>Create a documentation file in plain HTML, MsWord, or Respec format. By default, create none.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>html</b>
+                        <br>(File) MinJenV.xlsx.properties:
+                                        none<br>Default:
+                                        none<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00034</td>
+                     <td>createofficemode</td>
+                     <td>plain|click</td>
+                     <td>
+                        <b>click</b>
+                     </td>
+                     <td>When creating office, use plain or clickable mode.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>click</b>
+                        <br>(File) MinJenV.xlsx.properties:
+                                        plain<br>Default:
+                                        click<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00035</td>
+                     <td>createofficevariant</td>
+                     <td>msword | respec | documentor</td>
+                     <td>
+                        <b>respec</b>
+                     </td>
+                     <td>Specify the type of office file. Multiple formats are allowed, separate list by whitespace.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>respec</b>
+                        <br>(File) MinJenV.xlsx.properties:
+                                        msword<br>Default:
+                                        documentor<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00036</td>
+                     <td>createopenapi</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if OpenAPI descriptions must be generated. This will also set sourcecodetype to "java-openapi"</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>yes</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00037</td>
+                     <td>createshacl</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if SHACL RDF must be generated</td>
+                     <td>false</td>
+                     <td>ShaclCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00038</td>
+                     <td>createskos</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if SKOS RDF must be generated</td>
+                     <td>false</td>
+                     <td>SkosCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00039</td>
+                     <td>createsourcecode</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if source code must be generated</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>Default:
+                                        <b>yes</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00040</td>
+                     <td>createstccsv</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if Stelselcatalogus CSV must be generated</td>
+                     <td>false</td>
+                     <td>StcCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00041</td>
+                     <td>createtemplate</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if an EAP template should be created for this application. If EAP provided, return template EAP. If XMI provided, return template XMI.</td>
+                     <td>false</td>
+                     <td>EapCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00042</td>
+                     <td>createumlreport</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>(Deprecated) Yes if an UML report should be created. Only applicable for EA enabled environments.</td>
+                     <td>false</td>
+                     <td>EapCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00043</td>
+                     <td>createxmlschema</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if XML schemas must be generated</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00044</td>
+                     <td>createxmlschemavariant</td>
+                     <td>name</td>
+                     <td>
+                        <b>unspecified</b>
+                     </td>
+                     <td>The name of the variant of the XML schema generated</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>unspecified</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00045</td>
+                     <td>createyaml</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if YAML must be generated</td>
+                     <td>false</td>
+                     <td>YamlCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00046</td>
+                     <td>createziprelease</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if the released application should be zipped for distribution</td>
+                     <td>false</td>
+                     <td>ReleaseCompiler</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>yes</b>
+                        <br>(File) MinJenV.xlsx.properties:
+                                        yes<br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00047</td>
+                     <td>debug</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if run in debug mode</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00048</td>
+                     <td>debugmode</td>
+                     <td>CODE</td>
+                     <td>
+                        <b>CHAIN</b>
+                     </td>
+                     <td>If debug=yes, then the debug mode must be any of the codes specified between ";". The main chain is "CHAIN".</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>Default:
+                                        <b>CHAIN</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00049</td>
+                     <td>derivedoc</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if derivation of documentation is required</td>
+                     <td>false</td>
+                     <td>ImvertCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00050</td>
+                     <td>docrelease</td>
+                     <td>YYYYMMDD</td>
+                     <td>
+                        <b>00000000</b>
+                     </td>
+                     <td>If supplied, this is a documentation release with specified release date</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>00000000</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00051</td>
+                     <td>docrules</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>(specify)</b>
+                     </td>
+                     <td>The name of the file holding the documentation rules. If omitted, assume metamodel name and version as extracted from the supplied model.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>(specify)</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00052</td>
+                     <td>documentorfile</td>
+                     <td>filepath</td>
+                     <td>
+                        <b></b>
+                     </td>
+                     <td>Path to the folder or zipfile holding the Documentor files, i.e. MsWord files and binaries used to create full Respec documentation.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b></b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00053</td>
+                     <td>elementisqualified</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>The XML schema elements are qualified. </td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00054</td>
+                     <td>endproductbaseconfig</td>
+                     <td>File name</td>
+                     <td>
+                        <b>(File) no_endproductbaseconfig</b>
+                     </td>
+                     <td>Name of the Excel file holding the base product configuration</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>(File) no_endproductbaseconfig</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00055</td>
+                     <td>externalurl</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if external schemas must be referened by URL</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00056</td>
+                     <td>flattenschemas</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if schemas should also be flattened</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00057</td>
+                     <td>forcecompile</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Force a compile and ignore possible errors</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>no</b>
+                        <br>(File) MinJenV.xlsx.properties:
+                                        no<br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00058</td>
+                     <td>forcenillable</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Force all properties in the resulting schema to be nillable.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00059</td>
+                     <td>fullrespec</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Should a full respec version be generated along with the catalog?</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00060</td>
+                     <td>gitcfg</td>
+                     <td>name</td>
+                     <td>
+                        <b>no_gitcfg</b>
+                     </td>
+                     <td>Name of the GIT configuration used by Imvertor to gain access to the GIT repository. The name must have been configured in the server.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>no_gitcfg</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00061</td>
+                     <td>gitcomment</td>
+                     <td>string</td>
+                     <td>
+                        <b></b>
+                     </td>
+                     <td>Description to pass as comment when committing to GIT.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td></td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00062</td>
+                     <td>gitpath</td>
+                     <td>path</td>
+                     <td>
+                        <b>no_gitpath</b>
+                     </td>
+                     <td>Subpath to the remote GIT repository, starting with / e.g. /MyOrganization/MyRepository</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>no_gitpath</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00063</td>
+                     <td>giturl</td>
+                     <td>URL</td>
+                     <td>
+                        <b>no_giturl</b>
+                     </td>
+                     <td>URL of the Github IO (pages) location</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>no_giturl</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00064</td>
+                     <td>gmlprofilename</td>
+                     <td>template</td>
+                     <td>
+                        <b>[owner]-gml</b>
+                     </td>
+                     <td>Name of the GML profile XSD file. You may use [...] parameters. </td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>[owner]-gml</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="cmp-system">
+                     <td class="ix">00065</td>
+                     <td>gmlprofileversion</td>
+                     <td>template</td>
+                     <td>
+                        <b></b>
+                     </td>
+                     <td>Version of the GML profile XSD file. You may use [...] parameters.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td></td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00066</td>
+                     <td>gmlversion</td>
+                     <td>version nr</td>
+                     <td>
+                        <b>3.2.1</b>
+                     </td>
+                     <td>The GML version to be used for ISO19136 schemas.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>3.2.1</b>
+                        <br>Default:
+                                        3.2.2<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00067</td>
+                     <td>help</td>
+                     <td>program|license</td>
+                     <td>
+                        <b>none</b>
+                     </td>
+                     <td>Print program help and copyright/license info for this application</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>none</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00068</td>
+                     <td>hisfile</td>
+                     <td>filepath</td>
+                     <td>
+                        <b>(File) History.xlsx</b>
+                     </td>
+                     <td>Path to the input xls history file</td>
+                     <td>false</td>
+                     <td>HistoryCompiler</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>(File) History.xlsx</b>
+                        <br>Default:
+                                        (File) no_hisfile<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00069</td>
+                     <td>identifierdomains</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Generate schemas with IDs with domains. This parameter applies to Kadaster schemas.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00070</td>
+                     <td>includedoclist</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if codelists and reference lists that have a location must be read dynamically from that location and included in the model documentation.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00071</td>
+                     <td>includemodelinfo</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Include model metadata in the catalog?</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>yes</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00072</td>
+                     <td>jobid</td>
+                     <td>ID</td>
+                     <td>
+                        <b>2025-10-15-11-19-20-226</b>
+                     </td>
+                     <td>An ID for this particular run of Imvertor</td>
+                     <td>true</td>
+                     <td>common</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>2025-10-15-11-19-20-226</b>
+                        <br>(File) MinJenV.xlsx.properties:
+                                        unspecified<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00073</td>
+                     <td>jsonconceptsname</td>
+                     <td>string</td>
+                     <td>
+                        <b>no_jsonconceptsname</b>
+                     </td>
+                     <td>The name of the JSON concepts file generated</td>
+                     <td>false</td>
+                     <td>JsonConceptsCompiler</td>
+                     <td>Default:
+                                        <b>no_jsonconceptsname</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00074</td>
+                     <td>jsonschemaname</td>
+                     <td>string</td>
+                     <td>
+                        <b>[appinfo/application-name]</b>
+                     </td>
+                     <td>The name of the json schema generated</td>
+                     <td>false</td>
+                     <td>JsonSchemaCompiler</td>
+                     <td>Default:
+                                        <b>[appinfo/application-name]</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00075</td>
+                     <td>jsonschemasource</td>
+                     <td>string</td>
+                     <td>
+                        <b>MIM</b>
+                     </td>
+                     <td>This is MIM or any other source. If MIM (default), Json schemas are based on a MIM serialisation.</td>
+                     <td>false</td>
+                     <td>JsonSchemaCompiler</td>
+                     <td>Default:
+                                        <b>MIM</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00076</td>
+                     <td>language</td>
+                     <td>ISO 639-1 codes</td>
+                     <td>
+                        <b>nl:nl</b>
+                     </td>
+                     <td>Language of the metamodel and model. Specify metamodel:model, like "en:nl", or single code for both.</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>nl:nl</b>
+                        <br>Default:
+                                        nl:nl<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00077</td>
+                     <td>ldrules</td>
+                     <td>name</td>
+                     <td>
+                        <b>(File) no_ldrules</b>
+                     </td>
+                     <td>The name of the Linked Data rules file</td>
+                     <td>false</td>
+                     <td>LDCompiler</td>
+                     <td>Default:
+                                        <b>(File) no_ldrules</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00078</td>
+                     <td>mapping</td>
+                     <td>name</td>
+                     <td>
+                        <b>NEN3610_GML321</b>
+                     </td>
+                     <td>Name of a mapping to be used for conceptual schemas</td>
+                     <td>false</td>
+                     <td>ImvertCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>NEN3610_GML321</b>
+                        <br>Default:
+                                        no_mapping<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00079</td>
+                     <td>messagecollapsekeys</td>
+                     <td>name(s)</td>
+                     <td>
+                        <b>[system/message-collapse-keys]</b>
+                     </td>
+                     <td>If similar messages should be collapsed, provide a space-separated list of keys for these types of messages.</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>[system/message-collapse-keys]</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00080</td>
+                     <td>messagelevel</td>
+                     <td>warning|error</td>
+                     <td>
+                        <b>warning</b>
+                     </td>
+                     <td>Set the message level to error (no warnings) or warning (errors and warnings)</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>warning</b>
+                        <br>Default:
+                                        warning<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00081</td>
+                     <td>metamodel</td>
+                     <td>name</td>
+                     <td>
+                        <b>(specify)</b>
+                     </td>
+                     <td>Name of metamodel used in UML model. If omitted, assume metamodel name and version as extracted from the supplied model.</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>(specify)</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00082</td>
+                     <td>metamodelextension</td>
+                     <td>name</td>
+                     <td>
+                        <b>LOGICAL</b>
+                     </td>
+                     <td>Name of the extension on the metamodel. When this is a MIM model, specify the MIM extension name</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>LOGICAL</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00083</td>
+                     <td>metamodelextensionversion</td>
+                     <td>version-number</td>
+                     <td>
+                        <b></b>
+                     </td>
+                     <td>Version of the extension on the metamodel. When this is a MIM model, specify the MIM extension version</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>Default:
+                                        <b></b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00084</td>
+                     <td>metamodelname</td>
+                     <td>name</td>
+                     <td>
+                        <b>MIM</b>
+                     </td>
+                     <td>Name of the metamodel. When this is a MIM model, specify MIM</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>MIM</b>
+                        <br>Default:
+                                        MIM<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00085</td>
+                     <td>metamodelnature</td>
+                     <td>name</td>
+                     <td>
+                        <b>MIM;GROUPING</b>
+                     </td>
+                     <td>What is the nature of the metamodel? Possible ";" delimited values are MIM and OPENAPI</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>Default:
+                                        <b>MIM;GROUPING</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00086</td>
+                     <td>metamodelversion</td>
+                     <td>version-number</td>
+                     <td>
+                        <b>1.2</b>
+                     </td>
+                     <td>Version of the metamodel. When this is a MIM model, specify the MIM version</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>1.2</b>
+                        <br>Default:
+                                        0.0.0<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00087</td>
+                     <td>migrate</td>
+                     <td>name</td>
+                     <td>
+                        <b>none</b>
+                     </td>
+                     <td>Specify a name if the source XMI file must be migrated to a (new) metamodel.</td>
+                     <td>false</td>
+                     <td>XmiCompiler</td>
+                     <td>Default:
+                                        <b>none</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00088</td>
+                     <td>mimformatname</td>
+                     <td>string</td>
+                     <td>
+                        <b>[appinfo/application-name]</b>
+                     </td>
+                     <td>The name of the MIM format file generated</td>
+                     <td>false</td>
+                     <td>MIMCompiler</td>
+                     <td>Default:
+                                        <b>[appinfo/application-name]</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00089</td>
+                     <td>mimformattype</td>
+                     <td>xml|rdf-xml|turtle|legacy</td>
+                     <td>
+                        <b>xml</b>
+                     </td>
+                     <td>The type of the MIM format file generated</td>
+                     <td>false</td>
+                     <td>MIMCompiler</td>
+                     <td>Default:
+                                        <b>xml</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00090</td>
+                     <td>mimformatversion</td>
+                     <td>v1|v2</td>
+                     <td>
+                        <b>v2</b>
+                     </td>
+                     <td>The version of the MIM compiler</td>
+                     <td>false</td>
+                     <td>MIMCompiler</td>
+                     <td>Default:
+                                        <b>v2</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00091</td>
+                     <td>modelistraced</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if the model derivation is implemented by UML tracing</td>
+                     <td>false</td>
+                     <td>ImvertCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00092</td>
+                     <td>nativescalars</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if scalar types may be entered without reference to a UML datatype</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00093</td>
+                     <td>normalizeids</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if XMI based ID's should be normalized, i.e. reduced to unique strings valid for Imvertor processing</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00094</td>
+                     <td>normalizenames</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if names of classes, attributes and relations should be normalized</td>
+                     <td>false</td>
+                     <td>Validator</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00095</td>
+                     <td>notesrules</td>
+                     <td>name</td>
+                     <td>
+                        <b>(specify)</b>
+                     </td>
+                     <td>Name of the configuration folder for notes rules. If omitted, assume metamodel name and version as extracted from the supplied model.</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>(specify)</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00096</td>
+                     <td>officename</td>
+                     <td>template</td>
+                     <td>
+                        <b>[project-name]-[application-name]-[phase]-[release]</b>
+                     </td>
+                     <td>Name of the office result document file. You may use [...] parameters.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>[project-name]-[application-name]-[phase]-[release]</b>
+                        <br>Default:
+                                        index<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00097</td>
+                     <td>openapibundledescriptions</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if the generated OpenAPI description and all descriptions that are referenced should be bundled to one description</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00098</td>
+                     <td>openapischemasonly</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if only the schema part of the OpenAPI description should be generated</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00099</td>
+                     <td>openapispecversion</td>
+                     <td>api30|api31</td>
+                     <td>
+                        <b>api30</b>
+                     </td>
+                     <td>The OpenAPI specification version to be generated, "3.0.1" (api30) or "3.1.0" (api31)</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>api30</b>
+                        <br>Default:
+                                        api30<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00100</td>
+                     <td>owner</td>
+                     <td>name</td>
+                     <td>
+                        <b>MinJenV</b>
+                     </td>
+                     <td>The owner of the configurations that are applied in a single Imvertor OS run. Typically an organization name.</td>
+                     <td>true</td>
+                     <td>ConfigCompiler</td>
+                     <td>#CLI:
+                                        <b>MinJenV</b>
+                        <br>(File) tmpA56C.tmp:
+                                        MinJenV<br>(File) MinJenV.xlsx.properties:
+                                        MinJenV<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00101</td>
+                     <td>passftp</td>
+                     <td>URL</td>
+                     <td>
+                        <b>no_passftp</b>
+                     </td>
+                     <td>URL of the ftp file e.g. ftp.example.com</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>no_passftp</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00102</td>
+                     <td>passoffice</td>
+                     <td>ftp|git|none</td>
+                     <td>
+                        <b>none</b>
+                     </td>
+                     <td>Enter "ftp" when the documentation file should be passed on directly to FTP, "git" when updating Github.</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>none</b>
+                        <br>Default:
+                                        none<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00103</td>
+                     <td>passpass</td>
+                     <td>password</td>
+                     <td>
+                        <b>no_passpass</b>
+                     </td>
+                     <td>FTP password</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>no_passpass</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00104</td>
+                     <td>passpath</td>
+                     <td>remote path</td>
+                     <td>
+                        <b>no_passpath</b>
+                     </td>
+                     <td>Path on server to the destination file e.g. /data/doc/result.html </td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>no_passpath</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00105</td>
+                     <td>passprotocol</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Pass using SFTP</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>yes</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00106</td>
+                     <td>passuser</td>
+                     <td>username</td>
+                     <td>
+                        <b>no_passuser</b>
+                     </td>
+                     <td>FTP user name</td>
+                     <td>false</td>
+                     <td>OfficeCompiler</td>
+                     <td>Default:
+                                        <b>no_passuser</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00107</td>
+                     <td>processingmode</td>
+                     <td>Processing mode</td>
+                     <td>
+                        <b>MinJenV:LOGICAL:uitgebreid</b>
+                     </td>
+                     <td>Specify the processing mode. This takes the form "Owner:Meta:Stage"</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>MinJenV:LOGICAL:uitgebreid</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00108</td>
+                     <td>profilemode</td>
+                     <td>CODE</td>
+                     <td>
+                        <b>#NONE</b>
+                     </td>
+                     <td>Specify for which stylesheets (identified by code) a runtime profile must be generated. Codes are specified between ";". Profiling is only available when debug=yes.</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>#NONE</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00109</td>
+                     <td>project</td>
+                     <td>name</td>
+                     <td>
+                        <b>LOGICAL</b>
+                     </td>
+                     <td>Name of the project</td>
+                     <td>true</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>LOGICAL</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00110</td>
+                     <td>proxyurl</td>
+                     <td>URL</td>
+                     <td>
+                        <b>http://www.google.com</b>
+                     </td>
+                     <td>Reliable URL for testing internet connection</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>http://www.google.com</b>
+                        <br>Default:
+                                        htps://no_proxyurl<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00111</td>
+                     <td>refreshconcepts</td>
+                     <td>yes|no|never</td>
+                     <td>
+                        <b>never</b>
+                     </td>
+                     <td>Yes to force re-read of concepts, No to read when required only, Never when to ignore concepts alltogether</td>
+                     <td>false</td>
+                     <td>ConceptCollector</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>never</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00112</td>
+                     <td>refreshxmi</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if the XMI file generated from EA must be recreated each time.</td>
+                     <td>false</td>
+                     <td>XmiCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00113</td>
+                     <td>releasename</td>
+                     <td>template</td>
+                     <td>
+                        <b>[project-name]-[application-name]-[version]-[phase]-[release][documentation-release]-[generation-id]</b>
+                     </td>
+                     <td>Name of the release. May hold placeholders. Will be used as the file name of the ZIP result.</td>
+                     <td>false</td>
+                     <td>ReleaseCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>[project-name]-[application-name]-[version]-[phase]-[release][documentation-release]-[generation-id]</b>
+                        <br>Default:
+                                        [project-name]-[application-name]-[version]-[phase]-[release][documentation-release]-[generation-id]<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00114</td>
+                     <td>reportshortview</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if a short view on the model must be generated as part of the report.</td>
+                     <td>false</td>
+                     <td>ImvertCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00115</td>
+                     <td>resolveconcepturi</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if an URI entered as a tagged value for a concept must be tested.</td>
+                     <td>false</td>
+                     <td>XmiCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00116</td>
+                     <td>sentinel</td>
+                     <td>Names</td>
+                     <td>
+                        <b>GM_SENTINEL</b>
+                     </td>
+                     <td>A (possibly empty) list of names of sentinels, separated by ';' and as configured for schema generation.</td>
+                     <td>false</td>
+                     <td>XmiCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>GM_SENTINEL</b>
+                        <br>Default:
+                                        GM_SENTINEL;GMLSF_SENTINEL<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00117</td>
+                     <td>sfconformance</td>
+                     <td>level nr</td>
+                     <td>
+                        <b>0</b>
+                     </td>
+                     <td>The GM 3.2 Simple Feature profile conformance level. Possible values are 0, 1 2.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>Default:
+                                        <b>0</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00118</td>
+                     <td>shaclrules</td>
+                     <td>name</td>
+                     <td>
+                        <b>unspecified</b>
+                     </td>
+                     <td>The name of the SHACL rules file</td>
+                     <td>false</td>
+                     <td>ShaclCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>unspecified</b>
+                        <br>Default:
+                                        [cli/owner]<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00119</td>
+                     <td>shortprefix</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if namespace prefixes for XSDs should be shortened</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00120</td>
+                     <td>signaldeadurls</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if a warning should, be issued for each inaccessible URL detected in notes and tagged values.</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00121</td>
+                     <td>skosrules</td>
+                     <td>name</td>
+                     <td>
+                        <b>unspecified</b>
+                     </td>
+                     <td>The name of the SKOS rules file</td>
+                     <td>false</td>
+                     <td>SkosCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>unspecified</b>
+                        <br>Default:
+                                        [cli/owner]<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00122</td>
+                     <td>skosusealias</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if the alias should be used, when available, to create the SKOS concept URI</td>
+                     <td>false</td>
+                     <td>SkosCompiler</td>
+                     <td>Default:
+                                        <b>yes</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00123</td>
+                     <td>sourcecodecopydownmixins</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if attributes must be copied from mixin supertypes</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00124</td>
+                     <td>sourcecoderesolvekeuzeattribuutsoorten</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if MIM "Keuze tussen attribuutsoorten" constructs must be resolved/simplified</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>yes</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00125</td>
+                     <td>sourcecoderesolvekeuzedatatypen</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if MIM "Keuze tussen datatypen" constructs must be resolved/simplified</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00126</td>
+                     <td>sourcecoderesolvekeuzerelatiedoelen</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if MIM "Keuze tussen relatiedoelen" constructs must be resolved/simplified</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>Default:
+                                        <b>no</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00127</td>
+                     <td>sourcecodetype</td>
+                     <td>java-pojo|java-jpa|java-openapi|java-openapi-model|java-openapi-resource|plantuml|entity-xml</td>
+                     <td>
+                        <b>java-pojo</b>
+                     </td>
+                     <td>The type(s) of source code generated (comma separated)</td>
+                     <td>false</td>
+                     <td>SourcecodeGenerator</td>
+                     <td>Default:
+                                        <b>java-pojo</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00128</td>
+                     <td>starthistory</td>
+                     <td>YYYYMMDD</td>
+                     <td>
+                        <b>20141001</b>
+                     </td>
+                     <td>Release date from which to compile history to be included in documentation; defaults to most recent previous release</td>
+                     <td>false</td>
+                     <td>HistoryCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>20141001</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00129</td>
+                     <td>stccsvname</td>
+                     <td>string</td>
+                     <td>
+                        <b>[cli/owner]</b>
+                     </td>
+                     <td>The name of the Stelselcatalogus CSV file generated</td>
+                     <td>false</td>
+                     <td>StcCompiler</td>
+                     <td>Default:
+                                        <b>[cli/owner]</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00130</td>
+                     <td>stub_requiresalias</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>No if aliases for objects and relations should not be tested (STUB)</td>
+                     <td>false</td>
+                     <td>Validator</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00131</td>
+                     <td>substitutions</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if substitutions should be generated, in stead of choice groups</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00132</td>
+                     <td>suppresswarnings</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if warnings should be suppressed in documentation</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        no<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00133</td>
+                     <td>task</td>
+                     <td>compile|release</td>
+                     <td>
+                        <b>compile</b>
+                     </td>
+                     <td>Set task to compile or release</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>compile</b>
+                        <br>Default:
+                                        compile<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00134</td>
+                     <td>tvmissingaswarning</td>
+                     <td>yes|no|phase</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Should missing tagged values be signalled as an error, as a warning, or does this depend on the phase of the model?</td>
+                     <td>false</td>
+                     <td>Validator</td>
+                     <td>Default:
+                                        <b>yes</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00135</td>
+                     <td>tvset</td>
+                     <td>name</td>
+                     <td>
+                        <b>(specify)</b>
+                     </td>
+                     <td>Name of the configuration folder for tagged value set definitions. If omitted, assume metamodel name and version as extracted from the supplied model.</td>
+                     <td>false</td>
+                     <td>ConfigCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>(specify)</b>
+                        <br>Default:
+                                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00136</td>
+                     <td>umlfile</td>
+                     <td>filepath</td>
+                     <td>
+                        <b>(File) 7KB04p9o.zip</b>
+                     </td>
+                     <td>Path to the input UML file, must be EAP or XMI</td>
+                     <td>true</td>
+                     <td>common</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>(File) 7KB04p9o.zip</b>
+                        <br>(File) MinJenV.xlsx.properties:
+                                        (File) unspecified<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00137</td>
+                     <td>usefirstmap</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>In case a construct in a conceptual schema mapping is duplicated, allow the first construct to be selected, if other resolve mechanisms fail.</td>
+                     <td>false</td>
+                     <td>ImvertCompiler</td>
+                     <td>Default:
+                                        <b>yes</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00138</td>
+                     <td>userid</td>
+                     <td>ID</td>
+                     <td>
+                        <b>EwoutBoter</b>
+                     </td>
+                     <td>ID of the user who started this run</td>
+                     <td>true</td>
+                     <td>common</td>
+                     <td>(File) tmpA56C.tmp:
+                                        <b>EwoutBoter</b>
+                        <br>(File) MinJenV.xlsx.properties:
+                                        unspecified<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00139</td>
+                     <td>validatecomplyexcel</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>no</b>
+                     </td>
+                     <td>Yes if the compliancy excels created must be validated</td>
+                     <td>false</td>
+                     <td>ComplyCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>no</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00140</td>
+                     <td>validatederivation</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if derivation must be validated</td>
+                     <td>false</td>
+                     <td>ImvertCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00141</td>
+                     <td>validatedocmissing</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if the notes fields that are required must be checked (for content)</td>
+                     <td>false</td>
+                     <td>Validator</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00142</td>
+                     <td>validateschema</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if result schemas must be validated</td>
+                     <td>false</td>
+                     <td>SchemaValidator</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00143</td>
+                     <td>validateshacl</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if SHACL RDF must be validated after it has been generated</td>
+                     <td>false</td>
+                     <td>ShaclCompiler</td>
+                     <td>Default:
+                                        <b>yes</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00144</td>
+                     <td>validateskos</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if SKOS RDF must be validated after it has been generated</td>
+                     <td>false</td>
+                     <td>SkosCompiler</td>
+                     <td>Default:
+                                        <b>yes</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00145</td>
+                     <td>validatetrace</td>
+                     <td>full|none</td>
+                     <td>
+                        <b>none</b>
+                     </td>
+                     <td>When full, test if each derivable construct is actually derived from at least one supplier construct.</td>
+                     <td>false</td>
+                     <td>ImvertCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>none</b>
+                        <br>Default:
+                                        none<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00146</td>
+                     <td>validatetvassignment</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if tagged value assignment is correct</td>
+                     <td>false</td>
+                     <td>Validator</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00147</td>
+                     <td>validatetvoccurs</td>
+                     <td>yes|no</td>
+                     <td>
+                        <b>yes</b>
+                     </td>
+                     <td>Yes if tagged values multiplicity should be checked (min/max occurs)</td>
+                     <td>false</td>
+                     <td>Validator</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>yes</b>
+                        <br>Default:
+                                        yes<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00148</td>
+                     <td>versionrules</td>
+                     <td>name</td>
+                     <td>
+                        <b>MinJenV</b>
+                     </td>
+                     <td>Name of the version rules file</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>MinJenV</b>
+                        <br>Default:
+                                        [cli/owner]<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00149</td>
+                     <td>visuals</td>
+                     <td>name</td>
+                     <td>
+                        <b>(unspecified)</b>
+                     </td>
+                     <td>Name of the visuals file. If omitted, assume metamodel name and version as extracted from the supplied model.</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>(unspecified)</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00150</td>
+                     <td>xlinkversion</td>
+                     <td>id</td>
+                     <td>
+                        <b>20010627</b>
+                     </td>
+                     <td>Version of the xlinks specification</td>
+                     <td>false</td>
+                     <td>common</td>
+                     <td>Default:
+                                        <b>20010627</b>
+                        <br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00151</td>
+                     <td>xsdfilename</td>
+                     <td>name template</td>
+                     <td>
+                        <b>[work/xsd-application]_[work/xsd-domain]_v[work/xsd-version].xsd</b>
+                     </td>
+                     <td>The name of each XSD file generated by the ISO19136 module. Named parameters such as [application-name] may be used.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>[work/xsd-application]_[work/xsd-domain]_v[work/xsd-version].xsd</b>
+                        <br>Default:
+                                        [application-name]<br>
+                     </td>
+                  </tr>
+                  <tr class="">
+                     <td class="ix">00152</td>
+                     <td>xsdsubpath</td>
+                     <td>subpath</td>
+                     <td>
+                        <b>[application-name]</b>
+                     </td>
+                     <td>A path within the result XSD folder to which the XSDs for the model provided are written. Named parameters such as [application-name] may be used.</td>
+                     <td>false</td>
+                     <td>XsdCompiler</td>
+                     <td>(File) MinJenV.xlsx.properties:
+                                        <b>[application-name]</b>
+                        <br>Default:
+                                        [appinfo/application-name]<br>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </table></body></html>

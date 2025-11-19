@@ -1,0 +1,159 @@
+<!DOCTYPE HTML><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Imvert - Imvert compiler</title><link href="../web/css/report.css" rel="stylesheet"><link href="../web/themes/blue/style.css" rel="stylesheet"><script src="../web/script/jquery/jquery-latest.js" type="text/javascript"></script><script src="../web/script/tablesorter/jquery.tablesorter.min.js" type="text/javascript"></script><script>
+                    $(function() { 
+                    
+                        $("#table-types").tablesorter(); 
+                    
+                    });  
+                </script></head><body><h1>Type listing</h1><p>
+                    This is the overview of all types (value types and classes), and their occurrence.
+                </p><p>
+                    Per type the following is indicated:
+                </p><ul>
+            <li>P::C in which P = package C = class/type</li>
+            <li>Any property of this type, in the form of P::C.p in which P = package C = class, p = property</li>
+         </ul><table class="tablesorter">
+            <table id="table-types" class="tablesorter">
+               <col style="width:5%">
+               <col style="width:50%">
+               <col style="width:50%">
+               <thead>
+                  <tr class="tableHeader">
+                     <th>#</th>
+                     <th>type</th>
+                     <th>properties of this type</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="ix">00001</td>
+                     <td>JZV::Afspraak</td>
+                     <td>JZV::Casus.heeftAfspraak (assoc)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00002</td>
+                     <td>JZV::Besluit</td>
+                     <td>JZV::Casus.heeftBesluit (assoc)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00003</td>
+                     <td>JZV::Betrokkene</td>
+                     <td>JZV::Casus.heeftNevenbetrokkene (assoc)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00004</td>
+                     <td></td>
+                     <td>JZV::Casus.heeftHoofdbetrokkene (assoc)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00005</td>
+                     <td>JZV::Casus</td>
+                     <td>JZV::Casusoverleg.heeftAgendapunt (assoc)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00006</td>
+                     <td>JZV::Casusoverleg</td>
+                     <td>JZV::VindCasusoverlegOpDatum.payload (assoc)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00007</td>
+                     <td>JZV::Naam (Naam)</td>
+                     <td>JZV::Betrokkene.naam (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00008</td>
+                     <td>JZV::Scenario</td>
+                     <td>JZV::Casus.heeftScenario (assoc)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00009</td>
+                     <td>MIM111::xs:date (Date)</td>
+                     <td>JZV::Casus.startDatum (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00010</td>
+                     <td></td>
+                     <td>JZV::Casusoverleg.datum (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00011</td>
+                     <td></td>
+                     <td>JZV::VindCasusoverlegOpDatum.zoekdatum (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00012</td>
+                     <td>MIM111::xs:string (CharacterString)</td>
+                     <td>JZV::Afspraak.id (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00013</td>
+                     <td></td>
+                     <td>JZV::Afspraak.omschrijving (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00014</td>
+                     <td></td>
+                     <td>JZV::Afspraak.verantwoordelijkeOrganisatie (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00015</td>
+                     <td></td>
+                     <td>JZV::Besluit.id (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00016</td>
+                     <td></td>
+                     <td>JZV::Besluit.omschrijving (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00017</td>
+                     <td></td>
+                     <td>JZV::Betrokkene.burgerservicenummer (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00018</td>
+                     <td></td>
+                     <td>JZV::Casus.id (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00019</td>
+                     <td></td>
+                     <td>JZV::Casusoverleg.id (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00020</td>
+                     <td></td>
+                     <td>JZV::Casusoverleg.notulen (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00021</td>
+                     <td></td>
+                     <td>JZV::Naam.voornaam (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00022</td>
+                     <td></td>
+                     <td>JZV::Naam.tussenvoegsel (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00023</td>
+                     <td></td>
+                     <td>JZV::Naam.geslachtsnaam (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00024</td>
+                     <td></td>
+                     <td>JZV::Scenario.id (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00025</td>
+                     <td></td>
+                     <td>JZV::Scenario.omschrijving (attrib)</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00026</td>
+                     <td></td>
+                     <td>JZV::Scenario.verantwoordelijkeOrganisatie (attrib)</td>
+                  </tr>
+               </tbody>
+            </table>
+         </table></body></html>

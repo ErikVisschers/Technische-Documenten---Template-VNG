@@ -1,0 +1,909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+=============================================================================================
+Dit bestand bevat een XML serialisatie van een informatiemodel dat is gemodelleerd volgens de 
+"Metamodel Informatie Modellering (MIM)" standaard versie 1.2.
+Zie: https://docs.geostandaarden.nl/mim/mim/ voor de laatste versie van de standaard.
+
+In deze serialisatie komen <mim-ref:xRef> elementen voor, zoals <mim-ref:ObjecttypeRef>. 
+Deze elementen zijn verwijzingen naar een type modelelement X elders in deze serialisatie. 
+Via xlink:href attribuut wordt naar betreffende ID verwezen, voorafgegaan door een # teken.
+Ook kan men de naam van het modelelement zelf gebruiken, zoals deze in de inhoud van het 
+element is opgenomen.
+
+Waar mogelijk is een referentie naar de officiele uitleg (met name de MIM standaard) als 
+commentaar toegevoegd. Dat is alleen bij de éérste opkomst van een contructie gedaan.
+=============================================================================================
+-->
+<mim:Informatiemodel xmlns:cs="http://www.imvertor.org/metamodels/conceptualschemas/model/v20181210"
+                     xmlns:dlogger="http://www.armatiek.nl/functions/dlogger-proxy"
+                     xmlns:mim="http://www.geostandaarden.nl/mim/mim-core/1.2"
+                     xmlns:mim-ext="http://www.geostandaarden.nl/mim/mim-ext/1.0"
+                     xmlns:mim-ref="http://www.geostandaarden.nl/mim/mim-ref/1.0"
+                     xmlns:xhtml="http://www.w3.org/1999/xhtml"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://www.geostandaarden.nl/mim/mim-core/1.2 xsd/1.2/MIMFORMAT_Mim_relatiesoort.xsd"
+                     id="jzv-d13986e2"><!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-naam-->
+   <mim:naam>JZV</mim:naam>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-herkomst-->
+   <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-definitie-->
+   <mim:definitie>
+      <xhtml:body>
+         <xhtml:p>Dit is de tekst van de tag <xhtml:em>Definitie</xhtml:em> bij de package «Informatiemodel» JZV. Dit is een <xhtml:a href="https://www.justid.nl/" shape="rect">link</xhtml:a>. </xhtml:p>
+      </xhtml:body>
+   </mim:definitie>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-herkomst-definitie-->
+   <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-datum-opname-->
+   <mim:datumOpname>20251001</mim:datumOpname>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-informatiemodel-type-->
+   <mim:informatiemodeltype>Conceptueel</mim:informatiemodeltype>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-informatiedomein-->
+   <mim:informatiedomein><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:informatiedomein>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-relatiemodelleringstype-->
+   <mim:relatiemodelleringstype>Relatiesoort leidend</mim:relatiemodelleringstype>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-mim-versie-->
+   <mim:MIMVersie>1.2</mim:MIMVersie>
+   <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-mim-taal-->
+   <mim:MIMTaal>NL</mim:MIMTaal>
+   <mim:packages><!--https://docs.geostandaarden.nl/mim/mim/#domein-->
+      <mim:Domein index="127" id="jzv-jzv-d13986e36">
+         <mim:naam>JZV</mim:naam>
+         <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+         <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+         <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+         <mim:datumOpname>20251001</mim:datumOpname>
+         <mim:objecttypen>
+            <mim:Objecttype index="310" id="jzv-jzv-afspraak-d13986e48">
+               <mim:naam>Afspraak</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Een toezegging van een ketenpartner bepaalde handelingen of interventies zo snel mogelijk uit te gaan voeren. </xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname>20251001</mim:datumOpname>
+               <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-abstract-object-->
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten><!--https://docs.geostandaarden.nl/mim/mim/#attribuutsoort-->
+                  <mim:Attribuutsoort index="327" id="jzv-jzv-afspraak-id-d13986e68">
+                     <mim:naam>id</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De unieke identificatie van de afspraak.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname>20251001</mim:datumOpname>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-type-domein-van-een-waarde-een-gegeven-->
+                     <mim:type>
+                        <mim:Datatype index="327">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-materiele-historie-->
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-formele-historie-->
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-kardinaliteit-->
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-authentiek-->
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-afleidbaar-->
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-indicatie-classificerend-->
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-mogelijk-geen-waarde-->
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-identificerend-->
+                     <mim:identificerend>true</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="387" id="jzv-jzv-afspraak-omschrijving-d13986e110">
+                     <mim:naam>omschrijving</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De beschrijving van de gemaakte afspraak.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname>20251001</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="387">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-patroon-->
+                     <mim:patroon>De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="428"
+                                      id="jzv-jzv-afspraak-verantwoordelijkeorganisatie-d13986e154">
+                     <mim:naam>verantwoordelijkeOrganisatie</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="428">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="OA Expose">yes</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Objecttype>
+            <mim:Objecttype index="1177" id="jzv-jzv-besluit-d13986e197">
+               <mim:naam>Besluit</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort index="1189" id="jzv-jzv-besluit-id-d13986e211">
+                     <mim:naam>id</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="1189">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>true</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="1236" id="jzv-jzv-besluit-omschrijving-d13986e247">
+                     <mim:naam>omschrijving</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="1236">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="OA Expose">yes</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Objecttype>
+            <!--https://docs.geostandaarden.nl/mim/mim/#objecttype-->
+            <mim:Objecttype index="1054" id="jzv-jzv-betrokkene-d13986e290">
+               <mim:naam>Betrokkene</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Een persoon die onderwerp is van de casus. </xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort index="1070" id="jzv-jzv-betrokkene-burgerservicenummer-d13986e310">
+                     <mim:naam>burgerservicenummer</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>Het burgerservicenummer van de betrokkene. </xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="1070">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>true</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim:gegevensgroepen><!--https://docs.geostandaarden.nl/mim/mim/#gegevensgroep-->
+                  <mim:Gegevensgroep index="1127" id="jzv-jzv-betrokkene-naam-d13986e353">
+                     <mim:naam>naam</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>De naam van de betrokkene.</mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:gegevensgroeptype>
+                        <mim-ref:GegevensgroeptypeRef index="1127" xlink:href="#jzv-jzv-naam-d13986e1015">Naam</mim-ref:GegevensgroeptypeRef>
+                     </mim:gegevensgroeptype>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Gegevensgroep>
+               </mim:gegevensgroepen>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Objecttype>
+            <mim:Objecttype index="494" id="jzv-jzv-casus-d13986e385">
+               <mim:naam>Casus</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort index="506" id="jzv-jzv-casus-id-d13986e399">
+                     <mim:naam>id</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="506">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>true</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="553" id="jzv-jzv-casus-startdatum-d13986e435">
+                     <mim:naam>startDatum</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="553">Date</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim:relatiesoorten><!--https://docs.geostandaarden.nl/mim/mim/#relatiesoort-->
+                  <mim:Relatiesoort index="600" id="jzv-jzv-casus-heeftnevenbetrokkene-d13986e472">
+                     <mim:naam>heeft nevenbetrokkene</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>0..*</mim:kardinaliteit>
+                     <mim:kardinaliteitBron>1</mim:kardinaliteitBron>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-unidirectioneel-->
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-aggregatietype-->
+                     <mim:aggregatietype>Geen</mim:aggregatietype>
+                     <mim:doel>
+                        <mim-ref:ObjecttypeRef index="600"
+                                               label="heeftNevenbetrokkene"
+                                               xlink:href="#jzv-jzv-betrokkene-d13986e290">Betrokkene</mim-ref:ObjecttypeRef>
+                     </mim:doel>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">200</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="kardinaliteitBron">1</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+                  <mim:Relatiesoort index="646" id="jzv-jzv-casus-heeftscenario-d13986e514">
+                     <mim:naam>heeftScenario</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>0..*</mim:kardinaliteit>
+                     <mim:kardinaliteitBron>1</mim:kardinaliteitBron>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:aggregatietype>Geen</mim:aggregatietype>
+                     <mim:doel>
+                        <mim-ref:ObjecttypeRef index="646"
+                                               label="heeftScenario"
+                                               xlink:href="#jzv-jzv-scenario-d13986e885">Scenario</mim-ref:ObjecttypeRef>
+                     </mim:doel>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">200</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="kardinaliteitBron">1</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+                  <mim:Relatiesoort index="692" id="jzv-jzv-casus-heeftafspraak-d13986e556">
+                     <mim:naam>heeftAfspraak</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>0..*</mim:kardinaliteit>
+                     <mim:kardinaliteitBron>1</mim:kardinaliteitBron>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:aggregatietype>Geen</mim:aggregatietype>
+                     <mim:doel>
+                        <mim-ref:ObjecttypeRef index="692"
+                                               label="heeftAfspraak"
+                                               xlink:href="#jzv-jzv-afspraak-d13986e48">Afspraak</mim-ref:ObjecttypeRef>
+                     </mim:doel>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">200</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="kardinaliteitBron">1</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+                  <mim:Relatiesoort index="738" id="jzv-jzv-casus-heeftbesluit-d13986e598">
+                     <mim:naam>heeftBesluit</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>0..*</mim:kardinaliteit>
+                     <mim:kardinaliteitBron>1</mim:kardinaliteitBron>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:aggregatietype>Geen</mim:aggregatietype>
+                     <mim:doel>
+                        <mim-ref:ObjecttypeRef index="738"
+                                               label="heeftBesluit"
+                                               xlink:href="#jzv-jzv-besluit-d13986e197">Besluit</mim-ref:ObjecttypeRef>
+                     </mim:doel>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">200</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="kardinaliteitBron">1</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+                  <mim:Relatiesoort index="784" id="jzv-jzv-casus-heefthoofdbetrokkene-d13986e640">
+                     <mim:naam>heeft hoofdbetrokkene</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:kardinaliteitBron>1</mim:kardinaliteitBron>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:aggregatietype>Geen</mim:aggregatietype>
+                     <mim:doel>
+                        <mim-ref:ObjecttypeRef index="784"
+                                               label="heeftHoofdbetrokkene"
+                                               xlink:href="#jzv-jzv-betrokkene-d13986e290">Betrokkene</mim-ref:ObjecttypeRef>
+                     </mim:doel>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">200</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="kardinaliteitBron">1</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+               </mim:relatiesoorten>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="OA Expose">yes</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Objecttype>
+            <mim:Objecttype index="841" id="jzv-jzv-casusoverleg-d13986e689">
+               <mim:naam>Casusoverleg</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>
+                  <xhtml:body>
+                     <xhtml:p>Een periodiek beraad waarbij meerdere bij de casus betrokken ketenpartners in een samenwerking samenwerken.</xhtml:p>
+                     <xhtml:p>Zie deze <xhtml:a href="https://www.justid.nl/" shape="rect">link</xhtml:a> voor meer informatie. </xhtml:p>
+                  </xhtml:body>
+               </mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname>20251001</mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort index="860" id="jzv-jzv-casusoverleg-id-d13986e715">
+                     <mim:naam>id</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De unieke identificatie van het casusoverleg.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname>20251001</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="860">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>true</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="920" id="jzv-jzv-casusoverleg-datum-d13986e757">
+                     <mim:naam>datum</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De datum waarop het casusoverleg heeft plaatsgevonden.</xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname>20251001</mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="920">Date</mim:Datatype>
+                     </mim:type>
+                     <mim:patroon>De verzameling van waarden die gegevens van deze attribuutsoort kunnen hebben, oftewel het waardenbereik, uitgedrukt in een specifieke structuur.</mim:patroon>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="961" id="jzv-jzv-casusoverleg-notulen-d13986e801">
+                     <mim:naam>notulen</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="961">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim:relatiesoorten>
+                  <mim:Relatiesoort index="1008" id="jzv-jzv-casusoverleg-heeftagendapunt-d13986e838">
+                     <mim:naam>heeft agendapunt</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1..*</mim:kardinaliteit>
+                     <mim:kardinaliteitBron>1</mim:kardinaliteitBron>
+                     <mim:authentiek><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:aggregatietype>Geen</mim:aggregatietype>
+                     <mim:doel>
+                        <mim-ref:ObjecttypeRef index="1008"
+                                               label="heeftAgendapunt"
+                                               xlink:href="#jzv-jzv-casus-d13986e385">Casus</mim-ref:ObjecttypeRef>
+                     </mim:doel>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="positie">200</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="kardinaliteitBron">1</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Relatiesoort>
+               </mim:relatiesoorten>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="OA Expose">yes</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Objecttype>
+            <mim:Objecttype index="1392" id="jzv-jzv-scenario-d13986e885">
+               <mim:naam>Scenario</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort index="1404" id="jzv-jzv-scenario-id-d13986e899">
+                     <mim:naam>id</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="1404">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>true</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="1451" id="jzv-jzv-scenario-omschrijving-d13986e935">
+                     <mim:naam>omschrijving</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="1451">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="1497"
+                                      id="jzv-jzv-scenario-verantwoordelijkeorganisatie-d13986e971">
+                     <mim:naam>verantwoordelijkeOrganisatie</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="1497">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="OA Expose">yes</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Objecttype>
+         </mim:objecttypen>
+         <mim:gegevensgroeptypen><!--https://docs.geostandaarden.nl/mim/mim/#gegevensgroeptype-->
+            <mim:Gegevensgroeptype index="149" id="jzv-jzv-naam-d13986e1015">
+               <mim:naam>Naam</mim:naam>
+               <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+               <mim:definitie>Gegevensgroeptype voor naamgegevens.</mim:definitie>
+               <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+               <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+               <mim:attribuutsoorten>
+                  <mim:Attribuutsoort index="160" id="jzv-jzv-naam-voornaam-d13986e1027">
+                     <mim:naam>Voornaam</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="160">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="206" id="jzv-jzv-naam-tussenvoegsel-d13986e1063">
+                     <mim:naam>Tussenvoegsel</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="206">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+                  <mim:Attribuutsoort index="252" id="jzv-jzv-naam-geslachtsnaam-d13986e1099">
+                     <mim:naam>Geslachtsnaam</mim:naam>
+                     <mim:herkomst><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomst>
+                     <mim:definitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:definitie>
+                     <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+                     <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+                     <mim:type>
+                        <mim:Datatype index="252">CharacterString</mim:Datatype>
+                     </mim:type>
+                     <mim:indicatieMaterieleHistorie>false</mim:indicatieMaterieleHistorie>
+                     <mim:indicatieFormeleHistorie>false</mim:indicatieFormeleHistorie>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:authentiek>Authentiek</mim:authentiek>
+                     <mim:indicatieAfleidbaar>false</mim:indicatieAfleidbaar>
+                     <mim:indicatieClassificerend>false</mim:indicatieClassificerend>
+                     <mim:mogelijkGeenWaarde>false</mim:mogelijkGeenWaarde>
+                     <mim:identificerend>false</mim:identificerend>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim:Attribuutsoort>
+               </mim:attribuutsoorten>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim:Gegevensgroeptype>
+         </mim:gegevensgroeptypen>
+         <mim-ext:constructies>
+            <mim-ext:Constructie index="1294" id="jzv-jzv-vindcasusoverlegopdatum-d13986e1141">
+               <mim-ext:constructietype>OPENAPI OPERATION</mim-ext:constructietype>
+               <mim:aggregatietype>Geen</mim:aggregatietype>
+               <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-code-->
+               <mim:code>VindCasusoverlegOpDatum</mim:code>
+               <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+               <mim:kardinaliteit>1</mim:kardinaliteit>
+               <mim:kardinaliteitBron>1</mim:kardinaliteitBron>
+               <mim:naam>vindCasusoverlegOpDatum</mim:naam>
+               <mim:unidirectioneel>false</mim:unidirectioneel>
+               <mim-ext:bevat>
+                  <mim-ext:Constructie index="1305" id="jzv-jzv-vindcasusoverlegopdatum-zoekdatum-d13986e1159">
+                     <mim-ext:constructietype>OPENAPI PARAMETER</mim-ext:constructietype>
+                     <mim:aggregatietype>Geen</mim:aggregatietype>
+                     <mim:code>zoekdatum</mim:code>
+                     <mim:definitie>
+                        <xhtml:body>
+                           <xhtml:p>De datum waarop gezocht moet worden. </xhtml:p>
+                        </xhtml:body>
+                     </mim:definitie>
+                     <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+                     <mim:kardinaliteit>1</mim:kardinaliteit>
+                     <mim:kardinaliteitBron>1</mim:kardinaliteitBron>
+                     <mim:naam>zoekdatum</mim:naam>
+                     <mim:unidirectioneel>false</mim:unidirectioneel>
+                     <mim:type>
+                        <mim:Datatype index="1305">Date</mim:Datatype>
+                     </mim:type>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="OA Description">De datum waarop het overleg heeft plaatsgevonden.</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="OA Example">2025-10-01</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="OA Parameter type">query</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="positie">100</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim-ext:Constructie>
+                  <mim-ext:Constructie index="1347" id="jzv-jzv-vindcasusoverlegopdatum-payload-d13986e1196">
+                     <mim-ext:constructietype>OPENAPI RESPONSE BODY</mim-ext:constructietype>
+                     <mim:aggregatietype>Geen</mim:aggregatietype>
+                     <mim:code>payload</mim:code>
+                     <mim:indicatieAbstractObject>false</mim:indicatieAbstractObject>
+                     <mim:kardinaliteit>0..*</mim:kardinaliteit>
+                     <mim:kardinaliteitBron>1</mim:kardinaliteitBron>
+                     <mim:naam>payload</mim:naam>
+                     <mim:unidirectioneel>true</mim:unidirectioneel>
+                     <mim:verwijstNaar>
+                        <mim-ref:ObjecttypeRef index="1347" xlink:href="#jzv-jzv-casusoverleg-d13986e689">Casusoverleg</mim-ref:ObjecttypeRef>
+                        <mim:_Relatierol>
+                           <mim:id>Doel</mim:id>
+                        </mim:_Relatierol>
+                     </mim:verwijstNaar>
+                     <mim-ext:kenmerken>
+                        <mim-ext:Kenmerk naam="positie">200</mim-ext:Kenmerk>
+                        <mim-ext:Kenmerk naam="kardinaliteitBron">1</mim-ext:Kenmerk>
+                     </mim-ext:kenmerken>
+                  </mim-ext:Constructie>
+               </mim-ext:bevat>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="OA Description">Retourneert de Overleggen die hebben plaatsgevonden op de gespecificeerde datum. </mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="OA HTTP method">GET</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="OA Path">/casusoverleg-datum</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="OA Summary">Zoek overleg op datum</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="OA Tag">Casusoverleg</mim-ext:Kenmerk>
+                  <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim-ext:Constructie>
+         </mim-ext:constructies>
+         <mim-ext:kenmerken>
+            <mim-ext:Kenmerk naam="Is afgeleid">Zie package</mim-ext:Kenmerk>
+            <mim-ext:Kenmerk naam="Release">20251001</mim-ext:Kenmerk>
+            <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+         </mim-ext:kenmerken>
+      </mim:Domein>
+      <!--https://docs.geostandaarden.nl/mim/mim/#extern-->
+      <mim:Extern index="1617" id="OUTSIDE-2">
+         <mim:naam>GML</mim:naam>
+         <mim:herkomst>OGC</mim:herkomst>
+         <mim:definitie>ISO19107 Geographic information – Spatial schema</mim:definitie>
+         <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+         <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+         <!--https://docs.geostandaarden.nl/mim/mim/#metagegeven-locatie-->
+         <mim:locatie>X</mim:locatie>
+         <mim-ext:kenmerken>
+            <mim-ext:Kenmerk naam="familie">GML</mim-ext:Kenmerk>
+            <mim-ext:Kenmerk naam="version">3.2.2</mim-ext:Kenmerk>
+            <mim-ext:Kenmerk naam="namespace">http://www.opengis.net/gml/3.2</mim-ext:Kenmerk>
+         </mim-ext:kenmerken>
+      </mim:Extern>
+      <mim:Extern index="1574" id="OUTSIDE-1">
+         <mim:naam>MIM111</mim:naam>
+         <mim:herkomst>MIM</mim:herkomst>
+         <mim:definitie>De primitieve datatypen zoals vastgesteld in de MIM 1.1.1 specificatie</mim:definitie>
+         <mim:herkomstDefinitie><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:herkomstDefinitie>
+         <mim:datumOpname><!-- FOUT: De waarde voor dit verplichte metagegeven is niet gespecificeerd in het model --></mim:datumOpname>
+         <mim:locatie>https://docs.geostandaarden.nl/mim/</mim:locatie>
+         <mim-ext:constructies>
+            <mim-ext:Constructie index="1609" id="jzv-mim111-date-d13986e1278">
+               <mim-ext:constructietype>INTERFACE</mim-ext:constructietype>
+               <mim:naam>Date</mim:naam>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="oasnaam">date</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim-ext:Constructie>
+            <mim-ext:Constructie index="1602" id="jzv-mim111-characterstring-d13986e1286">
+               <mim-ext:constructietype>INTERFACE</mim-ext:constructietype>
+               <mim:naam>CharacterString</mim:naam>
+               <mim-ext:kenmerken>
+                  <mim-ext:Kenmerk naam="oasnaam">string</mim-ext:Kenmerk>
+               </mim-ext:kenmerken>
+            </mim-ext:Constructie>
+         </mim-ext:constructies>
+         <mim-ext:kenmerken>
+            <mim-ext:Kenmerk naam="familie"/>
+            <mim-ext:Kenmerk naam="version">1.0.0</mim-ext:Kenmerk>
+            <mim-ext:Kenmerk naam="namespace">http://www.geonovum.nl/MIM111</mim-ext:Kenmerk>
+         </mim-ext:kenmerken>
+      </mim:Extern>
+   </mim:packages>
+   <mim-ext:kenmerken>
+      <mim-ext:Kenmerk naam="Imvertor">model</mim-ext:Kenmerk>
+      <mim-ext:Kenmerk naam="Niveau">specifiek</mim-ext:Kenmerk>
+      <mim-ext:Kenmerk naam="OA Auto mode">All objecttypes</mim-ext:Kenmerk>
+      <mim-ext:Kenmerk naam="Release">20251001</mim-ext:Kenmerk>
+      <mim-ext:Kenmerk naam="OA Description">
+         <body xmlns="http://www.w3.org/1999/xhtml"
+               xmlns:html="http://www.w3.org/1999/xhtml"
+               xmlns:imvert="http://www.imvertor.org/schema/system">
+            <p>Dit is de tekst van de tag <em>OA Description</em> bij de package «Informatiemodel» JZV. Dit is een <a href="https://www.justid.nl/" shape="rect">link</a>. </p>
+         </body>
+      </mim-ext:Kenmerk>
+      <mim-ext:Kenmerk naam="version">1.0</mim-ext:Kenmerk>
+      <mim-ext:Kenmerk naam="namespace">JZV</mim-ext:Kenmerk>
+      <mim-ext:Kenmerk naam="imvertor-version">Nightly-build.0</mim-ext:Kenmerk>
+   </mim-ext:kenmerken>
+</mim:Informatiemodel>

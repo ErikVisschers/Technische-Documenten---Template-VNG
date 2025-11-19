@@ -1,0 +1,365 @@
+<!DOCTYPE HTML><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Imvert - Imvert compiler</title><link href="../web/css/report.css" rel="stylesheet"><link href="../web/themes/blue/style.css" rel="stylesheet"><script src="../web/script/jquery/jquery-latest.js" type="text/javascript"></script><script src="../web/script/tablesorter/jquery.tablesorter.min.js" type="text/javascript"></script><script>
+                    $(function() { 
+                    
+                        $("#table-compactview").tablesorter(); 
+                    
+                    });  
+                </script></head><body><h1>Compact view</h1><p>
+                    This is a technical overview of all constructs, suitable for import into Excel.
+                </p><table class="tablesorter">
+            <table id="table-compactview" class="tablesorter">
+               <col style="width:5%">
+               <col style="width:10%">
+               <col style="width:40%">
+               <col style="width:40%">
+               <col style="width:5%">
+               <col style="width:5%">
+               <col style="width:10%">
+               <thead>
+                  <tr class="tableHeader">
+                     <th>#</th>
+                     <th>pos</th>
+                     <th>property</th>
+                     <th>type</th>
+                     <th>min</th>
+                     <th>max</th>
+                     <th>stereotype</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td class="ix">00001</td>
+                     <td></td>
+                     <td>JZV::Naam</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>GEGEVENSGROEPTYPE</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00002</td>
+                     <td>100</td>
+                     <td>JZV::Naam.Voornaam (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00003</td>
+                     <td>100</td>
+                     <td>JZV::Naam.Tussenvoegsel (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00004</td>
+                     <td>100</td>
+                     <td>JZV::Naam.Geslachtsnaam (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00005</td>
+                     <td></td>
+                     <td>JZV::Afspraak</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>OBJECTTYPE OPENAPI OBJECTTYPE</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00006</td>
+                     <td>100</td>
+                     <td>JZV::Afspraak.id (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00007</td>
+                     <td>100</td>
+                     <td>JZV::Afspraak.omschrijving (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00008</td>
+                     <td>100</td>
+                     <td>JZV::Afspraak.verantwoordelijkeOrganisatie (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00009</td>
+                     <td></td>
+                     <td>JZV::Casus</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>OBJECTTYPE OPENAPI OBJECTTYPE</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00010</td>
+                     <td>100</td>
+                     <td>JZV::Casus.id (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00011</td>
+                     <td>100</td>
+                     <td>JZV::Casus.startDatum (attrib)</td>
+                     <td>MIM111::Date (Date)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00012</td>
+                     <td>200</td>
+                     <td>JZV::Casus.heeft nevenbetrokkene (assoc)</td>
+                     <td>JZV::Betrokkene</td>
+                     <td>0</td>
+                     <td>unbounded</td>
+                     <td>RELATIESOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00013</td>
+                     <td>200</td>
+                     <td>JZV::Casus.heeftScenario (assoc)</td>
+                     <td>JZV::Scenario</td>
+                     <td>0</td>
+                     <td>unbounded</td>
+                     <td>RELATIESOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00014</td>
+                     <td>200</td>
+                     <td>JZV::Casus.heeftAfspraak (assoc)</td>
+                     <td>JZV::Afspraak</td>
+                     <td>0</td>
+                     <td>unbounded</td>
+                     <td>RELATIESOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00015</td>
+                     <td>200</td>
+                     <td>JZV::Casus.heeftBesluit (assoc)</td>
+                     <td>JZV::Besluit</td>
+                     <td>0</td>
+                     <td>unbounded</td>
+                     <td>RELATIESOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00016</td>
+                     <td>200</td>
+                     <td>JZV::Casus.heeft hoofdbetrokkene (assoc)</td>
+                     <td>JZV::Betrokkene</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>RELATIESOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00017</td>
+                     <td></td>
+                     <td>JZV::Casusoverleg</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>OBJECTTYPE OPENAPI OBJECTTYPE</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00018</td>
+                     <td>100</td>
+                     <td>JZV::Casusoverleg.id (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00019</td>
+                     <td>100</td>
+                     <td>JZV::Casusoverleg.datum (attrib)</td>
+                     <td>MIM111::Date (Date)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00020</td>
+                     <td>100</td>
+                     <td>JZV::Casusoverleg.notulen (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00021</td>
+                     <td>200</td>
+                     <td>JZV::Casusoverleg.heeft agendapunt (assoc)</td>
+                     <td>JZV::Casus</td>
+                     <td>1</td>
+                     <td>unbounded</td>
+                     <td>RELATIESOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00022</td>
+                     <td></td>
+                     <td>JZV::Betrokkene</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>OBJECTTYPE</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00023</td>
+                     <td>100</td>
+                     <td>JZV::Betrokkene.burgerservicenummer (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00024</td>
+                     <td>100</td>
+                     <td>JZV::Betrokkene.naam (attrib)</td>
+                     <td>JZV::Naam</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>GEGEVENSGROEP</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00025</td>
+                     <td></td>
+                     <td>JZV::Besluit</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>OBJECTTYPE OPENAPI OBJECTTYPE</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00026</td>
+                     <td>100</td>
+                     <td>JZV::Besluit.id (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00027</td>
+                     <td>100</td>
+                     <td>JZV::Besluit.omschrijving (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00028</td>
+                     <td></td>
+                     <td>JZV::vindCasusoverlegOpDatum</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>OPENAPI OPERATION</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00029</td>
+                     <td>100</td>
+                     <td>JZV::vindCasusoverlegOpDatum.zoekdatum (attrib)</td>
+                     <td>MIM111::Date (Date)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>OPENAPI PARAMETER</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00030</td>
+                     <td>200</td>
+                     <td>JZV::vindCasusoverlegOpDatum.payload (assoc)</td>
+                     <td>JZV::Casusoverleg</td>
+                     <td>0</td>
+                     <td>unbounded</td>
+                     <td>OPENAPI RESPONSE BODY</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00031</td>
+                     <td></td>
+                     <td>JZV::Scenario</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>OBJECTTYPE OPENAPI OBJECTTYPE</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00032</td>
+                     <td>100</td>
+                     <td>JZV::Scenario.id (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00033</td>
+                     <td>100</td>
+                     <td>JZV::Scenario.omschrijving (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00034</td>
+                     <td>100</td>
+                     <td>JZV::Scenario.verantwoordelijkeOrganisatie (attrib)</td>
+                     <td>MIM111::CharacterString (CharacterString)</td>
+                     <td>1</td>
+                     <td>1</td>
+                     <td>ATTRIBUUTSOORT</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00035</td>
+                     <td></td>
+                     <td>MIM111::CharacterString</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>INTERFACE</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00036</td>
+                     <td></td>
+                     <td>MIM111::Date</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>INTERFACE</td>
+                  </tr>
+                  <tr>
+                     <td class="ix">00037</td>
+                     <td></td>
+                     <td>GML::GM_SENTINEL</td>
+                     <td></td>
+                     <td></td>
+                     <td></td>
+                     <td>INTERFACE</td>
+                  </tr>
+               </tbody>
+            </table>
+         </table></body></html>
