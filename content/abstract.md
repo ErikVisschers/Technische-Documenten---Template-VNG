@@ -1,4 +1,8 @@
 ## Voorbeeld tabel
+Erm, doet dit nu iets? 
+
+We zitten op 20 November 2025
+
 
 | Kolom 1 | Kolom 2 | Kolom 3 | Kolom A | Kolom B | Kolom C |
 |---------|---------|---------|---------|---------|---------|
