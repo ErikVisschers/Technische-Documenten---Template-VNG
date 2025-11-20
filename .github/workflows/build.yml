@@ -10,12 +10,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-      - uses: actions/checkout@v4
 
-      # -------------------------------
-      # Validate content and detect Imvertor
-      # -------------------------------
+      # --------------------------------
+      # Checkout repository
+      # --------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # --------------------------------
+      # Validate content + generate manifest
+      # --------------------------------
       - name: Check required files and generate manifest
         run: |
           echo "Checking required markdown files…"
@@ -34,6 +38,7 @@ jobs:
 
           MISSING=0
 
+          # Check markdown chapter files
           for f in "${REQUIRED_MD[@]}"; do
             if [ ! -f "$f" ]; then
               echo "::error::Missing required Markdown file: $f"
@@ -46,24 +51,24 @@ jobs:
           echo "Searching for Imvertor .respec.html…"
           IMV=$(find content/imvertor -name "*.respec.html" | head -n 1 || true)
 
+          mkdir -p js
+
           if [ -z "$IMV" ]; then
-            echo "::warning::No Imvertor .respec.html found — document will still build, but Imvertor section will be empty."
+            echo "::warning::No Imvertor .respec.html found — Imvertor section will be empty."
+            echo "export default { path: null };" > js/imvertor-manifest.js
           else
             echo "Found Imvertor export: $IMV"
+            echo "export default { path: \"${IMV}\" };" > js/imvertor-manifest.js
           fi
 
-          echo "Creating js/imvertor-manifest.js…"
-          mkdir -p js
-          echo "export default { path: \"${IMV}\" };" > js/imvertor-manifest.js
-
-          if [ $MISSING -eq 1 ]; then
+          if [ $MISSING -ne 0 ]; then
             echo "::error::Required files missing — build aborted."
             exit 1
           fi
 
-      # -------------------------------
-      # Build HTML
-      # -------------------------------
+      # --------------------------------
+      # Build HTML via ReSpec API
+      # --------------------------------
       - name: Build HTML using ReSpec API
         run: |
           mkdir -p snapshots
@@ -80,9 +85,9 @@ jobs:
             exit 1
           fi
 
-      # -------------------------------
-      # Build PDF
-      # -------------------------------
+      # --------------------------------
+      # Build PDF via ReSpec API
+      # --------------------------------
       - name: Build PDF using ReSpec API
         run: |
           echo "Building PDF…"
@@ -98,9 +103,9 @@ jobs:
             exit 1
           fi
 
-      # -------------------------------
-      # Upload artifacts
-      # -------------------------------
+      # --------------------------------
+      # Upload build artifacts
+      # --------------------------------
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
         with:
