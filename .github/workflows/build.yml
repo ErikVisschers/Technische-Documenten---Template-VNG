@@ -1,7 +1,4 @@
-name: Build and Deploy Docs
-
-permissions:
-  contents: write
+name: Build & Publish
 
 on:
   push:
@@ -12,90 +9,104 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - name: Cache Puppeteer Chrome
+        uses: actions/cache@v4
         with:
-          node-version: 20
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ runner.os }}-chrome-142
 
-      - name: Install Puppeteer
-        run: npm install puppeteer@latest
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb curl
+          npm ci
 
-      - name: Start local server
-        run: python3 -m http.server 8080 --bind 127.0.0.1 &
+      - name: Start static server
+        run: |
+          npx http-server -p 8080 --silent &
+          echo $! > server.pid
 
       - name: Wait for server
         run: |
           for i in {1..20}; do
             if curl -sS http://127.0.0.1:8080 > /dev/null; then
-              echo "server ready"; break
+              echo "server ready"
+              break
             fi
-            echo "waiting... ($i)"; sleep 3
+            echo "waiting... ($i)"
+            sleep 3
           done
 
-      - name: Render snapshot (puppeteer)
+      - name: Generate snapshots (HTML, PNG, PDF)
         run: |
-          npx puppeteer browsers install chrome
-          node -e "
+          cat > build.js << 'EOF'
           const puppeteer = require('puppeteer');
-          const fs = require('fs');
           (async () => {
             const browser = await puppeteer.launch({
-              headless: true,
-              args: ['--no-sandbox','--disable-setuid-sandbox']
+              headless: "new",
+              args: ["--no-sandbox", "--disable-setuid-sandbox"]
             });
-            const page = await browser.newPage();
-            console.log('goto index...');
-            await page.goto('http://127.0.0.1:8080/index.html', { waitUntil: 'networkidle2' });
 
-            // wait for ReSpec to be ready
+            const page = await browser.newPage();
+
+            // LOG ALL FAILURES
+            page.on("pageerror", err => console.log("Page error:", err));
+            page.on("console", msg => console.log("Console:", msg.text()));
+            page.on("requestfailed", req =>
+              console.log("Request failed:", req.url(), req.failure().errorText)
+            );
+
+            await page.goto("http://127.0.0.1:8080/index.html", {
+              waitUntil: "networkidle2"
+            });
+
+            // WAIT FOR BASIC DOM
+            await page.waitForSelector("section", { timeout: 5000 });
+
+            // WAIT FOR RESPEC
             try {
-              await page.waitForFunction(() =>
-                document.respec && document.respec.ready,
-                { timeout: 90000 }
-              );
-              await page.evaluate(() => document.respec.flush());
-            } catch (e) {
-              console.log('Fallback: waiting 10 seconds for ReSpec…');
-              await new Promise(resolve => setTimeout(resolve, 10000));
+              await page.evaluate(async () => {
+                await window.respec.ready;
+                await window.respec.flush();
+              });
+            } catch (err) {
+              console.log("ReSpec did not signal ready, using fallback:", err);
+              await new Promise(r => setTimeout(r, 10000));
             }
 
-            await page.screenshot({ path: 'snapshot.png', fullPage: true });
-            await page.pdf({ path: 'snapshot.pdf', format: 'A4', printBackground: true });
-            fs.writeFileSync('snapshot.html', await page.content());
+            // PREVENT EMPTY DOCUMENTS
+            const html = await page.content();
+            if (!html.includes("<section")) {
+              throw new Error("ReSpec output seems empty — aborting build");
+            }
+
+            // SAVE OUTPUTS
+            const fs = require("fs");
+            fs.mkdirSync("snapshots", { recursive: true });
+
+            fs.writeFileSync("snapshots/index.html", html);
+            await page.screenshot({ path: "snapshots/screenshot.png", fullPage: true });
+            await page.pdf({ path: "snapshots/document.pdf", format: "A4" });
+
             await browser.close();
-          })();"
+          })();
+          EOF
 
-      - name: Upload snapshots
-        uses: actions/upload-artifact@v4
-        with:
-          name: docs-snapshots
-          path: |
-            snapshot.html
-            snapshot.pdf
-            snapshot.png
+          node build.js
 
-      - name: Prepare docs folder for GH Pages
+      - name: Prepare docs output
         run: |
-          rm -rf docs || true
           mkdir -p docs
-          cp -v index.html docs/index.html
-          cp -rv js docs/ || true
-          cp -rv css docs/ || true
-          cp -rv media docs/ || true
-          cp -rv content docs/ || true
-          touch docs/.nojekyll
+          rsync -av snapshots/ docs/
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
-          publish_branch: gh-pages
-          user_name: github-actions[bot]
-          user_email: github-actions[bot]@users.noreply.github.com
+          path: docs
 
-      - name: Done
-        run: echo "Published to gh-pages"
+      - name: Cleanup
+        run: kill $(cat server.pid)
