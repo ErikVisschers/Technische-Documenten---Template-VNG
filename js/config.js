@@ -23,10 +23,10 @@ let respecConfig = {
   // ------------------------
   // Content sections
   // ------------------------
-  content: {
-    // Example dynamic Imvertor section (versioned by folder)
-    "imvertor": { path: "content/imvertor/20251118-import-logical-name/doc/index.html", class: "imvertor-section" }
-  },
+  // content: {
+  //   // Example dynamic Imvertor section (versioned by folder)
+  //   "imvertor": { path: "content/imvertor/20251118-import-logical-name/doc/index.html", class: "imvertor-section" }
+  // },
 
   localBiblio: {
     ...organisationConfig.localBiblio,
