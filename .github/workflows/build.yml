@@ -1,112 +1,90 @@
-name: Build & Publish
+name: Build ReSpec Document
 
 on:
   push:
     branches: [ main ]
+  pull_request:
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Cache Puppeteer Chrome
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/puppeteer
-          key: puppeteer-${{ runner.os }}-chrome-142
-
-      - name: Install dependencies
+      # -------------------------------
+      # Validate required content files
+      # -------------------------------
+      - name: Check required Markdown and Imvertor files
         run: |
-          sudo apt-get update
-          sudo apt-get install -y xvfb curl
-          npm install
+          REQUIRED_FILES=(
+            "index.html"
+            "content/abstract.md"
+            "content/ch01.md"
+            "content/ch02.md"
+            "content/imvertor/doc/index.html"
+          )
 
-      - name: Start static server
-        run: |
-          npx http-server -p 8080 --silent &
-          echo $! > server.pid
+          MISSING=0
+          echo "Checking required files…"
 
-      - name: Wait for server
-        run: |
-          for i in {1..20}; do
-            if curl -sS http://127.0.0.1:8080 > /dev/null; then
-              echo "server ready"
-              break
+          for f in "${REQUIRED_FILES[@]}"; do
+            if [ ! -f "$f" ]; then
+              echo "::error::Missing required file: $f"
+              MISSING=1
+            else
+              echo "OK: $f"
             fi
-            echo "waiting... ($i)"
-            sleep 3
           done
 
-      - name: Generate snapshots (HTML, PNG, PDF)
+          if [ $MISSING -eq 1 ]; then
+            echo "::error::Missing files detected — build aborted."
+            exit 1
+          fi
+
+      # -------------------------------
+      # Build HTML via Respec API
+      # -------------------------------
+      - name: Build HTML using ReSpec API
         run: |
-          cat > build.js << 'EOF'
-          const puppeteer = require('puppeteer');
-          (async () => {
-            const browser = await puppeteer.launch({
-              headless: "new",
-              args: ["--no-sandbox", "--disable-setuid-sandbox"]
-            });
+          mkdir -p snapshots
+          echo "Building HTML…"
 
-            const page = await browser.newPage();
+          curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d "{\"url\": \"$(pwd)/index.html\"}" \
+            https://respec.org/api/v1/transform \
+            -o snapshots/document.html
 
-            // LOG ALL FAILURES
-            page.on("pageerror", err => console.log("Page error:", err));
-            page.on("console", msg => console.log("Console:", msg.text()));
-            page.on("requestfailed", req =>
-              console.log("Request failed:", req.url(), req.failure().errorText)
-            );
+          if [ ! -s snapshots/document.html ]; then
+            echo "::error::HTML output is empty – build failed"
+            exit 1
+          fi
 
-            await page.goto("http://127.0.0.1:8080/index.html", {
-              waitUntil: "networkidle2"
-            });
-
-            // WAIT FOR BASIC DOM
-            await page.waitForSelector("section", { timeout: 5000 });
-
-            // WAIT FOR RESPEC
-            try {
-              await page.evaluate(async () => {
-                await window.respec.ready;
-                await window.respec.flush();
-              });
-            } catch (err) {
-              console.log("ReSpec did not signal ready, using fallback:", err);
-              await new Promise(r => setTimeout(r, 10000));
-            }
-
-            // PREVENT EMPTY DOCUMENTS
-            const html = await page.content();
-            if (!html.includes("<section")) {
-              throw new Error("ReSpec output seems empty — aborting build");
-            }
-
-            // SAVE OUTPUTS
-            const fs = require("fs");
-            fs.mkdirSync("snapshots", { recursive: true });
-
-            fs.writeFileSync("snapshots/index.html", html);
-            await page.screenshot({ path: "snapshots/screenshot.png", fullPage: true });
-            await page.pdf({ path: "snapshots/document.pdf", format: "A4" });
-
-            await browser.close();
-          })();
-          EOF
-
-          node build.js
-
-      - name: Prepare docs output
+      # -------------------------------
+      # Build PDF via Respec API
+      # -------------------------------
+      - name: Build PDF using ReSpec API
         run: |
-          mkdir -p docs
-          rsync -av snapshots/ docs/
+          echo "Building PDF…"
 
-      - name: Upload website artifact
-        uses: actions/upload-pages-artifact@v3
+          curl -s -X POST \
+            -H "Content-Type: application/json" \
+            -d "{\"url\": \"$(pwd)/index.html\", \"format\": \"pdf\"}" \
+            https://respec.org/api/v1/transform \
+            -o snapshots/document.pdf
+
+          if [ ! -s snapshots/document.pdf ]; then
+            echo "::error::PDF output is empty – PDF build failed"
+            exit 1
+          fi
+
+      # -------------------------------
+      # Store outputs as artifacts
+      # -------------------------------
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
         with:
-          path: docs
-
-      - name: Cleanup
-        run: kill $(cat server.pid)
+          name: ReSpec-outputs
+          path: snapshots
