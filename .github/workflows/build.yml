@@ -11,15 +11,16 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       # -------------------------------
-      # Validate required content files
+      # Validate content and detect Imvertor
       # -------------------------------
-      - name: Check required Markdown and Imvertor files
+      - name: Check required files and generate manifest
         run: |
-          # Required markdown files
-          REQUIRED_MARKDOWN=(
+          echo "Checking required markdown files…"
+
+          REQUIRED_MD=(
             "content/abstract.md"
             "content/ch01.md"
             "content/ch02.md"
@@ -28,14 +29,12 @@ jobs:
             "content/VNG-R-Foutoplossing.md"
             "content/VNG-R-Generating.md"
             "content/VNG-R-Publishing.md"
+            "content/README.md"
           )
 
-          # Detect the first Imvertor export folder
-          IMVERTOR_HTML=$(find content/imvertor -name index.html | head -n1)
-
-          echo "Checking required Markdown files…"
           MISSING=0
-          for f in "${REQUIRED_MARKDOWN[@]}"; do
+
+          for f in "${REQUIRED_MD[@]}"; do
             if [ ! -f "$f" ]; then
               echo "::error::Missing required Markdown file: $f"
               MISSING=1
@@ -44,20 +43,26 @@ jobs:
             fi
           done
 
-          if [ ! -f "$IMVERTOR_HTML" ]; then
-            echo "::error::Missing Imvertor content file (index.html)"
-            MISSING=1
+          echo "Searching for Imvertor .respec.html…"
+          IMV=$(find content/imvertor -name "*.respec.html" | head -n 1 || true)
+
+          if [ -z "$IMV" ]; then
+            echo "::warning::No Imvertor .respec.html found — document will still build, but Imvertor section will be empty."
           else
-            echo "OK: Imvertor index.html found at $IMVERTOR_HTML"
+            echo "Found Imvertor export: $IMV"
           fi
 
+          echo "Creating js/imvertor-manifest.js…"
+          mkdir -p js
+          echo "export default { path: \"${IMV}\" };" > js/imvertor-manifest.js
+
           if [ $MISSING -eq 1 ]; then
-            echo "::error::Missing files detected — build aborted."
+            echo "::error::Required files missing — build aborted."
             exit 1
           fi
 
       # -------------------------------
-      # Build HTML via ReSpec API
+      # Build HTML
       # -------------------------------
       - name: Build HTML using ReSpec API
         run: |
@@ -76,7 +81,7 @@ jobs:
           fi
 
       # -------------------------------
-      # Build PDF via ReSpec API
+      # Build PDF
       # -------------------------------
       - name: Build PDF using ReSpec API
         run: |

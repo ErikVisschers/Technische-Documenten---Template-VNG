@@ -10,19 +10,24 @@
   <!-- Organization config -->
   <script src="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/js/organisation-config.js" class="remove"></script>
 
+  <!-- Your project config -->
   <script src="js/config.js" class="remove"></script>
-  <script class="remove"> respecConfig = {...organisationConfig, ...respecConfig}</script>
-  <script>document.title = respecConfig.title || "Default Title";</script>
+  <script class="remove">
+    respecConfig = { ...organisationConfig, ...respecConfig };
+    document.title = respecConfig.title || "Default Title";
+  </script>
 
-  <link rel="shortcut icon" href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico" />
+  <link rel="shortcut icon"
+        href="https://vng-realisatie.github.io/VNG-R-Respec-Organization-configurations/media/logo-VNG-Realisatie.ico" />
   <link rel="stylesheet" href="css/custom.css">
 
-  <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js" class="remove" async></script>
+  <script src="https://gitdocumentatie.logius.nl/publicatie/respec/builds/respec-nlgov.js"
+          class="remove" async></script>
 
   <style>
     .figure img, .sidefigure img, figure img,
     .figure object, .sidefigure object, figure object {
-      max-width: none !important; 
+      max-width: none !important;
     }
     h7 { font-style: italic; }
     h7::after, h7::before { content: "\a"; white-space: pre; }
@@ -30,35 +35,40 @@
 </head>
 
 <body>
-  <!-- Required sections for ReSpec -->
+
+  <!-- Required baseline ReSpec sections -->
   <section id="abstract" data-include-format="markdown" data-include="content/abstract.md"></section>
   <section id="sotd"></section>
+
+  <!-- Your manually listed chapters -->
   <section id="rm" data-include-format="markdown" data-include="content/README.md"></section>
-  <!-- <section id="imvertor" data-include-format="html" data-include="content/imvertor/20251118-import-logical-name/doc/index.html"></section> -->
   <section id="ch01" data-include-format="markdown" data-include="content/ch01.md"></section>
   <section id="gen" data-include-format="markdown" data-include="content/VNG-R-Generating.md"></section>
   <section id="assembl" data-include-format="markdown" data-include="content/VNG-R-Assembling.md"></section>
-  <!-- <section id="publ" data-include-format="markdown" data-include="content/VNG-R-Publishing.md"></section>
-  <section id="probl" data-include-format="markdown" data-include="content/VNG-R-Foutoplossing.md"></section> -->
+  <section id="publ" data-include-format="markdown" data-include="content/VNG-R-Publishing.md"></section>
+  <section id="probl" data-include-format="markdown" data-include="content/VNG-R-Foutoplossing.md"></section>
 
-
-  <!-- Dynamic inclusion of Imvertor / extra Markdown or HTML -->
+  <!-- Dynamic IMVERTOR injection happens AFTER probl section -->
+  <script src="js/imvertor-manifest.js"></script>
   <script>
-    let content = "";
-    const getClass = (key) => respecConfig.content[key]?.class ? ` class="${respecConfig.content[key].class}"` : "";
-
-    for (let key in respecConfig.content) {
-      const item = respecConfig.content[key];
-      const path = typeof item === "string" ? item : item.path;
-      const format = path.endsWith(".html") ? "html" : "markdown";
-
-      content += `<section data-include-format="${format}" data-include="${path}" ${getClass(key) || ""}></section>`;
-    }
-
-    document.getElementById("probl").insertAdjacentHTML('afterend', content);
+    (async () => {
+      try {
+        const manifest = await import('./js/imvertor-manifest.js');
+        if (manifest.default?.path) {
+          const imvPath = manifest.default.path;
+          const section = `
+            <section id="imvertor" data-include-format="html" data-include="${imvPath}">
+            </section>
+          `;
+          document.getElementById("probl").insertAdjacentHTML('afterend', section);
+        }
+      } catch (e) {
+        console.warn("No Imvertor manifest found:", e);
+      }
+    })();
   </script>
 
-  <!-- Other required ReSpec sections -->
+  <!-- Remaining required ReSpec sections -->
   <section id="conformance"></section>
   <section id="tof"></section>
   <section id="index"></section>

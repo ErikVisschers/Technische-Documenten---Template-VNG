@@ -15,7 +15,7 @@ let respecConfig = {
   editors: [{
     name: "Erik Visschers",
     company: "Smart-ICT",
-    companyURL: "https://smart-ict.nl"
+    companyURL: "https://smart-ict.com"
   }],
 
   github: { repoURL: "https://github.com/ErikVisschers/Technische-Documenten---Template-VNG" },
@@ -23,10 +23,7 @@ let respecConfig = {
   // ------------------------
   // Content sections
   // ------------------------
-  "imvertor": {
-    path: "content/imvertor/20251118-import-logical-name/cat/LOGICAL-JZV-1-20251001.respec.html",
-    class: "imvertor-section"
-  },
+
 
   localBiblio: {
     ...organisationConfig.localBiblio,
