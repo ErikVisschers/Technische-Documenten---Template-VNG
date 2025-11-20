@@ -18,25 +18,38 @@ jobs:
       # -------------------------------
       - name: Check required Markdown and Imvertor files
         run: |
-          REQUIRED_FILES=(
-            "index.html"
+          # Required markdown files
+          REQUIRED_MARKDOWN=(
             "content/abstract.md"
             "content/ch01.md"
             "content/ch02.md"
-            "content/imvertor/20251118-import-logical-name/doc/index.html"
+            "content/ch03.md"
+            "content/VNG-R-Assembling.md"
+            "content/VNG-R-Foutoplossing.md"
+            "content/VNG-R-Generating.md"
+            "content/VNG-R-Publishing.md"
           )
 
-          MISSING=0
-          echo "Checking required files…"
+          # Detect the first Imvertor export folder
+          IMVERTOR_HTML=$(find content/imvertor -name index.html | head -n1)
 
-          for f in "${REQUIRED_FILES[@]}"; do
+          echo "Checking required Markdown files…"
+          MISSING=0
+          for f in "${REQUIRED_MARKDOWN[@]}"; do
             if [ ! -f "$f" ]; then
-              echo "::error::Missing required file: $f"
+              echo "::error::Missing required Markdown file: $f"
               MISSING=1
             else
               echo "OK: $f"
             fi
           done
+
+          if [ ! -f "$IMVERTOR_HTML" ]; then
+            echo "::error::Missing Imvertor content file (index.html)"
+            MISSING=1
+          else
+            echo "OK: Imvertor index.html found at $IMVERTOR_HTML"
+          fi
 
           if [ $MISSING -eq 1 ]; then
             echo "::error::Missing files detected — build aborted."
@@ -44,7 +57,7 @@ jobs:
           fi
 
       # -------------------------------
-      # Build HTML via Respec API
+      # Build HTML via ReSpec API
       # -------------------------------
       - name: Build HTML using ReSpec API
         run: |
@@ -63,7 +76,7 @@ jobs:
           fi
 
       # -------------------------------
-      # Build PDF via Respec API
+      # Build PDF via ReSpec API
       # -------------------------------
       - name: Build PDF using ReSpec API
         run: |
@@ -81,7 +94,7 @@ jobs:
           fi
 
       # -------------------------------
-      # Store outputs as artifacts
+      # Upload artifacts
       # -------------------------------
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
