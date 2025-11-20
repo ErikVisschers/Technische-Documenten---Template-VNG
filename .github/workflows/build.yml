@@ -23,7 +23,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y xvfb curl
-          npm ci
+          npm install
 
       - name: Start static server
         run: |
