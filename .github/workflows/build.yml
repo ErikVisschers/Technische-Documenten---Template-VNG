@@ -23,7 +23,7 @@ jobs:
             "content/abstract.md"
             "content/ch01.md"
             "content/ch02.md"
-            "content/imvertor/doc/index.html"
+            "content\imvertor\20251118-import-logical-name\doc\index.html"
           )
 
           MISSING=0
