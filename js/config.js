@@ -26,6 +26,7 @@ let respecConfig = {
   "imvertor": {
     path: "content/imvertor/20251118-import-logical-name/cat/LOGICAL-JZV-1-20251001.respec.html",
     class: "imvertor-section"
+  },
 
   localBiblio: {
     ...organisationConfig.localBiblio,
